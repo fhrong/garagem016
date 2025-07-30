@@ -10,23 +10,12 @@
 <body>
     <header class="hero">
         <div class="overlay">
-            <h1>Garagem 016</h1>
+            <h1 class="hero-title">GARAGEM 016</h1>
             <p>Oficina & Centro Técnico Automotivo</p>
-            <a href="https://wa.me/5516992391499?texto='Olá, vim pelo site e gostaria de solicitar um atendimento !'" class="cta">Fale com um profissional !</a>
+            <a href="https://wa.me/5516992391499?text=Olá, vim pelo site e gostaria de solicitar um atendimento !" class="cta">Fale com um profissional !</a>
         </div>
     </header>
-    <section class="gallery" aria-label="Galeria de fotos da oficina">
-        <div class="gallery-bg"></div>
-        <div class="gallery-overlay">
-            <h2>Conheça Nossa Estrutura</h2>
-            <div class="carousel-indicators" role="tablist">
-                <button data-slide="0" aria-label="Foto 1" class="active" tabindex="0"></button>
-                <button data-slide="1" aria-label="Foto 2" tabindex="0"></button>
-                <button data-slide="2" aria-label="Foto 3" tabindex="0"></button>
-                <button data-slide="3" aria-label="Foto 4" tabindex="0"></button>
-            </div>
-        </div>
-    </section>
+
     <section class="services">
         <h2>Serviços Oferecidos</h2>
         <ul>
@@ -37,7 +26,7 @@
             <li>Mecânica Geral</li>
             <li>Elétrica e Diagnóstico</li>
         </ul>
-        <a href="https://wa.me/5516992391499?texto='Olá, vim pelo site e gostaria de solicitar um atendimento !'" class="cta secondary">Faça um orçamento !</a>
+        <a href="https://wa.me/5516992391499?text=Olá, vim pelo site e gostaria de solicitar um atendimento !" class="cta secondary">Faça um orçamento !</a>
     </section>
 
     <section class="services-gallery" aria-label="Ilustrações dos serviços">
@@ -62,6 +51,19 @@
         </div>
     </section>
 
+    <section class="gallery" aria-label="Galeria de fotos da oficina">
+        <div class="gallery-bg"></div>
+        <div class="gallery-overlay">
+            <h2>Conheça Nossa Estrutura</h2>
+            <div class="carousel-indicators" role="tablist">
+                <button data-slide="0" aria-label="Foto 1" class="active" tabindex="0"></button>
+                <button data-slide="1" aria-label="Foto 2" tabindex="0"></button>
+                <button data-slide="2" aria-label="Foto 3" tabindex="0"></button>
+                <button data-slide="3" aria-label="Foto 4" tabindex="0"></button>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-final" aria-label="Solicite seu orçamento">
         <div class="cta-final-content">
             <h2>Seu carro merece o melhor cuidado!</h2>
@@ -71,11 +73,12 @@
             <p class="cta-secure">Atendimento rápido, transparente e sem compromisso.</p>
         </div>
     </section>
+
     <footer>
         <p>© 2025 Garagem 016 - Todos os direitos reservados.</p>
     </footer>
+
     <script>
-    // Leve e suave: transição com opacity
     const images = [
         "/imagens/Foto 1 - Foto em 45graus mostrando toda a oficina por dentro com vários carros e a porta  com a rua no fundo em proporção vertical.jpeg",
         "/imagens/Foto 2 - Foto da oficina do lado de fora, mostrando a faixada em proorção de paisagem.jpeg",
@@ -114,7 +117,6 @@
         }, 5000);
     }
 
-    // Inicialização
     setBg(0);
     startAuto();
     </script>

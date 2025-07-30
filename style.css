@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'ArtegraSans';
+  src: url('fonts/artegra-sans-font-artegra.woff2') format('woff2'),
+       url('fonts/artegra-sans-font-artegra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero-title {
+  font-family: 'ArtegraSans', sans-serif;
+  font-size: 3rem; /* Adjust size as needed */
+  color: black; /* Main color of the text */
+
+  /* White contour using text-shadow */
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+
+  /* Optional: for cleaner outlines (only works in some browsers) */
+  /* -webkit-text-stroke: 1px white; */
+}
+
+
 /* Seção CTA Final */
 .cta-final {
     background: linear-gradient(90deg, #111 0%, #ff6600 100%);
