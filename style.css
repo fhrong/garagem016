@@ -1,6 +1,6 @@
 /* Seção CTA Final */
 .cta-final {
-    background: linear-gradient(90deg, #1e293b 0%, #3b82f6 100%);
+    background: linear-gradient(90deg, #111 0%, #ff6600 100%);
     color: #fff;
     padding: 48px 0 36px 0;
     text-align: center;
@@ -16,24 +16,25 @@
     margin-bottom: 18px;
     font-weight: 700;
     letter-spacing: -1px;
+    color: #ff6600;
 }
 .cta-final p {
     font-size: 1.15rem;
     margin-bottom: 18px;
-    color: #e0e7ef;
+    color: #fff;
 }
 .cta-urgency {
     display: block;
     font-size: 1.05rem;
-    color: #facc15;
+    color: #fff200;
     font-weight: 600;
     margin-top: 8px;
     letter-spacing: 0.5px;
 }
 .cta-final .cta.highlight {
     display: inline-block;
-    background: #facc15;
-    color: #1e293b;
+    background: #ff6600;
+    color: #fff;
     font-weight: 700;
     font-size: 1.18rem;
     padding: 16px 38px;
@@ -42,15 +43,18 @@
     text-decoration: none;
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
     transition: background 0.2s, color 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+    border: 2px solid #ff6600;
 }
 .cta-final .cta.highlight:hover {
-    background: #fde047;
-    color: #0f172a;
+    background: #fff;
+    color: #ff6600;
+    border: 2px solid #ff6600;
     transform: scale(1.04);
 }
 .cta-secure {
     font-size: 0.98rem;
-    color: #bae6fd;
+    color: #fff;
     margin-top: 6px;
 }
 /* Seção de serviços ilustrados */
