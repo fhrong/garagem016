@@ -9,15 +9,15 @@
 </head>
 <body>
     <header class="hero">
-    <div class="overlay">
-        <div class="hero-content">
-            <h1 class="hero-title">GARAGEM 016</h1>
-            <p class="hero-subtitle">Especialistas em Performance, Segurança e Cuidado Automotivo</p>
-            <a href="https://wa.me/5516992391499?text=Olá, vim pelo site e gostaria de solicitar um atendimento !" class="cta">Solicitar Atendimento no WhatsApp</a>
+        <div class="overlay">
+            <img src="/imagens/logo.png" alt="Logo Garagem 016" class="hero-logo">
+            <div class="hero-content">
+                <h1 class="hero-title">GARAGEM 016</h1>
+                <p class="hero-subtitle">Especialistas em Performance, Segurança e Cuidado Automotivo</p>
+                <a href="https://wa.me/5516992391499?text=Olá, vim pelo site e gostaria de solicitar um atendimento !" class="cta">Solicitar Atendimento no WhatsApp</a>
+            </div>
         </div>
-    </div>
     </header>
-
 
     <section class="services">
         <h2>Serviços Oferecidos</h2>
@@ -82,46 +82,46 @@
     </footer>
 
     <script>
-    const images = [
-        "/imagens/Foto 1 - Foto em 45graus mostrando toda a oficina por dentro com vários carros e a porta  com a rua no fundo em proporção vertical.webp",
-        "/imagens/Foto 2 - Foto da oficina do lado de fora, mostrando a faixada em proorção de paisagem.webp",
-        "/imagens/Foto 3 - Foto mostrando a oficina por dentro em proporção de paisagem.webp",
-        "/imagens/Foto 4 - Foto mostrando a oficina por dentro em proporção de retrato.webp"
-    ];
-    const galleryBg = document.querySelector('.gallery-bg');
-    const indicators = document.querySelectorAll('.carousel-indicators button');
-    let currentIndex = 0;
-    let intervalId;
+        const images = [
+            "/imagens/Foto 1 - Foto em 45graus mostrando toda a oficina por dentro com vários carros e a porta  com a rua no fundo em proporção vertical.webp",
+            "/imagens/Foto 2 - Foto da oficina do lado de fora, mostrando a faixada em proorção de paisagem.webp",
+            "/imagens/Foto 3 - Foto mostrando a oficina por dentro em proporção de paisagem.webp",
+            "/imagens/Foto 4 - Foto mostrando a oficina por dentro em proporção de retrato.webp"
+        ];
+        const galleryBg = document.querySelector('.gallery-bg');
+        const indicators = document.querySelectorAll('.carousel-indicators button');
+        let currentIndex = 0;
+        let intervalId;
 
-    function setBg(index) {
-        galleryBg.style.opacity = 0;
-        setTimeout(() => {
-            galleryBg.style.backgroundImage = `url('${images[index]}')`;
-            galleryBg.style.opacity = 1;
-        }, 300);
+        function setBg(index) {
+            galleryBg.style.opacity = 0;
+            setTimeout(() => {
+                galleryBg.style.backgroundImage = `url('${images[index]}')`;
+                galleryBg.style.opacity = 1;
+            }, 300);
+            indicators.forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+
         indicators.forEach((btn, i) => {
-            btn.classList.toggle('active', i === index);
+            btn.addEventListener('click', () => {
+                clearInterval(intervalId);
+                setBg(i);
+                startAuto();
+            });
         });
-        currentIndex = index;
-    }
 
-    indicators.forEach((btn, i) => {
-        btn.addEventListener('click', () => {
-            clearInterval(intervalId);
-            setBg(i);
-            startAuto();
-        });
-    });
+        function startAuto() {
+            intervalId = setInterval(() => {
+                let idx = (currentIndex + 1) % images.length;
+                setBg(idx);
+            }, 5000);
+        }
 
-    function startAuto() {
-        intervalId = setInterval(() => {
-            let idx = (currentIndex + 1) % images.length;
-            setBg(idx);
-        }, 5000);
-    }
-
-    setBg(0);
-    startAuto();
+        setBg(0);
+        startAuto();
     </script>
 </body>
 </html>
