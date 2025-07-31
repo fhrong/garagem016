@@ -1,41 +1,93 @@
-const images = [
-    "/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
-    "/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
-    "/imagens/oficina-interior-ribeirao-preto-servicos.webp",
-    "/imagens/mecanica-oficina-ribeirao-preto.jpg"
-];
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"> <!-- Declaração do namespace de imagem -->
+  
+  <!-- Páginas -->
+  <url>
+    <loc>https://garagem016.netlify.app/</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+  </url>
 
-const galleryBg = document.querySelector('.gallery-bg');
-const indicators = document.querySelectorAll('.carousel-indicators button');
-let currentIndex = 0;
-let intervalId;
+  <url>
+    <loc>https://garagem016.netlify.app/servicos/mecanica-geral-ribeirao-preto.html</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+  </url>
 
-function setBg(index) {
-    galleryBg.style.opacity = 0;
-    setTimeout(() => {
-        galleryBg.style.backgroundImage = `url('${images[index]}')`;
-        galleryBg.style.opacity = 1;
-    }, 300);
-    indicators.forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
-    });
-    currentIndex = index;
-}
+  <url>
+    <loc>https://garagem016.netlify.app/servicos/alinhamento-balanceamento-ribeirao-preto.html</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+  </url>
 
-indicators.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
-        clearInterval(intervalId);
-        setBg(i);
-        startAuto();
-    });
-});
+  <url>
+    <loc>https://garagem016.netlify.app/servicos/suspensao-automotiva-ribeirao-preto.html</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+  </url>
 
-function startAuto() {
-    intervalId = setInterval(() => {
-        let idx = (currentIndex + 1) % images.length;
-        setBg(idx);
-    }, 5000);
-}
+  <!-- Imagens -->
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/logo/garagem016-logo-mecanica-ribeirao-preto.png</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/logo/garagem016-logo-mecanica-ribeirao-preto.png</image:loc>
+      <image:caption>Logo da Garagem 016, mecânica automotiva em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
 
-setBg(0);
-startAuto();
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/fachada/oficina-fachada-exterior-ribeirao-preto.webp</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/fachada/oficina-fachada-exterior-ribeirao-preto.webp</image:loc>
+      <image:caption>Fachada da oficina Garagem 016 em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/fachada/oficina-interior-ribeirao-preto-servicos.webp</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/fachada/oficina-interior-ribeirao-preto-servicos.webp</image:loc>
+      <image:caption>Interior da oficina Garagem 016 em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/servicos/mecanica-geral-ribeirao-preto.webp</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/servicos/mecanica-geral-ribeirao-preto.webp</image:loc>
+      <image:caption>Serviço de Mecânica Geral em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/servicos/alinhamento-balanceamento-pneus-ribeirao-preto.webp</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/servicos/alinhamento-balanceamento-pneus-ribeirao-preto.webp</image:loc>
+      <image:caption>Alinhamento e Balanceamento de Pneus em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/servicos/parte-eletrica-veicular-ribeirao-preto.webp</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/servicos/parte-eletrica-veicular-ribeirao-preto.webp</image:loc>
+      <image:caption>Serviço de Elétrica e Diagnóstico Automotivo em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.netlify.app/imagens/servicos/suspensao-automotiva-ribeirao-preto.webp</loc>
+    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.netlify.app/imagens/servicos/suspensao-automotiva-ribeirao-preto.webp</image:loc>
+      <image:caption>Serviço de Suspensão Automotiva em Ribeirão Preto</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
