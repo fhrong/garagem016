@@ -5,78 +5,67 @@
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Páginas -->
+
+  <!-- Página principal -->
   <url>
     <loc>https://garagem016.netlify.app/</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
   </url>
-  <url>
-    <loc>https://garagem016.netlify.app/servicos/mecanica-geral-ribeirao-preto.html</loc>
-    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://garagem016.netlify.app/servicos/alinhamento-balanceamento-ribeirao-preto.html</loc>
-    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://garagem016.netlify.app/servicos/suspensao-automotiva-ribeirao-preto.html</loc>
-    <lastmod>2025-07-31T12:16:54+00:00</lastmod>
-  </url>
 
-  <!-- Imagens -->
+  <!-- Imagens (sem subpastas) -->
   <url>
-    <loc>https://garagem016.netlify.app/imagens/logo/garagem016-logo-mecanica-ribeirao-preto.png</loc>
+    <loc>https://garagem016.netlify.app/imagens/garagem016-logo-mecanica-ribeirao-preto.png</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/logo/garagem016-logo-mecanica-ribeirao-preto.png</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/garagem016-logo-mecanica-ribeirao-preto.png</image:loc>
       <image:caption>Logo da Garagem 016, mecânica automotiva em Ribeirão Preto</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/imagens/fachada/oficina-fachada-exterior-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.netlify.app/imagens/oficina-fachada-exterior-ribeirao-preto.webp</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/fachada/oficina-fachada-exterior-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/oficina-fachada-exterior-ribeirao-preto.webp</image:loc>
       <image:caption>Fachada da oficina Garagem 016 em Ribeirão Preto</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/imagens/fachada/oficina-interior-ribeirao-preto-servicos.webp</loc>
+    <loc>https://garagem016.netlify.app/imagens/oficina-interior-ribeirao-preto-servicos.webp</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/fachada/oficina-interior-ribeirao-preto-servicos.webp</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/oficina-interior-ribeirao-preto-servicos.webp</image:loc>
       <image:caption>Interior da oficina Garagem 016 em Ribeirão Preto</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/imagens/servicos/mecanica-geral-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.netlify.app/imagens/mecanica-geral-ribeirao-preto.webp</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/servicos/mecanica-geral-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/mecanica-geral-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de Mecânica Geral em Ribeirão Preto</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/imagens/servicos/alinhamento-balanceamento-pneus-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.netlify.app/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/servicos/alinhamento-balanceamento-pneus-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</image:loc>
       <image:caption>Alinhamento e Balanceamento de Pneus em Ribeirão Preto</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/imagens/servicos/parte-eletrica-veicular-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.netlify.app/imagens/parte-eletrica-veicular-ribeirao-preto.webp</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/servicos/parte-eletrica-veicular-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/parte-eletrica-veicular-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de Elétrica e Diagnóstico Automotivo em Ribeirão Preto</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/imagens/servicos/suspensao-automotiva-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.netlify.app/imagens/suspensao-automotiva-ribeirao-preto.webp</loc>
     <lastmod>2025-07-31T12:16:54+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/imagens/servicos/suspensao-automotiva-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.netlify.app/imagens/suspensao-automotiva-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de Suspensão Automotiva em Ribeirão Preto</image:caption>
     </image:image>
   </url>
