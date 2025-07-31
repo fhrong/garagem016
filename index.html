@@ -11,7 +11,7 @@
 <body>
     <header class="hero">
         <div class="overlay">
-            <img src="/imagens/logo.png" alt="Logo Garagem 016" class="hero-logo">
+            <img src="/imagens/garagem016-logo-mecanica-ribeirao-preto.png" alt="Logo da Garagem 016, mecânica automotiva em Ribeirão Preto" class="hero-logo">
             <div class="hero-content">
                 <h1 class="hero-title">GARAGEM 016</h1>
                 <p class="hero-subtitle">Especialistas em Performance, Segurança e Cuidado Automotivo</p>
@@ -37,19 +37,19 @@
         <h2>Alguns dos nossos serviços</h2>
         <div class="services-illustration-grid">
             <div class="service-item">
-                <img src="imagens/Foto balanceamento e alinhamento de pneus.webp" alt="Alinhamento e Balanceamento de Pneus">
+                <img src="imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp" alt="Alinhamento e Balanceamento de Pneus em Ribeirão Preto" loading="lazy">
                 <h3>Alinhamento e Balanceamento</h3>
             </div>
             <div class="service-item">
-                <img src="imagens/Foto mecanica Geral.webp" alt="Mecânica Geral">
+                <img src="imagens/mecanica-geral-ribeirao-preto.webp" alt="Serviço de Mecânica Geral em Ribeirão Preto" loading="lazy">
                 <h3>Mecânica Geral</h3>
             </div>
             <div class="service-item">
-                <img src="imagens/Foto parte elétrica.webp" alt="Parte Elétrica">
+                <img src="imagens/parte-eletrica-veicular-ribeirao-preto.webp" alt="Serviço de Elétrica e Diagnóstico Automotivo em Ribeirão Preto" loading="lazy">
                 <h3>Elétrica e Diagnóstico</h3>
             </div>
             <div class="service-item">
-                <img src="imagens/Foto suspensão.webp" alt="Suspensão">
+                <img src="imagens/suspensao-automotiva-ribeirao-preto.webp" alt="Serviço de Suspensão Automotiva em Ribeirão Preto" loading="lazy">
                 <h3>Suspensão</h3>
             </div>
         </div>
@@ -82,47 +82,6 @@
         <p>© 2025 Garagem 016 - Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        const images = [
-            "/imagens/Foto 1 - Foto em 45graus mostrando toda a oficina por dentro com vários carros e a porta  com a rua no fundo em proporção vertical.webp",
-            "/imagens/Foto 2 - Foto da oficina do lado de fora, mostrando a faixada em proorção de paisagem.webp",
-            "/imagens/Foto 3 - Foto mostrando a oficina por dentro em proporção de paisagem.webp",
-            "/imagens/Foto 4 - Foto mostrando a oficina por dentro em proporção de retrato.webp"
-        ];
-        const galleryBg = document.querySelector('.gallery-bg');
-        const indicators = document.querySelectorAll('.carousel-indicators button');
-        let currentIndex = 0;
-        let intervalId;
-
-        function setBg(index) {
-            galleryBg.style.opacity = 0;
-            setTimeout(() => {
-                galleryBg.style.backgroundImage = `url('${images[index]}')`;
-                galleryBg.style.opacity = 1;
-            }, 300);
-            indicators.forEach((btn, i) => {
-                btn.classList.toggle('active', i === index);
-            });
-            currentIndex = index;
-        }
-
-        indicators.forEach((btn, i) => {
-            btn.addEventListener('click', () => {
-                clearInterval(intervalId);
-                setBg(i);
-                startAuto();
-            });
-        });
-
-        function startAuto() {
-            intervalId = setInterval(() => {
-                let idx = (currentIndex + 1) % images.length;
-                setBg(idx);
-            }, 5000);
-        }
-
-        setBg(0);
-        startAuto();
-    </script>
+    <script src="js/main.js"></script> <!-- Referência ao arquivo JS externo -->
 </body>
 </html>
