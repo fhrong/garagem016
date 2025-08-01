@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /admin/
-Allow: /imagens/
-Allow: /css/
-Allow: /js/
+Allow: /
+
 Sitemap: https://garagem016.netlify.app/sitemap.xml
