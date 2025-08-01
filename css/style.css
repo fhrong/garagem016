@@ -354,17 +354,16 @@ footer {
 }
 
 
-
 .social-top {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 4rem;
+    gap: 100px;
+    margin-bottom: 1.5rem;
 }
 
 .social-top a {
     color: var(--text-color);
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     transition: color 0.3s;
 }
 
@@ -374,12 +373,12 @@ footer {
 
 @media (max-width: 480px) {
     .social-top a {
-        font-size: 1.3rem;
+        font-size: 2.3rem;
     }
 
     .social-top {
-        gap: 16px;
-        margin-bottom: 1rem;
+        gap: 36px;
+        margin-bottom: 1.5rem;
     }
 }
 
