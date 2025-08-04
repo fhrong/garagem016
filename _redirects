@@ -1,0 +1,2 @@
+# Evita que o Netlify trate o sitemap.xml como fallback para SPA
+/sitemap.xml  /sitemap.xml  200
