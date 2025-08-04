@@ -27,7 +27,7 @@ indicators.forEach((btn, i) => {
         clearInterval(intervalId);
         setBg(i);
         startAuto();
-        btn.blur();
+        btn.blur(); //Netlify.Update.main
     });
 });
 
