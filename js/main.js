@@ -27,6 +27,7 @@ indicators.forEach((btn, i) => {
         clearInterval(intervalId);
         setBg(i);
         startAuto();
+        btn.blur();
     });
 });
 
