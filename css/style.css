@@ -471,14 +471,41 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .social-top a {
-    font-size: 2.3rem;
-    }
-
-    .social-top {
-    gap: 36px;
-    margin-bottom: 1.5rem;
-    }
+  .overlay {
+    padding: 1rem 0.5rem;
+  }
+  .main-nav {
+    width: 100vw;
+    max-width: none;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .main-nav ul {
+    gap: 0.5rem;
+  }
+  .social-top {
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  .social-top a {
+    font-size: 2rem;
+  }
+  .hero-logo {
+    max-width: 120px;
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
 }
 
 @media (min-width: 769px) {
