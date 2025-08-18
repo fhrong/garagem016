@@ -7,10 +7,10 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://garagem016.netlify.app/favicon.png</loc>
+    <loc>https://garagem016.netlify.app/favicon.ico</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.netlify.app/favicon.png</image:loc>
+      <image:loc>https://garagem016.netlify.app/favicon.ico</image:loc>
       <image:caption>Favicon da Garagem 016</image:caption>
     </image:image>
   </url>
