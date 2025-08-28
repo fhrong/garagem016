@@ -138,7 +138,7 @@ body {
     padding: 1rem 0.5rem;
   }
   .main-nav {
-    width: 100vw;
+    width: 100%;
     max-width: none;
     left: 0;
     right: 0;
