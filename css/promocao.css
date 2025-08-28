@@ -283,7 +283,8 @@ header.hero .overlay {
 }
 
 /* ===== BOTÕES CTA ===== */
-.cta {
+.cta,
+.cta-buttons .cta {
   display: inline-block;
   padding: 15px 32px;
   font-size: 1.2rem;
@@ -297,7 +298,8 @@ header.hero .overlay {
   animation: cta-gloom 1.6s infinite ease-in-out;
 }
 
-.cta:hover {
+.cta:hover,
+.cta-buttons .cta:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(255, 102, 0, 0.7);
 }
@@ -558,8 +560,6 @@ html {
   50% { transform: scale(1.07); box-shadow: 0 8px 28px rgba(255, 102, 0, 0.7);}
   100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);}
 }
-
-.cta,
 .cta-buttons .cta {
   animation: cta-gloom 1.6s infinite ease-in-out;
 }
@@ -571,10 +571,6 @@ html {
   display: none;
   z-index: 1000;
   transition: background-color 0.3s ease;
-}}
-
-#scrollTopBtn:hover {
-  background-color: var(--cta-hover-color);
 }
 
 /* Utility for hiding elements */
@@ -624,6 +620,10 @@ table th {
   box-shadow: 0 4px 12px rgba(255, 165, 0, 0.5);
 }
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
