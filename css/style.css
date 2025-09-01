@@ -9,6 +9,8 @@
 --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
+
+
 @font-face {
 font-family: 'ArtegraSans';
 src: url('/fonts/artegra-sans-font-artegra.woff2') format('woff2'),
@@ -532,17 +534,45 @@ footer {
   }
 }
 
-.footer-social {
-    margin-top: 0.5rem;
+/* Pricing strip — moved from index.html (compact, conversion-friendly) */
+.pricing {
+  margin: 18px 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
-
-.footer-social a {
-    color: #888;
-    margin: 0 8px;
-    font-size: 1.3rem;
-    transition: color 0.3s;
+.pricing h3 { margin: 0 0 8px 0; font-size:18px; color:#fff; }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
 }
-
-.footer-social a:hover {
-    color: var(--primary-color);
+.price-card {
+  background: rgba(255,255,255,0.02);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #e6eef6;
+  font-size: 14px;
+}
+.price-card .label { color: var(--muted, #9aa4b2); display:block; margin-bottom:6px; font-weight:600; }
+.price-card .amount { color: #ff6b00; font-weight:800; font-size:18px; }
+/* specific price note in green (keeps specificity and avoids global .note conflicts) */
+.price-card .note { font-size:12px; color: rgb(0, 233, 0); margin-top:6px; }
+.pricing-cta { display:flex; justify-content:center; margin-top:12px; }
+.pricing-cta .cta-small {
+  padding:8px 14px;
+  font-size:14px;
+  border-radius:8px;
+  text-decoration:none;
+  background:#ff6b00;
+  color:#071022;
+  font-weight:700;
+}
+@media (max-width:600px){
+  .pricing { padding:12px; }
+  .pricing h3{ font-size:16px; }
+  .price-card .amount{ font-size:16px; }
 }
