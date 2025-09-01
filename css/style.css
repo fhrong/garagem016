@@ -594,3 +594,52 @@ footer .footer-social a i {
   line-height: 1;
   display: inline-block;
 }
+
+/* Urgency styling and subtle pulsing/glow for promotional values */
+.pricing.urgent .pricing-title {
+  color: var(--accent);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.4px;
+}
+
+.promo-badge {
+  display:inline-block;
+  background: linear-gradient(90deg, rgba(255,107,0,0.12), rgba(255,154,60,0.08));
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight:700;
+  box-shadow: 0 6px 18px rgba(255,107,0,0.06);
+  transform-origin: center;
+}
+
+/* pulsing + glow animation for the amount to create the "glooming" effect */
+@keyframes pricePulse {
+  0%   { transform: scale(1); text-shadow: none; }
+  50%  { transform: scale(1.06); text-shadow: 0 8px 24px rgba(255,107,0,0.18); }
+  100% { transform: scale(1); text-shadow: none; }
+}
+
+.price-card .amount {
+  display: inline-block; /* needed for transform */
+  animation: pricePulse 2.2s ease-in-out infinite;
+  will-change: transform, text-shadow;
+  transition: transform 0.2s;
+}
+
+/* Slightly increase pulse on hover (keeps interaction-friendly) */
+.price-card:hover .amount {
+  transform: scale(1.08);
+  text-shadow: 0 10px 28px rgba(255,107,0,0.22);
+}
+
+/* Make title and badge more prominent on small screens but avoid overwhelming */
+@media (max-width: 600px) {
+  .pricing.urgent .pricing-title { font-size: 16px; }
+  .promo-badge { font-size:12px; padding:3px 7px; }
+  .price-card .amount { font-size: 16px; }
+}
