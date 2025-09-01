@@ -558,9 +558,9 @@ footer {
   font-size: 14px;
 }
 .price-card .label { color: var(--muted, #9aa4b2); display:block; margin-bottom:6px; font-weight:600; }
-.price-card .amount { color: #ff6b00; font-weight:800; font-size:18px; }
+.price-card .amount { color: #65ff18; font-weight:800; font-size:18px; }
 /* specific price note in green (keeps specificity and avoids global .note conflicts) */
-.price-card .note { font-size:12px; color: rgb(0, 233, 0); margin-top:6px; }
+.price-card .note { font-size:12px; color: rgb(255, 48, 238); margin-top:6px; }
 .pricing-cta { display:flex; justify-content:center; margin-top:12px; }
 .pricing-cta .cta-small {
   padding:8px 14px;
