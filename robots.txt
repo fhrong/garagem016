@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://garagem016.netlify.app/sitemap.xml
+Sitemap: https://garagem016.com.br/sitemap.xml

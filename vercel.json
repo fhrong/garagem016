@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/servicos/mecanica-geral-ribeirao-preto.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/servicos/alinhamento-balanceamento-ribeirao-preto.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/servicos/suspensao-automotiva-ribeirao-preto.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/favicon.png",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

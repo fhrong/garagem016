@@ -6,20 +6,12 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://garagem016.netlify.app/</loc>
+    <loc>https://garagem016.com.br/</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://garagem016.netlify.app/servicos/mecanica-geral-ribeirao-preto.html</loc>
+    <loc>https://garagem016.com.br/promocao-amortecedor-49_90-reais-ribeirao-preto.html</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://garagem016.netlify.app/servicos/alinhamento-balanceamento-ribeirao-preto.html</loc>
-    <lastmod>2025-08-04T12:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://garagem016.netlify.app/servicos/suspensao-automotiva-ribeirao-preto.html</loc>
-    <lastmod>2025-08-04T12:00:00+00:00</lastmod>
-  </url>
+  </url>,
 
 </urlset>

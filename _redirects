@@ -1,6 +1,0 @@
-# Evita que o Netlify trate o sitemap.xml como fallback para SPA
-/sitemap.xml  /sitemap.xml  200
-/servicos/mecanica-geral-ribeirao-preto.html   /   301
-/servicos/alinhamento-balanceamento-ribeirao-preto.html   /   301
-/servicos/suspensao-automotiva-ribeirao-preto.html   /   301
-/favicon.png   /   301
