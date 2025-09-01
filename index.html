@@ -9,7 +9,12 @@
   <link rel="canonical" href="https://garagem016.com.br/" />
   <link rel="icon" type="image/ico" href="/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Performance: preconnect & preload critical assets (CSS loaded async below) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/imagens/oficina-fachada-exterior-ribeirao-preto.webp" as="image" fetchpriority="high">
+  <!-- load main CSS non-blocking -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -91,7 +96,7 @@
       </div>
 
       <!-- Logo and Hero Content -->
-      <img src="imagens/garagem016-logo-mecanica-ribeirao-preto.png" alt="Logo da Garagem 016, mecânica automotiva em Ribeirão Preto" class="hero-logo" width="180" height="60" loading="eager">
+      <img src="imagens/garagem016-logo-mecanica-ribeirao-preto.png" alt="Logo da Garagem 016, mecânica automotiva em Ribeirão Preto" class="hero-logo" width="180" height="60" loading="eager" decoding="async" fetchpriority="high">
       <div class="hero-content">
         <h1 class="hero-title">Garagem 016 – Oficina Mecânica em Ribeirão Preto</h1>
         <p class="hero-subtitle">Especialistas em Performance, Segurança e Cuidado Automotivo</p>
@@ -157,23 +162,23 @@
     <h2>Alguns dos nossos serviços</h2>
     <div class="services-illustration-grid">
             <div class="service-item">
-                <img src="imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp" alt="Alinhamento e Balanceamento de Pneus em Ribeirão Preto" loading="lazy">
+                <img src="imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp" alt="Alinhamento e Balanceamento de Pneus em Ribeirão Preto" loading="lazy" decoding="async" width="240" height="150">
                 <h3>Alinhamento e Balanceamento</h3>
             </div>
             <div class="service-item">
-                <img src="imagens/mecanica-geral-ribeirao-preto.webp" alt="Serviço de Mecânica Geral em Ribeirão Preto" loading="lazy">
+                <img src="imagens/mecanica-geral-ribeirao-preto.webp" alt="Serviço de Mecânica Geral em Ribeirão Preto" loading="lazy" decoding="async" width="240" height="150">
                 <h3>Mecânica Geral</h3>
             </div>
             <div class="service-item">
-                <img src="imagens/parte-eletrica-veicular-ribeirao-preto.webp" alt="Serviço de Elétrica e Diagnóstico Automotivo em Ribeirão Preto" loading="lazy">
+                <img src="imagens/parte-eletrica-veicular-ribeirao-preto.webp" alt="Serviço de Elétrica e Diagnóstico Automotivo em Ribeirão Preto" loading="lazy" decoding="async" width="240" height="150">
                 <h3>Elétrica e Diagnóstico</h3>
             </div>
             <div class="service-item">
-                <img src="imagens/suspensao-automotiva-ribeirao-preto.webp" alt="Serviço de Suspensão Automotiva em Ribeirão Preto" loading="lazy">
+                <img src="imagens/suspensao-automotiva-ribeirao-preto.webp" alt="Serviço de Suspensão Automotiva em Ribeirão Preto" loading="lazy" decoding="async" width="240" height="150">
                 <h3>Suspensão</h3>
             </div>
         </div>
-  </section>
+   </section>
 
   <section id="gallery" class="gallery" aria-label="Galeria de fotos da oficina">
     <div class="gallery-bg"></div>

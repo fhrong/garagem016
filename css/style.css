@@ -697,3 +697,51 @@ footer .footer-social a i {
 @media (max-width: 480px) {
   .service-item, .service-item img { box-shadow: none; }
 }
+
+/* Improve Speed Index / SI and reduce main-thread work:
+   - Defer rendering of offscreen heavy sections until needed.
+   - Provide intrinsic sizes to avoid layout shifts. */
+.services-gallery,
+.reviews-section,
+.pricing,
+.gallery {
+  content-visibility: auto;
+  contain-intrinsic-size: 480px; /* reserve space to avoid CLS */
+}
+
+/* Ensure service images have intrinsic ratio (already set) and hardware-accelerated animations */
+.service-item img {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .price-card .amount,
+  .price-card,
+  .service-item,
+  .hero-logo,
+  .marmita {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Avoid non-composited animations: prefer transform/opacity only */
+.price-card .amount,
+.service-item,
+.hero-logo,
+.marmita {
+  will-change: transform, opacity;
+}
+
+/* Drop expensive large text-shadows on small screens to reduce paint cost */
+@media (max-width: 600px) {
+  .hero-title, .price-card .amount {
+    text-shadow: none;
+  }
+}
+
+/* End of performance tweaks */
