@@ -557,6 +557,52 @@ footer {
   color: #e6eef6;
   font-size: 14px;
 }
+
+#amortecedor{
+  color: #000;
+}
+
+/* Styles specific to the Amortecedor price card (id="#amorteceor") */
+#amorteceor {
+  /* visual do card */
+  background: linear-gradient(180deg, rgba(255,107,0,0.04), rgba(255,107,0,0.02));
+  border: 1px solid rgba(255,107,0,0.12);
+  box-shadow: 0 10px 30px rgba(255,107,0,0.06);
+  transform-origin: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* aumentar ligeiramente ao passar o mouse */
+#amorteceor:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(255,107,0,0.12);
+}
+
+/* alvo específico do valor dentro do card */
+#amorteceor .amount {
+  color: #296a00; /* sobrescreve a cor padrão se quiser */
+  background: linear-gradient(90deg,#43ff3d,#ffaa34);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight:900;
+  display:inline-block;
+  /* animação de pulso discreta */
+  animation: amortPulse 2s ease-in-out infinite;
+}
+
+/* keyframes da animação */
+@keyframes amortPulse {
+  0%   { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255,107,0,0)); }
+  50%  { transform: scale(1.06); filter: drop-shadow(0 12px 24px rgba(255,107,0,0.12)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255,107,0,0)); }
+}
+
+/* opcional: variante para tela pequena */
+@media (max-width:600px){
+  #amorteceor { padding: 8px; }
+  #amorteceor .amount { font-size:16px; padding:5px 8px; }
+}
+
 .price-card .label { color: var(--muted, #9aa4b2); display:block; margin-bottom:6px; font-weight:600; }
 .price-card .amount { color: #65ff18; font-weight:800; font-size:18px; }
 /* specific price note in green (keeps specificity and avoids global .note conflicts) */
