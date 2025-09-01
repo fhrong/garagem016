@@ -576,3 +576,21 @@ footer {
   .pricing h3{ font-size:16px; }
   .price-card .amount{ font-size:16px; }
 }
+
+/* Restore footer social icons to original appearance (white) and subtle hover */
+footer .footer-social a {
+  color: #ff6b00;               /* original color */
+  transition: color 0.18s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-social a:hover {
+  color: #c95400;               /* site accent on hover */
+}
+footer .footer-social a i {
+  font-size: 1.05rem;           /* keep icons consistent size */
+  line-height: 1;
+  display: inline-block;
+}
