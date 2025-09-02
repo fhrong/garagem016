@@ -214,6 +214,24 @@ body {
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
+  /* force identical desktop appearance for promo page CTA */
+  .floating-cta {
+    right: 40px;
+    bottom: 30px;
+  }
+  .floating-cta a {
+    min-width: 180px !important;
+    padding: 12px 18px !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+  }
+  .floating-cta a .label {
+    font-size: 1rem !important;
+    display: inline-block !important;
+  }
+  .floating-cta i {
+    font-size: 1.2rem !important;
+  }
 }
 
 /* ===== HERO ===== */

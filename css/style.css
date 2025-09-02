@@ -816,32 +816,26 @@ footer .footer-social a i {
 
 /* End of performance tweaks */
 @media (min-width: 769px) {
-  /* make social icons compact on desktop without touching mobile rules */
-  .social-top {
-    gap: 28px;            /* reduce the huge 100px gap on desktop */
+  /* ensure floating CTA appears at a consistent desktop size */
+  .floating-cta {
+    right: 40px;
+    bottom: 30px;
   }
-  .social-top a {
-    font-size: 1.6rem;    /* smaller icon size for desktop headers */
+  .floating-cta a {
+    min-width: 180px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    line-height: 1;
   }
-
-  /* --- Desktop "zoom out" tweaks (only for >=769px) --- */
-  /* Scale down the hero overlay content so the page feels slightly "zoomed out" on desktop */
-  .overlay {
-    transform-origin: center top;
-    transform: scale(0.92);    /* ~8% smaller (visually similar to "zoom out 10%") */
-    transition: transform 180ms ease;
+  .floating-cta a .label {
+    font-size: 1rem;
+    display: inline-block;
   }
-
-  /* Compensate the hero container height so scaled overlay still fills the viewport */
-  .hero {
-    height: calc(100vh / 0.92); /* keeps visual fill after scaling */
-    overflow: visible;
+  .floating-cta i {
+    font-size: 1.2rem;
   }
-
-  /* Minor refinement so title spacing stays tidy after scale */
-  .hero-title {
-    line-height: 1.02;
-  }
+  /* keep collapsed state only for smaller viewports */
+  .floating-cta.collapsed { /* no-op on desktop */ }
 }
 
 /* Mobile / small tablet fixes to avoid header/icon overlap with the hamburger menu */
@@ -967,6 +961,12 @@ footer .footer-social a i {
   .floating-cta.collapsed a i { font-size: 1.1rem; }
 }
 
+/* preserve desktop expanded appearance */
+@media (min-width: 769px) {
+  .floating-cta { right: 40px; bottom: 30px; }
+  .floating-cta.collapsed { /* do not collapse on desktop */ }
+  .floating-cta a { min-width: 160px; padding: 10px 14px; border-radius: 999px; }
+}
 /* preserve desktop expanded appearance */
 @media (min-width: 769px) {
   .floating-cta { right: 40px; bottom: 30px; }
