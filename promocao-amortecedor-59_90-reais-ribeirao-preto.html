@@ -30,48 +30,65 @@
   </style>
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Garagem 016",
-    "logo": "https://garagem016.com.br/favicon.ico"
-    "image": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ribeirão Preto",
-      "addressRegion": "SP",
-      "addressCountry": "BR"
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Garagem 016",
+    "url":"https://garagem016.com.br/",
+    "logo":"https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+    "image":"https://garagem016.com.br/imagens/suspensao-automotiva-ribeirao-preto.webp",
+    "telephone":"+55-16-99239-1499",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Rua dos Aliados, 581",
+      "addressLocality":"Ribeirão Preto",
+      "addressRegion":"SP",
+      "postalCode":"14080-570",
+      "addressCountry":"BR"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-21.1775",
-      "longitude": "-47.8103"
+    "geo":{"@type":"GeoCoordinates","latitude":-21.1775,"longitude":-47.8103},
+    "openingHours":["Mo-Fr 08:00-18:00","Sa 08:00-12:00"],
+    "areaServed":["Ribeirão Preto","Sertãozinho","Cravinhos","Jardinópolis"],
+    "sameAs":[
+      "https://www.facebook.com/Garagem016Oficina",
+      "https://www.instagram.com/garagem016oficinacta"
+    ]
+  }
+  </script>
+
+  <!-- Product/Offer schema for the promotional service -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Troca de Amortecedor — Promoção",
+    "serviceType":"Troca de Amortecedor com instalação",
+    "provider": {
+      "@type":"LocalBusiness",
+      "name":"Garagem 016",
+      "telephone":"+55-16-99239-1499",
+      "url":"https://garagem016.com.br/"
     },
-    "url": "https://www.garagem016.com.br/promocao-amortecedor-59_90-reais-ribeirao-preto.html",
-    "telephone": "+55-16-99239-1499",
-    "priceRange": "R$",
-    "openingHours": "Mo-Sa 08:00-18:00",
-    "areaServed": [
-      "Ribeirão Preto",
-      "Sertãozinho",
-      "Cravinhos",
-      "Jardinópolis",
-      "Dumont",
-      "Brodowski",
-      "Barrinha",
-      "Guatapará",
-      "Pradópolis",
-      "Pontal"
-    ],
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "Service",
-        "name": "Troca de Amortecedor"
-      },
-      "price": "59.90",
-      "priceCurrency": "BRL",
-      "availability": "https://schema.org/InStock"
+    "offers": {
+      "@type":"Offer",
+      "url":"https://garagem016.com.br/promocao-amortecedor-59_90-reais-ribeirao-preto.html",
+      "price":"59.90",
+      "priceCurrency":"BRL",
+      "availability":"https://schema.org/InStock",
+      "priceValidUntil":"2025-12-31"
     }
+  }
+  </script>
+
+  <!-- FAQ for the promotion (helps appear as rich result) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"O que está incluído na troca por R$59,90?","acceptedAnswer":{"@type":"Answer","text":"Instalação do amortecedor por par, verificação de componentes e garantia de 2 anos."}},
+      {"@type":"Question","name":"Preciso agendar?","acceptedAnswer":{"@type":"Answer","text":"Recomendamos agendar pelo WhatsApp para garantir atendimento no horário desejado."}},
+      {"@type":"Question","name":"Qual a validade da promoção?","acceptedAnswer":{"@type":"Answer","text":"Promoção por tempo limitado — verifique disponibilidade na sua cidade ao contatar via WhatsApp."}}
+    ]
   }
   </script>
   <meta name="robots" content="index,follow">
@@ -198,5 +215,15 @@
       </a>
     </div>
   </footer>
+
+  <!-- Floating CTAs for immediate conversion (same as homepage) -->
+  <div class="floating-cta" aria-hidden="false">
+    <a class="whatsapp" href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Amortecedor%20R$59,90" target="_blank" rel="noopener noreferrer" aria-label="Reservar pelo WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i> Reservar pelo WhatsApp
+    </a>
+    <a class="phone" href="tel:+5516992391499" aria-label="Ligar para Garagem 016">
+      <i class="fas fa-phone" aria-hidden="true"></i> +55 (16) 99239‑1499
+    </a>
+  </div>
 </body>
 </html>

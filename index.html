@@ -51,46 +51,93 @@
   }
   </script>
 
-  <!-- Performance: preconnect to CDNs used and preload critical assets -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://flagcdn.com" crossorigin>
-  <link rel="preload" href="/fonts/artegra-sans-font-artegra.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/imagens/oficina-fachada-exterior-ribeirao-preto.webp" as="image">
-  <!-- accessibility: skip link for keyboard users -->
-  <style> .skip-link{ position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden; } .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#000;color:#fff;padding:.5rem;border-radius:4px;z-index:9999;} </style>
-  <meta name="robots" content="index,follow">
-  <meta name="author" content="Garagem 016">
-  <link rel="alternate" href="https://garagem016.com.br/" hreflang="pt-BR" />
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Garagem 016">
-  <meta property="og:title" content="Garagem 016 – Oficina Mecânica em Ribeirão Preto">
-  <meta property="og:description" content="Troca de óleo, revisão e mecânica geral em Ribeirão Preto. Agende pelo WhatsApp.">
-  <meta property="og:url" content="https://garagem016.com.br/">
-  <meta property="og:image" content="https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Garagem 016 – Oficina Mecânica em Ribeirão Preto">
-  <meta name="twitter:description" content="Troca de óleo, revisão e mecânica geral em Ribeirão Preto. Agende pelo WhatsApp.">
-  <meta name="twitter:image" content="https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png">
-  <!-- Organization structured data -->
+  <!-- ContactPoint + AutoRepair detailed schema for rich results -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Garagem 016",
-    "url":"https://garagem016.com.br/",
-    "logo":"https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Garagem 016",
+    "image": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+    "url": "https://garagem016.com.br/",
+    "logo": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+    "telephone": "+55-16-99239-1499",
+    "priceRange":"R$",
+    "address": {
+      "@type":"PostalAddress",
+      "streetAddress":"Rua dos Aliados, 581",
+      "addressLocality":"Ribeirão Preto",
+      "addressRegion":"SP",
+      "postalCode":"14080-570",
+      "addressCountry":"BR"
+    },
+    "geo": {"@type":"GeoCoordinates","latitude":-21.1505882,"longitude":-47.803875},
+    "openingHours": ["Mo-Fr 08:00-18:00","Sa 08:00-12:00"],
+    "contactPoint": [{
+      "@type":"ContactPoint",
+      "telephone":"+55-16-99239-1499",
+      "contactType":"customer service",
+      "areaServed":"BR",
+      "availableLanguage":["Portuguese","English"]
+    }],
     "sameAs":[
       "https://www.facebook.com/Garagem016Oficina",
       "https://www.instagram.com/garagem016oficinacta",
       "https://www.tiktok.com/@garagem016.oficinacta"
-    ]
+    ],
+    "makesOffer": {
+      "@type":"OfferCatalog",
+      "name":"Serviços automotivos",
+      "itemListElement":[
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Troca de Óleo"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Alinhamento e Balanceamento"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Suspensão e Freios"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Injeção Eletrônica"}}
+      ]
+    },
+    "aggregateRating": {
+      "@type":"AggregateRating",
+      "ratingValue":4.9,
+      "reviewCount":142
+    },
+    "potentialAction": {
+      "@type":"ReserveAction",
+      "target": {
+        "@type":"EntryPoint",
+        "urlTemplate":"https://wa.me/5516992391499?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento"
+      }
+    }
   }
   </script>
+  <style>
+    /* floating CTA (WhatsApp + call) */
+    .floating-cta{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:9999;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:flex-end;
+    }
+    .floating-cta a{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:#25D366;
+      color:#07202a;
+      padding:10px 14px;
+      border-radius:999px;
+      box-shadow:0 8px 28px rgba(37,211,102,0.14);
+      font-weight:700;
+      text-decoration:none;
+    }
+    .floating-cta a.phone{ background:#ff6b00; color:#071022; }
+    .floating-cta i{ font-size:1.1rem; }
+    @media (min-width:1200px){ .floating-cta{ right:40px; bottom:30px; } }
+  </style>
 </head>
 <body>
-  <a href="#services" class="skip-link">Pular para o conteúdo</a>
   <header class="hero">
     <div class="overlay">
       <!-- Mobile Nav Toggle -->
@@ -281,5 +328,15 @@
       }, true);
     })();
   </script>
+
+  <!-- Floating CTAs for immediate conversion -->
+  <div class="floating-cta" aria-hidden="false">
+    <a class="whatsapp" href="https://wa.me/5516992391499?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i> Chamar no WhatsApp
+    </a>
+    <a class="phone" href="tel:+5516992391499" aria-label="Ligar para Garagem 016">
+      <i class="fas fa-phone" aria-hidden="true"></i> +55 (16) 99239‑1499
+    </a>
+  </div>
 </body>
 </html>
