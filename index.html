@@ -12,9 +12,9 @@
   <!-- Performance: preconnect & preload critical assets (CSS loaded async below) -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="/imagens/oficina-fachada-exterior-ribeirao-preto.webp" as="image" fetchpriority="high">
-  <!-- load main CSS non-blocking -->
-  <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <!-- load main CSS non-blocking (versioned to bust cache after deploy) -->
+  <link rel="preload" href="css/style.css?v=20250902" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css?v=20250902"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -230,7 +230,7 @@
   </footer>
 
   <!-- defer JS to avoid render-blocking; main.js should be resilient to defer -->
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=20250902" defer></script>
   <!-- Ensure the promo link opens even if other scripts intercept clicks -->
   <script>
     (function(){
