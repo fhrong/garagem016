@@ -843,3 +843,34 @@ footer .footer-social a i {
     line-height: 1.02;
   }
 }
+
+/* Mobile / small tablet fixes to avoid header/icon overlap with the hamburger menu */
+@media (max-width: 768px) {
+  /* ensure the menu toggle stays above icons */
+  .nav-toggle-label { z-index: 1100; right: 1rem; top: 1rem; }
+
+  /* push overlay content down so icons/menu don't overlap */
+  .overlay {
+    padding-top: 4rem; /* reserve space for toggle + icons on small screens */
+  }
+
+  /* make social icons compact on small screens */
+  .social-top {
+    gap: 16px !important;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1050; /* below the toggle but above background */
+  }
+  .social-top a {
+    font-size: 1.8rem !important;
+    line-height: 1;
+    padding: 4px;
+  }
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 420px) {
+  .overlay { padding-top: 4.5rem; }
+  .social-top { gap: 12px; }
+  .social-top a { font-size: 1.6rem; }
+}
