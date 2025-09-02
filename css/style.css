@@ -788,3 +788,12 @@ footer .footer-social a i {
 }
 
 /* End of performance tweaks */
+@media (min-width: 769px) {
+  /* make social icons compact on desktop without touching mobile rules */
+  .social-top {
+    gap: 28px;            /* reduce the huge 100px gap on desktop */
+  }
+  .social-top a {
+    font-size: 1.6rem;    /* smaller icon size for desktop headers */
+  }
+}
