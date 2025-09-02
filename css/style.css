@@ -543,6 +543,25 @@ footer {
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
+
+  /* --- Desktop "zoom out" tweaks (only for >=769px) --- */
+  /* Scale down the hero overlay content so the page feels slightly "zoomed out" on desktop */
+  .overlay {
+    transform-origin: center top;
+    transform: scale(0.92);    /* ~8% smaller (visually similar to "zoom out 10%") */
+    transition: transform 180ms ease;
+  }
+
+  /* Compensate the hero container height so scaled overlay still fills the viewport */
+  .hero {
+    height: calc(100vh / 0.92); /* keeps visual fill after scaling */
+    overflow: visible;
+  }
+
+  /* Minor refinement so title spacing stays tidy after scale */
+  .hero-title {
+    line-height: 1.02;
+  }
 }
 
 /* Pricing strip — moved from index.html (compact, conversion-friendly) */
@@ -803,5 +822,24 @@ footer .footer-social a i {
   }
   .social-top a {
     font-size: 1.6rem;    /* smaller icon size for desktop headers */
+  }
+
+  /* --- Desktop "zoom out" tweaks (only for >=769px) --- */
+  /* Scale down the hero overlay content so the page feels slightly "zoomed out" on desktop */
+  .overlay {
+    transform-origin: center top;
+    transform: scale(0.92);    /* ~8% smaller (visually similar to "zoom out 10%") */
+    transition: transform 180ms ease;
+  }
+
+  /* Compensate the hero container height so scaled overlay still fills the viewport */
+  .hero {
+    height: calc(100vh / 0.92); /* keeps visual fill after scaling */
+    overflow: visible;
+  }
+
+  /* Minor refinement so title spacing stays tidy after scale */
+  .hero-title {
+    line-height: 1.02;
   }
 }
