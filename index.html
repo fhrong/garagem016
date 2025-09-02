@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Troca de óleo em Ribeirão Preto | Oficina Mecânica em Ribeirão Preto</title>
+  <title>Garagem016 | Oficina Mecânica & Centro Técnico Automotivo em Ribeirão Preto</title>
   <meta name="description" content="Troca de óleo rápida, revisão e mecânica geral em Ribeirão Preto. Agende seu atendimento agora pelo WhatsApp.">
   <meta name="keywords" content="troca de óleo Ribeirão Preto, mecânica Ribeirão Preto, revisão de carro, oficina automotiva Ribeirão Preto">
   <link rel="canonical" href="https://garagem016.com.br/" />
@@ -30,7 +30,7 @@
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "Garagem 016",
-    "image": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+    "logo": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua dos Aliados, 581",
@@ -122,36 +122,54 @@
   <section class="pricing urgent" aria-label="Valores Promocionais">
     <h3 class="pricing-title">Valores Promocionais <span class="promo-badge" aria-hidden="true">🔥 Oferta</span></h3>
     <div class="pricing-grid" role="list">
-      <div class="price-card" id="amorteceor" role="listitem">
+      <a class="price-card" id="amorteceor" role="listitem"
+         href="https://garagem016.com/promocao-amortecedor-59_90-reais-ribeirao-preto"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Amortecedor instalado — R$59,90 — abrir WhatsApp">
         <span class="label">Amortecedor — Instalado</span>
         <span class="amount">R$59,90</span>
-        <div class="note">Valor referente ao par </div>
-      </div>
-      <div class="price-card" role="listitem">
+        <div class="note">Valor referente ao par</div>
+      </a>
+
+      <a class="price-card" role="listitem"
+         href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Kit%20Embreagem%20R$390,00"
+         target="_blank" rel="noopener noreferrer" aria-label="Kit embreagem instalado — R$390,00 — abrir WhatsApp">
         <span class="label">Kit Embreagem — Instalado</span>
         <span class="amount">R$390,00</span>
         <div class="note">Valor do kit instalado</div>
-      </div>
-      <div class="price-card" role="listitem">
+      </a>
+
+      <a class="price-card" role="listitem"
+         href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Correia%20dentada%20R$159,90"
+         target="_blank" rel="noopener noreferrer" aria-label="Correia dentada instalada — R$159,90 — abrir WhatsApp">
         <span class="label">Correia dentada — Instalado</span>
         <span class="amount">R$159,90</span>
         <div class="note">Peça + instalação</div>
-      </div>
-      <div class="price-card" role="listitem">
+      </a>
+
+      <a class="price-card" role="listitem"
+         href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Óleo%20e%20Filtro%20R$149,90"
+         target="_blank" rel="noopener noreferrer" aria-label="Óleo e filtro — R$149,90 — abrir WhatsApp">
         <span class="label">Óleo e Filtro</span>
         <span class="amount">R$149,90</span>
         <div class="note">Troca de óleo + filtro</div>
-      </div>
-      <div class="price-card" role="listitem">
+      </a>
+
+      <a class="price-card" role="listitem"
+         href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Alinhamento%20R$49,90"
+         target="_blank" rel="noopener noreferrer" aria-label="Alinhamento — R$49,90 — abrir WhatsApp">
         <span class="label">Alinhamento</span>
         <span class="amount">R$49,90</span>
-        <div class="note">Alinhamento dos 4 pneus </div>
-      </div>
-      <div class="price-card" role="listitem">
+        <div class="note">Alinhamento dos 4 pneus</div>
+      </a>
+
+      <a class="price-card" role="listitem"
+         href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Balanceamento%20R$49,90"
+         target="_blank" rel="noopener noreferrer" aria-label="Balanceamento — R$49,90 — abrir WhatsApp">
         <span class="label">Balanceamento</span>
         <span class="amount">R$49,90</span>
-        <div class="note">Balanceamento dos 4 pneus </div>
-      </div>
+        <div class="note">Balanceamento dos 4 pneus</div>
+      </a>
     </div>
     <div class="pricing-cta">
       <a class="cta-small" href="https://wa.me/5516992391499?text=Olá!%20Vi%20os%20preços%20no%20site%20e%20gostaria%20de%20um%20orçamento.">Agende agora mesmo uma consulta ! </a>
@@ -213,5 +231,24 @@
 
   <!-- defer JS to avoid render-blocking; main.js should be resilient to defer -->
   <script src="js/main.js" defer></script>
+  <!-- Ensure the promo link opens even if other scripts intercept clicks -->
+  <script>
+    (function(){
+      const a = document.getElementById('amortecedorLink');
+      if (!a) return;
+      // use capture so this runs before most other handlers
+      a.addEventListener('click', function (ev) {
+        try {
+          // open in new tab (matches target="_blank")
+          window.open(a.href, '_blank', 'noopener');
+        } catch (e) {
+          // fallback to standard navigation
+          window.location.href = a.href;
+        }
+        ev.preventDefault();
+        ev.stopPropagation();
+      }, true);
+    })();
+  </script>
 </body>
 </html>
