@@ -218,12 +218,39 @@
 
   <!-- Floating CTAs for immediate conversion (same as homepage) -->
   <div class="floating-cta" aria-hidden="false">
-    <a class="whatsapp" href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Amortecedor%20R$59,90" target="_blank" rel="noopener noreferrer" aria-label="Reservar pelo WhatsApp">
-      <i class="fab fa-whatsapp" aria-hidden="true"></i> Reservar pelo WhatsApp
+    <a class="whatsapp" href="https://wa.me/5516992391499?text=Olá!%20Tenho%20interesse%20na%20promoção%20Amortecedor%20R$59,90" target="_blank" rel="noopener noreferrer" aria-label="Chamar pelo WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span class="label">Chamar pelo WhatsApp</span>
     </a>
     <a class="phone" href="tel:+5516992391499" aria-label="Ligar para Garagem 016">
-      <i class="fas fa-phone" aria-hidden="true"></i> +55 (16) 99239‑1499
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <span class="label">+55 (16) 99239‑1499</span>
     </a>
   </div>
+
+  <!-- Floating CTA behavior: same code as index (collapse on mobile, expand on tap) -->
+  <script>
+    (function(){
+      function isMobile(){ return window.matchMedia('(max-width:768px)').matches; }
+      const cta = document.querySelector('.floating-cta');
+      if (!cta) return;
+      function init(){
+        if (isMobile()) cta.classList.add('collapsed');
+        else cta.classList.remove('collapsed');
+      }
+      document.addEventListener('click', function(e){
+        if (!cta.contains(e.target)) return;
+        if (!isMobile()) return;
+        if (cta.classList.contains('collapsed')) {
+          cta.classList.remove('collapsed');
+          cta.classList.add('expanded');
+          clearTimeout(cta._collapseTimer);
+          cta._collapseTimer = setTimeout(()=>{ cta.classList.remove('expanded'); cta.classList.add('collapsed'); }, 6000);
+        }
+      }, true);
+      window.addEventListener('resize', init);
+      init();
+    })();
+  </script>
 </body>
 </html>

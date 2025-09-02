@@ -874,3 +874,102 @@ footer .footer-social a i {
   .social-top { gap: 12px; }
   .social-top a { font-size: 1.6rem; }
 }
+
+/* Floating CTA shared by homepage and promo pages */
+.floating-cta{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+.floating-cta a{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #07202a;
+  padding: 10px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.14);
+  font-weight: 700;
+  text-decoration: none;
+}
+.floating-cta a.phone { background: #ff6b00; color: #071022; }
+.floating-cta i { font-size: 1.1rem; }
+
+/* adjust placement on very large viewports */
+@media (min-width: 1200px) {
+  .floating-cta { right: 40px; bottom: 30px; }
+}
+
+/* ensure CTA does not block small-screen controls (if needed you can tweak) */
+@media (max-width: 420px) {
+  .floating-cta { right: 12px; bottom: 12px; gap: 8px; }
+  .floating-cta a { padding: 8px 10px; font-size: 0.95rem; }
+}
+
+/* Floating CTA: collapsed / expanded behavior (mobile-friendly) */
+.floating-cta {
+  transition: transform 200ms ease, opacity 200ms ease;
+  pointer-events: auto;
+}
+/* wrapper keeps original layout on desktop; on mobile we collapse */
+.floating-cta.collapsed a {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  justify-content: center;
+  overflow: hidden;
+}
+.floating-cta.collapsed a .label {
+  display: none;
+}
+.floating-cta a .label {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: opacity, transform;
+}
+
+/* subtle transition for labels */
+.floating-cta a .label {
+  transition: opacity 180ms ease, transform 180ms ease;
+  opacity: 1;
+}
+.floating-cta.collapsed a .label {
+  opacity: 0;
+  transform: translateX(6px);
+}
+
+/* compact icon-only buttons look */
+.floating-cta.collapsed a i {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* expanded state (temporary on mobile) */
+.floating-cta.expanded a {
+  min-width: 160px;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+.floating-cta.expanded a .label { display: inline-block; opacity: 1; transform: none; }
+
+/* ensure spacing & z-index safe for small screens */
+@media (max-width: 768px) {
+  .floating-cta { right: 12px; bottom: 12px; gap: 8px; }
+  .floating-cta a { font-size: 0.95rem; padding: 8px 10px; }
+  .floating-cta.collapsed a { width: 44px; height: 44px; padding: 0; }
+  .floating-cta.collapsed a i { font-size: 1.1rem; }
+}
+
+/* preserve desktop expanded appearance */
+@media (min-width: 769px) {
+  .floating-cta { right: 40px; bottom: 30px; }
+  .floating-cta.collapsed { /* do not collapse on desktop */ }
+  .floating-cta a { min-width: 160px; padding: 10px 14px; border-radius: 999px; }
+}
