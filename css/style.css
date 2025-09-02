@@ -157,11 +157,19 @@ transform: scale(1.05);
 }
 
 .hero-title {
-font-family: 'ArtegraSans';
-font-size: 3.5rem;
-color: var(--primary-color);
-margin-bottom: 1rem;
-text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  /* use the custom font if available, but fall back to robust system fonts */
+  font-family: 'ArtegraSans', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;                 /* explicit weight to avoid different defaults */
+  /* clamp prevents the title from becoming too large on some setups */
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  line-height: 1.03;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  /* avoid extremely long words forcing odd breaks */
+  max-width: 1100px;
+  word-break: normal;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 .hero-subtitle {
