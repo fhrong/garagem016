@@ -12,33 +12,33 @@
 @font-face {
   font-family: 'ArtegraSans';
   src: url('/fonts/artegra-sans-font-artegra.woff2') format('woff2'),
-       url('/fonts/artegra-sans-font-artegra.woff') format('woff');
+    url('/fonts/artegra-sans-font-artegra.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
-html, body {
+html,
+body {
   box-sizing: border-box;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
-/* Ensure all elements inherit box-sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
-  margin: 0;
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   background-color: #111;
   color: #f5f5f5;
   line-height: 1.6;
 }
 
-/* Accessibility */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -106,7 +106,394 @@ body {
   color: var(--primary-color);
 }
 
-/* Responsive Navigation */
+/* Hero Section */
+header.hero {
+  position: relative;
+  height: 92vh;
+  background: url('/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo{
+  scale: 1.6;
+}
+
+.hero-logo:hover {
+  transform: scale(1.3);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  max-width: 720px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.price-badge {
+  display: inline-block;
+  background: radial-gradient(circle at 30% 30%, #ff9900, #ff6600);
+  color: #111;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 28px 36px;
+  border-radius: 50%;
+  animation: pulse 1.8s infinite;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+}
+
+.promo-badge {
+  background: #ff4500;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 15px rgba(255, 102, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 102, 0, 0);
+  }
+}
+
+.cta,
+.cta-buttons .cta {
+  display: inline-block;
+  padding: 15px 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff6600, #ffaa00);
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
+  animation: cta-gloom 1.6s infinite ease-in-out;
+}
+
+.cta:hover,
+.cta-buttons .cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.7);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+/* Benefits/Services Section */
+section.services {
+  padding: 60px 20px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+section.services h2 {
+  color: #ff6600;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.benefit-card {
+  background: #222 url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-size: cover;
+  padding: 28px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.benefit-card i {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ff6600;
+}
+
+.benefit-card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: #ff6600;
+}
+
+/* Final CTA Section */
+section.cta-final {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #111, #1a1a1a 40%, #ff6600 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.cta-final h2 {
+  color: #fff200;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cta-final p {
+  color: #fff;
+  margin-bottom: 22px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.price-disclaimer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff200;
+  margin-bottom: 12px;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background: #181818;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #ff6600;
+  margin-bottom: 30px;
+  font-size: 1.7rem;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.testimonial {
+  background: #232323;
+  border-radius: 10px;
+  padding: 22px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-width: 340px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  color: #ff6600;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer a {
+  color: #ff6600;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  color: #ffaa00;
+  transform: scale(1.2);
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cta-gloom {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.07);
+    box-shadow: 0 8px 28px rgba(255, 102, 0, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px var(--shadow-color);
+  display: none;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: var(--cta-hover-color);
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: var(--text-color);
+}
+
+.dark-mode .main-nav {
+  background: rgba(20, 20, 20, 0.85);
+}
+
+.dark-mode .benefit-card {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container,
+section,
+.hero-content,
+.main-nav,
+.cta-buttons {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: flex;
@@ -138,17 +525,105 @@ body {
     animation: dropdownFadeIn 0.25s;
   }
   @keyframes dropdownFadeIn {
-    from { opacity: 0; transform: translateY(-10px);}
-    to { opacity: 1; transform: translateY(0);}
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .social-top {
     margin-bottom: 2.5rem;
+  }
+  .overlay {
+    padding-top: 1.6rem;
+    padding-bottom: 2rem;
+  }
+  .hero-content {
+    padding: 0.75rem 1rem;
+    max-height: none;
+  }
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    z-index: 10002;
+  }
+  .hero .cta,
+  .cta-buttons .cta {
+    width: clamp(220px, 80%, 420px);
+    padding: 10px 18px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10003;
+  }
+  .promo-badge {
+    margin-bottom: 8px;
+  }
+  .hero {
+    min-height: calc(100vh - 76px);
+  }
+}
+
+@media (min-width: 769px) {
+  .main-nav {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .overlay {
+    align-items: center;
+  }
+  .social-top {
+    margin: 0 0 1.5rem;
+  }
+  .floating-cta {
+    right: 40px;
+    bottom: 30px;
+  }
+  .floating-cta a {
+    min-width: 180px !important;
+    padding: 12px 18px !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+  }
+  .floating-cta a .label {
+    font-size: 1rem !important;
+    display: inline-block !important;
+  }
+  .floating-cta i {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 15px; /* Slightly reduce base font size for better fit */
+    font-size: 15px;
   }
   body {
     padding: 0 !important;
@@ -189,550 +664,18 @@ body {
   }
 }
 
-/* Larger screens nav */
-@media (min-width: 769px) {
-  .main-nav {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-bottom: 1.5rem;
-    background: rgba(0,0,0,0.6);
-    padding: 0.5rem 2.5rem;
-    border-radius: 2rem;
-    box-shadow: 0 4px 12px var(--shadow-color);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-  }
+@media (max-width: 420px) {
   .overlay {
-    align-items: center;
+    padding-top: 1.2rem;
+    padding-bottom: 2.4rem;
   }
-  .social-top {
-    margin: 0 0 1.5rem;
-  }
-  /* force identical desktop appearance for promo page CTA */
-  .floating-cta {
-    right: 40px;
-    bottom: 30px;
-  }
-  .floating-cta a {
-    min-width: 180px !important;
-    padding: 12px 18px !important;
-    font-size: 1rem !important;
-    line-height: 1 !important;
-  }
-  .floating-cta a .label {
-    font-size: 1rem !important;
-    display: inline-block !important;
-  }
-  .floating-cta i {
-    font-size: 1.2rem !important;
-  }
-}
-
-/* ===== HERO ===== */
-header.hero {
-  position: relative;
-  height: 92vh;
-  background: url('/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero-content {
-  position: relative;
-  text-align: center;
-  z-index: 2;
-  max-width: 720px;
-  padding: 0 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-.hero-title {
-  font-size: 2.2rem; /* Reduced from 3rem */
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #fff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-}
-.hero-subtitle {
-  font-size: 1.1rem; /* Reduced from 1.4rem */
-  margin-bottom: 25px;
-  color: #fff;
-}
-.price-badge {
-  display: inline-block;
-  background: radial-gradient(circle at 30% 30%, #ff9900, #ff6600);
-  color: #111;
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding: 28px 36px;
-  border-radius: 50%;
-  animation: pulse 1.8s infinite;
-  margin-bottom: 25px;
-  box-shadow: 0 6px 20px rgba(255,102,0,0.6);
-}
-
-.promo-badge {
-  background: #ff4500;
-  color: #fff;
-  font-weight: bold;
-  padding: 6px 14px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.7); }
-  70% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(255, 102, 0, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 102, 0, 0); }
-}
-.cta {
-  display: inline-block;
-  padding: 15px 32px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 50px;
-  background: linear-gradient(90deg, #ff6600, #ffaa00);
-  color: #111;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
-  animation: cta-gloom 1.6s infinite ease-in-out;
-}
-
-/* ===== BOTÕES CTA ===== */
-.cta,
-.cta-buttons .cta {
-  display: inline-block;
-  padding: 15px 32px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 50px;
-  background: linear-gradient(90deg, #ff6600, #ffaa00);
-  color: #111;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
-  animation: cta-gloom 1.6s infinite ease-in-out;
-}
-
-.cta:hover,
-.cta-buttons .cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.7);
-}
-
-/* ===== ÍCONES SOCIAL ===== */
-footer a {
-  color: #ff6600;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-footer a:hover {
-  color: #ffaa00;
-  transform: scale(1.2);
-}
-
-.cta-buttons .cta {
-  background: linear-gradient(90deg, #ff6600, #ffaa00);
-  color: #111;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
-  transition: transform 0.2s ease;
-  animation: cta-gloom 1.6s infinite ease-in-out;
-}
-.cta-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 25px;
-  flex-wrap: wrap;
-}
-
-/* ===== BENEFÍCIOS ===== */
-section.services {
-  padding: 60px 20px;
-  background: #1a1a1a;
-  text-align: center;
-}
-section.services h2 {
-  color: #ff6600;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-@media (min-width: 600px) {
-  .benefits {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-.benefits {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 22px;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 10px;
-}
-
-.benefit-card {
-  background: #222 url('https://www.transparenttextures.com/patterns/asfalt-light.png');
-  background-size: cover;
-  padding: 28px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  word-break: break-word;
-}
-
-.benefit-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-}
-.benefit-card i {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #ff6600;
-}
-.benefit-card h3 {
-  margin: 10px 0;
-  font-size: 1.3rem;
-  color: #ff6600;
-}
-
-/* ===== CTA FINAL ===== */
-section.cta-final {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #111, #1a1a1a 40%, #ff6600 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  min-height: 70vh; /* Add this line to make the section bigger */
-  justify-content: center; /* Vertically center content */
-}
-.cta-final h2 {
-  color: #fff200;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  text-align: center;
-}
-.cta-final p {
-  color: #fff;
-  margin-bottom: 22px;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-footer {
-  background: #000;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #aaa;
-}
-footer a {
-  color: #ff6600;
-  margin: 0 10px;
-  font-size: 1.3rem;
-}
-
-.price-disclaimer {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff200;
-  margin-bottom: 12px;
-}
-
-.footer-social {
-  margin-top: 10px;
-}
-
-/* ===== TESTEMUNHOS ===== */
-.testimonials {
-  background: #181818;
-  padding: 50px 20px;
-  text-align: center;
-}
-.testimonials h2 {
-  color: #ff6600;
-  margin-bottom: 30px;
-  font-size: 1.7rem;
-}
-.testimonial-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 22px;
-}
-.testimonial {
-  background: #232323;
-  border-radius: 10px;
-  padding: 22px 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  max-width: 340px;
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-.testimonial span {
-  display: block;
-  margin-top: 10px;
-  color: #ff6600;
-  font-size: 1.1rem;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-/* Scroll to top button */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 0.75rem 1rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 16px var(--shadow-color);
-  display: none;
-  z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-#scrollTopBtn:hover {
-  background-color: var(--cta-hover-color);
-}
-
-/* Utility for hiding elements */
-.hidden {
-  display: none !important;
-}
-
-/* Image responsiveness */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  color: var(--text-color);
-}
-
-table th,
-table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #444;
-  text-align: left;
-}
-
-table th {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-/* Dark mode toggle */
-.dark-mode {
-  background-color: #121212;
-  color: var(--text-color);
-}
-
-.dark-mode .main-nav {
-  background: rgba(20, 20, 20, 0.85);
-}
-
-.dark-mode .benefit-card {
-  background-color: #222;
-  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.5);
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Only one @keyframes cta-gloom block */
-@keyframes cta-gloom {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
-  }
-  50% {
-    transform: scale(1.07);
-    box-shadow: 0 8px 28px rgba(255, 102, 0, 0.7);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
-  }
-}
-
-.cta-buttons .cta {
-  animation: cta-gloom 1.6s infinite ease-in-out;
-}
-
-table {
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  color: var(--text-color);
-}
-
-table th,
-table td {
-  padding: 0.75rem 1rem;
-  border: 1px solid #444;
-  text-align: left;
-}
-
-table th {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-/* Dark mode toggle */
-.dark-mode {
-  background-color: #121212;
-  color: var(--text-color);
-}
-
-.dark-mode .main-nav {
-  background: rgba(20, 20, 20, 0.85);
-}
-
-.dark-mode .benefit-card {
-  background-color: #222;
-  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.5);
-}
-html {
-  scroll-behavior: smooth;
-}
-
-body, html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* * {
-  outline: 1px solid red;
-} */
-
-.container, section, .hero-content, .main-nav, .cta-buttons {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Fix hero CTA visibility & responsivity on small screens */
-@media (max-width: 768px) {
-  /* reduce top padding so content isn't pushed below the fold */
-  .overlay {
-    padding-top: 1.6rem; /* antes era maior — reduz para caber o botão */
-    padding-bottom: 2rem;
-  }
-
-  /* ensure hero content can grow and buttons stack nicely */
-  .hero-content {
-    padding: 0.75rem 1rem;
-    max-height: none;
-  }
-
-  .cta-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
-    z-index: 10002; /* acima do overlay, acima do CTA flutuante */
-  }
-
-  /* responsive CTA width/size so it always shows on small screens */
   .hero .cta,
   .cta-buttons .cta {
-    width: clamp(220px, 80%, 420px);
-    padding: 10px 18px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 10003; /* garante que a CTA do hero fique acima do floating CTA */
-  }
-
-  .promo-badge {
-    margin-bottom: 8px;
-  }
-
-  /* avoid the floating CTA overlapping the hero CTA on very small screens:
-     reduce hero viewport height a little so hero can scroll above the floating CTA */
-  .hero {
-    min-height: calc(100vh - 76px);
-  }
-}
-
-/* extra safeguard for very small devices */
-@media (max-width: 420px) {
-  .overlay { padding-top: 1.2rem; padding-bottom: 2.4rem; }
-  .hero .cta, .cta-buttons .cta {
     width: calc(100% - 32px);
     padding: 10px 14px;
     font-size: 0.98rem;
   }
-  /* small extra bottom spacing so CTA isn't visually blocked when keyboard shows */
-  .hero { min-height: calc(100vh - 90px); }
+  .hero {
+    min-height: calc(100vh - 90px);
+  }
 }

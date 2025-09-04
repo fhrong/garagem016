@@ -1,91 +1,692 @@
 :root {
---primary-color: #ff6600;
---secondary-color: #f5f5f5;
---background-color: #111;
---text-color: #fff;
---text-dark: #222;
---link-color: #ff6600;
---cta-hover-color: #e65700;
---shadow-color: rgba(0, 0, 0, 0.3);
+  --primary-color: #ff6600;
+  --secondary-color: #f5f5f5;
+  --background-color: #111;
+  --text-color: #fff;
+  --text-dark: #222;
+  --link-color: #ff6600;
+  --cta-hover-color: #e65700;
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 @font-face {
-font-family: 'ArtegraSans';
-src: url('/fonts/artegra-sans-font-artegra.woff2') format('woff2'),
+  font-family: 'ArtegraSans';
+  src: url('/fonts/artegra-sans-font-artegra.woff2') format('woff2'),
     url('/fonts/artegra-sans-font-artegra.woff') format('woff');
-font-weight: normal;
-font-style: normal;
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
-font-display: swap;
 }
 
 body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background-color: var(--background-color);
-color: var(--text-color);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .nav-toggle {
-display: none;
+  display: none;
 }
 
 .nav-toggle-label {
-position: absolute;
-top: 1.5rem;
-right: 1.5rem;
-display: none;
-flex-direction: column;
-justify-content: space-between;
-width: 2rem;
-height: 1.5rem;
-cursor: pointer;
-z-index: 1000;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .nav-toggle-label span {
-display: block;
-height: 3px;
-background: var(--text-color);
-border-radius: 2px;
+  display: block;
+  height: 3px;
+  background: var(--text-color);
+  border-radius: 2px;
 }
 
 .main-nav {
-position: absolute;
-top: 1.5rem;
-left: 50%;
-transform: translateX(-50%);
-background: rgba(0, 0, 0, 0.6);
-padding: 0.5rem 1rem;
-border-radius: 2rem;
-box-shadow: 0 4px 12px var(--shadow-color);
-z-index: 500;
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 500;
 }
 
 .main-nav ul {
-list-style: none;
-display: flex;
-gap: 2rem;
-margin: 0;
-padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
-color: var(--text-color);
-text-decoration: none;
-font-weight: 600;
-transition: color 0.2s;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
 }
 
 .main-nav a:hover {
-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-@media (max-width: 768px) {
-.nav-toggle-label {
-    display: flex;
+.hero {
+  background: url('/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
+  contain: paint;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--text-color);
 }
-    .main-nav {
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-logo {
+  max-width: clamp(160px, 20vw, 280px);
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.hero-logo{
+  scale: 1.6;
+}
+
+.hero-logo:hover {
+  transform: scale(1.3);
+}
+
+.hero-title {
+  font-family: 'ArtegraSans', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  line-height: 1.03;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  max-width: 1100px;
+  word-break: normal;
+  white-space: normal;
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 1rem;
+}
+
+.cta {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.cta:hover {
+  background-color: var(--cta-hover-color);
+  transform: scale(1.05);
+}
+
+.services {
+  background-color: #222;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.services h2 {
+  color: var(--primary-color);
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.gallery {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 480px;
+}
+
+.gallery-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1);
+  opacity: 1;
+  z-index: 1;
+}
+
+.gallery-overlay {
+  position: relative;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  margin: 2rem auto;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-indicators button {
+  width: 14px;
+  height: 14px;
+  background: #0f0909;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  opacity: 0.7;
+  outline: none;
+}
+
+.carousel-indicators button.active,
+.carousel-indicators button:focus {
+  background: var(--primary-color);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.carousel-indicators button:focus {
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.services-gallery {
+  background: #f7f7f7;
+  padding: 40px 0 30px 0;
+  text-align: center;
+  color: #000;
+  content-visibility: auto;
+  contain-intrinsic-size: 480px;
+}
+
+.services-gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.services-illustration-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 18px 18px 10px 18px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+}
+
+.service-item img {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.service-item h3 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 600;
+}
+
+.cta-final {
+  background: linear-gradient(90deg, #111 0%, var(--primary-color) 100%);
+  color: var(--text-color);
+  padding: 48px 0 36px 0;
+  text-align: center;
+  margin-top: 0;
+}
+
+.cta-final-content {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.cta-final h2 {
+  font-size: 2.0rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--primary-color);
+}
+
+.cta-final p {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  color: var(--text-color);
+}
+
+.cta-urgency {
+  display: block;
+  font-size: 1.05rem;
+  color: #fff200;
+  font-weight: 600;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+}
+
+.cta-final .cta.highlight {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.18rem;
+  padding: 16px 38px;
+  border-radius: 32px;
+  margin: 12px 0 8px 0;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--primary-color);
+}
+
+.cta-final .cta.highlight:hover {
+  background: #fff;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transform: scale(1.04);
+}
+
+.cta-secure {
+  font-size: 0.98rem;
+  color: var(--text-color);
+  margin-top: 6px;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 1rem 0;
+  color: #888;
+}
+
+.social-top {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.social-top a {
+  color: var(--text-color);
+  font-size: 2.6rem;
+  transition: color 0.3s;
+}
+
+.social-top a:hover {
+  color: var(--primary-color);
+}
+
+/* Pricing strip */
+.pricing {
+  margin: 18px 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  content-visibility: auto;
+  contain-intrinsic-size: 480px;
+}
+
+.pricing h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.price-card {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #e6eef6;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.price-card:hover,
+.price-card:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(255, 107, 0, 0.06);
+  outline: none;
+}
+
+.price-card:focus-visible {
+  outline: 3px solid rgba(255, 107, 0, 0.18);
+  outline-offset: 4px;
+}
+
+.price-card .label {
+  color: var(--muted, #9aa4b2);
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.price-card .label:hover,
+.price-card .label:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  outline: none;
+}
+
+.price-card .amount {
+  color: #65ff18;
+  font-weight: 800;
+  font-size: 18px;
+  display: inline-block;
+  animation: pricePulse 2.2s ease-in-out infinite;
+  will-change: transform, text-shadow;
+  transition: transform 0.2s;
+}
+
+.price-card:hover .amount {
+  transform: scale(1.08);
+  text-shadow: 0 10px 28px rgba(255, 107, 0, 0.22);
+}
+
+.price-card .note {
+  font-size: 12px;
+  color: rgb(255, 48, 238);
+  margin-top: 6px;
+}
+
+.pricing-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.pricing-cta .cta-small {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #ff6b00;
+  color: #071022;
+  font-weight: 700;
+}
+
+/* Amortecedor price card */
+#amorteceor {
+  background: linear-gradient(180deg, rgba(255, 107, 0, 0.04), rgba(255, 107, 0, 0.02));
+  border: 1px solid rgba(255, 107, 0, 0.12);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.06);
+  transform-origin: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+#amorteceor:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(255, 107, 0, 0.12);
+}
+
+#amorteceor .amount {
+  color: #296a00;
+  background: linear-gradient(90deg, #43ff3d, #ffaa34);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 900;
+  display: inline-block;
+  animation: amortPulse 2s ease-in-out infinite;
+}
+
+@keyframes amortPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(255, 107, 0, 0));
+  }
+  50% {
+    transform: scale(1.06);
+    filter: drop-shadow(0 12px 24px rgba(255, 107, 0, 0.12));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(255, 107, 0, 0));
+  }
+}
+
+footer .footer-social a {
+  color: #ff6b00;
+  transition: color 0.18s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer-social a:hover {
+  color: #c95400;
+}
+
+footer .footer-social a i {
+  font-size: 1.05rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.pricing.urgent .pricing-title {
+  color: var(--accent);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.4px;
+}
+
+.promo-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(255, 107, 0, 0.12), rgba(255, 154, 60, 0.08));
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(255, 107, 0, 0.06);
+  transform-origin: center;
+}
+
+@keyframes pricePulse {
+  0% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(1.06);
+    text-shadow: 0 8px 24px rgba(255, 107, 0, 0.18);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: none;
+  }
+}
+
+.floating-cta {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  transition: transform 200ms ease, opacity 200ms ease;
+  pointer-events: auto;
+}
+
+.floating-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #07202a;
+  padding: 10px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.14);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.floating-cta a.phone {
+  background: #ff6b00;
+  color: #071022;
+}
+
+.floating-cta i {
+  font-size: 1.1rem;
+}
+
+.floating-cta.collapsed a {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.floating-cta.collapsed a .label {
+  display: none;
+}
+
+.floating-cta a .label {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: opacity, transform;
+  transition: opacity 180ms ease, transform 180ms ease;
+  opacity: 1;
+}
+
+.floating-cta.collapsed a .label {
+  opacity: 0;
+  transform: translateX(6px);
+}
+
+.floating-cta.collapsed a i {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.floating-cta.expanded a {
+  min-width: 160px;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.floating-cta.expanded a .label {
+  display: inline-block;
+  opacity: 1;
+  transform: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: flex;
+    z-index: 1100;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .main-nav {
     position: absolute;
     top: 4.5rem;
     right: 1.5rem;
@@ -102,421 +703,79 @@ color: var(--primary-color);
     z-index: 999;
     display: none;
     box-shadow: 0 4px 16px var(--shadow-color);
-    }
-    .main-nav ul {
+  }
+
+  .main-nav ul {
     flex-direction: column;
     gap: 1rem;
-    }
-    .nav-toggle:checked + .nav-toggle-label + .main-nav {
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .main-nav {
     display: block;
     animation: dropdownFadeIn 0.25s;
+  }
+
+  @keyframes dropdownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
     }
-    @keyframes dropdownFadeIn {
-    from { opacity: 0; transform: translateY(-10px);}
-    to { opacity: 1; transform: translateY(0);}
-    }
-    .social-top {
-    margin-bottom: 2.5rem;
-    }
-}
-
-.hero {
-background: url('/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
-contain: paint;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-color: var(--text-color);
-}
-
-.overlay {
-position: absolute;
-inset: 0;
-background-color: rgba(0, 0, 0, 0.75);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: 2rem;
-}
-
-.hero-logo {
-max-width: 180px;
-height: auto;
-margin-bottom: 1.5rem;
-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
-transition: transform 0.3s ease;
-}
-
-.hero-logo:hover {
-transform: scale(1.05);
-}
-
-.hero-title {
-  /* use the custom font if available, but fall back to robust system fonts */
-  font-family: 'ArtegraSans', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 800;                 /* explicit weight to avoid different defaults */
-  /* clamp prevents the title from becoming too large on some setups */
-  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
-  line-height: 1.03;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
-  /* avoid extremely long words forcing odd breaks */
-  max-width: 1100px;
-  word-break: normal;
-  white-space: normal;
-  text-wrap: balance;
-}
-
-.hero-subtitle {
-font-size: 1.5rem;
-font-weight: 400;
-color: var(--secondary-color);
-margin-bottom: 2rem;
-line-height: 1.4;
-}
-
-.hero-content {
-max-width: 720px;
-padding: 1rem;
-}
-
-.cta {
-background-color: var(--primary-color);
-color: var(--text-color);
-padding: 1rem 2rem;
-font-size: 1.1rem;
-font-weight: bold;
-border-radius: 2rem;
-text-decoration: none;
-transition: background 0.3s ease, transform 0.2s ease;
-display: inline-block;
-box-shadow: 0 4px 16px var(--shadow-color);
-}
-
-.cta:hover {
-background-color: var(--cta-hover-color);
-transform: scale(1.05);
-}
-
-.services {
-background-color: #222;
-padding: 3rem 1rem;
-text-align: center;
-}
-
-.services h2 {
-color: var(--primary-color);
-}
-
-.services ul {
-list-style: none;
-padding: 0;
-}
-
-.services li {
-margin: 0.5rem 0;
-font-size: 1.1rem;
-}
-
-.gallery {
-    position: relative;
-    min-height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.gallery-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
-    opacity: 1;
-    z-index: 1;
-}
-
-.gallery-overlay {
-    position: relative;
-    background: rgba(0,0,0,0.55);
-    padding: 1.5rem 1rem;
-    border-radius: 1rem;
-    text-align: center;
-    width: 90%;
-    max-width: 420px;
-    margin: 2rem auto;
-    z-index: 2;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 0.7rem;
-    margin-top: 1.5rem;
-}
-
-.carousel-indicators button {
-    width: 14px;
-    height: 14px;
-    background: #0f0909;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    opacity: 0.7;
-    outline: none;
-}
-
-.carousel-indicators button.active,
-.carousel-indicators button:focus {
-    background: var(--primary-color);
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.carousel-indicators button:focus {
-    box-shadow: 0 0 0 2px var(--primary-color);
-}
-
-.services-gallery {
-    background: #f7f7f7;
-    padding: 40px 0 30px 0;
-    text-align: center;
-    color: #000;
-}
-
-.services-gallery h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    color: var(--text-dark);
-}
-
-.services-illustration-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.service-item {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    padding: 18px 18px 10px 18px;
-    width: 240px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.service-item:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
-}
-
-.service-item img {
-    aspect-ratio: 16 / 10; /* matches the visual size used (240x150 -> 1.6) */
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-}
-
-.service-item h3 {
-    font-size: 1.1rem;
-    color: #1a1a1a;
-    margin: 0;
-    font-weight: 600;
-}
-
-.cta-final {
-    background: linear-gradient(90deg, #111 0%, var(--primary-color) 100%);
-    color: var(--text-color);
-    padding: 48px 0 36px 0;
-    text-align: center;
-    margin-top: 0;
-}
-
-.cta-final-content {
-    max-width: 540px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-.cta-final h2 {
-    font-size: 2.0rem;
-    margin-bottom: 18px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: var(--primary-color);
-}
-
-.cta-final p {
-    font-size: 1.15rem;
-    margin-bottom: 18px;
-    color: var(--text-color);
-}
-
-.cta-urgency {
-    display: block;
-    font-size: 1.05rem;
-    color: #fff200;
-    font-weight: 600;
-    margin-top: 8px;
-    letter-spacing: 0.5px;
-}
-
-.cta-final .cta.highlight {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--text-color);
-    font-weight: 700;
-    font-size: 1.18rem;
-    padding: 16px 38px;
-    border-radius: 32px;
-    margin: 12px 0 8px 0;
-    text-decoration: none;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    letter-spacing: 0.5px;
-    border: 2px solid var(--primary-color);
-}
-
-.cta-final .cta.highlight:hover {
-    background: #fff;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    transform: scale(1.04);
-}
-
-.cta-secure {
-    font-size: 0.98rem;
-    color: var(--text-color);
-    margin-top: 6px;
-}
-
-footer {
-    background-color: #000;
-    text-align: center;
-    padding: 1rem 0;
-    color: #888;
-}
-
-@media (max-width: 768px) {
-    .hero-title {
-    font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-    font-size: 1.1rem;
-    }
-
-    .cta {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    }
-}
-
-  @media (max-width: 480px) {
-    .hero-title {
-      font-size: 2rem;
-    }
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-    .cta {
-      font-size: 1rem;
-      padding: 0.75rem 1.5rem;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
-@media (max-width: 480px) {
-    .hero-title {
-    font-size: 2rem;
-    }
-
-    .hero-subtitle {
-    font-size: 1rem;
-    }
-
-    .cta {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    }
-
-    .service-item img {
-    width: 100%;
-    height: auto;
-    }
-}
-
-.social-top {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-bottom: 1.5rem;
-}
-
-.social-top a {
-    color: var(--text-color);
-    font-size: 2.6rem;
-    transition: color 0.3s;
-}
-
-.social-top a:hover {
-    color: var(--primary-color);
-}
-
-@media (max-width: 480px) {
-  .overlay {
-    padding: 1rem 0.5rem;
-  }
-  .main-nav {
-    width: 100vw;
-    max-width: none;
-    left: 0;
-    right: 0;
-    transform: none;
-    border-radius: 0;
-    padding: 0.5rem 0.5rem;
-    margin-bottom: 1rem;
-  }
-  .main-nav ul {
-    gap: 0.5rem;
-  }
   .social-top {
-    flex-direction: row;
-    gap: 24px;
-    margin-bottom: 1.2rem;
-    margin-top: 0.5rem;
-  }
-  .social-top a {
-    font-size: 2rem;
-  }
-  .hero-logo {
-    max-width: 120px;
+    margin-bottom: 2.5rem;
+    gap: 16px !important;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1050;
   }
+
+  .social-top a {
+    font-size: 1.8rem !important;
+    line-height: 1;
+    padding: 4px;
+  }
+
+  .overlay {
+    padding-top: 4rem;
+  }
+
   .hero-title {
-    font-size: 1.3rem;
+    font-size: 2.5rem;
   }
+
   .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .floating-cta {
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .floating-cta a {
     font-size: 0.95rem;
+    padding: 8px 10px;
+  }
+
+  .floating-cta.collapsed a {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+
+  .floating-cta.collapsed a i {
+    font-size: 1.1rem;
   }
 }
 
@@ -527,7 +786,7 @@ footer {
     left: auto;
     transform: none;
     margin-bottom: 1.5rem;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: 0.5rem 2.5rem;
     border-radius: 2rem;
     box-shadow: 0 4px 12px var(--shadow-color);
@@ -535,433 +794,188 @@ footer {
     display: flex;
     justify-content: center;
   }
+
   .overlay {
     align-items: center;
+    transform-origin: center top;
+    transform: scale(0.92);
+    transition: transform 180ms ease;
   }
+
+  .hero {
+    height: calc(100vh / 0.92);
+    overflow: visible;
+  }
+
+  .hero-title {
+    line-height: 1.02;
+  }
+
   .social-top {
     margin: 0 0 1.5rem;
   }
 
-  /* --- Desktop "zoom out" tweaks (only for >=769px) --- */
-  /* Scale down the hero overlay content so the page feels slightly "zoomed out" on desktop */
-  .overlay {
-    transform-origin: center top;
-    transform: scale(0.92);    /* ~8% smaller (visually similar to "zoom out 10%") */
-    transition: transform 180ms ease;
-  }
-
-  /* Compensate the hero container height so scaled overlay still fills the viewport */
-  .hero {
-    height: calc(100vh / 0.92); /* keeps visual fill after scaling */
-    overflow: visible;
-  }
-
-  /* Minor refinement so title spacing stays tidy after scale */
-  .hero-title {
-    line-height: 1.02;
-  }
-}
-
-/* Pricing strip — moved from index.html (compact, conversion-friendly) */
-.pricing {
-  margin: 18px 0;
-  padding: 14px;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-.pricing h3 { margin: 0 0 8px 0; font-size:18px; color:#fff; }
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
-}
-.price-card {
-  background: rgba(255,255,255,0.02);
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  color: #e6eef6;
-  font-size: 14px;
-  display: block;              /* anchor behaves like a card */
-  text-decoration: none;       /* remove underline */
-  cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-/* hover/focus for the whole card (keeps previous visual behavior) */
-.price-card:hover,
-.price-card:focus {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 18px 36px rgba(255,107,0,0.06);
-  outline: none;
-}
-
-/* accessible focus ring for keyboard users */
-.price-card:focus-visible {
-  outline: 3px solid rgba(255,107,0,0.18);
-  outline-offset: 4px;
-}
-
-/* inner label remains a span but keep same styles */
-.price-card .label {
-  color: var(--muted, #9aa4b2);
-  display:block;
-  margin-bottom:6px;
-  font-weight:600;
-}
-
-/* ensure .amount and .note styling still apply (no change required) */
-
-/* ...existing code... */
-#amortecedor{
-  color: #000;
-}
-
-/* Styles specific to the Amortecedor price card (id="#amorteceor") */
-#amorteceor {
-  /* visual do card */
-  background: linear-gradient(180deg, rgba(255,107,0,0.04), rgba(255,107,0,0.02));
-  border: 1px solid rgba(255,107,0,0.12);
-  box-shadow: 0 10px 30px rgba(255,107,0,0.06);
-  transform-origin: center;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-}
-
-/* aumentar ligeiramente ao passar o mouse */
-#amorteceor:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 18px 36px rgba(255,107,0,0.12);
-}
-
-/* alvo específico do valor dentro do card */
-#amorteceor .amount {
-  color: #296a00; /* sobrescreve a cor padrão se quiser */
-  background: linear-gradient(90deg,#43ff3d,#ffaa34);
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-weight:900;
-  display:inline-block;
-  /* animação de pulso discreta */
-  animation: amortPulse 2s ease-in-out infinite;
-}
-
-/* keyframes da animação */
-@keyframes amortPulse {
-  0%   { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255,107,0,0)); }
-  50%  { transform: scale(1.06); filter: drop-shadow(0 12px 24px rgba(255,107,0,0.12)); }
-  100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(255,107,0,0)); }
-}
-
-/* opcional: variante para tela pequena */
-@media (max-width:600px){
-  #amorteceor { padding: 8px; }
-  #amorteceor .amount { font-size:16px; padding:5px 8px; }
-}
-
-.price-card .label { color: var(--muted, #9aa4b2); display:block; margin-bottom:6px; font-weight:600; }
-.price-card .label {
-  color: var(--muted, #9aa4b2);
-  display:block;
-  margin-bottom:6px;
-  font-weight:600;
-  text-decoration: none;    /* keep link appearance clean */
-  cursor: pointer;
-}
-.price-card .label:hover,
-.price-card .label:focus {
-  color: var(--primary-color);
-  text-decoration: none;
-  outline: none;
-}
-.price-card .amount { color: #65ff18; font-weight:800; font-size:18px; }
-/* specific price note in green (keeps specificity and avoids global .note conflicts) */
-.price-card .note { font-size:12px; color: rgb(255, 48, 238); margin-top:6px; }
-.pricing-cta { display:flex; justify-content:center; margin-top:12px; }
-.pricing-cta .cta-small {
-  padding:8px 14px;
-  font-size:14px;
-  border-radius:8px;
-  text-decoration:none;
-  background:#ff6b00;
-  color:#071022;
-  font-weight:700;
-}
-@media (max-width:600px){
-  .pricing { padding:12px; }
-  .pricing h3{ font-size:16px; }
-  .price-card .amount{ font-size:16px; }
-}
-
-/* Restore footer social icons to original appearance (white) and subtle hover */
-footer .footer-social a {
-  color: #ff6b00;               /* original color */
-  transition: color 0.18s ease;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-footer .footer-social a:hover {
-  color: #c95400;               /* site accent on hover */
-}
-footer .footer-social a i {
-  font-size: 1.05rem;           /* keep icons consistent size */
-  line-height: 1;
-  display: inline-block;
-}
-
-/* Urgency styling and subtle pulsing/glow for promotional values */
-.pricing.urgent .pricing-title {
-  color: var(--accent);
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  letter-spacing: 0.4px;
-}
-
-.promo-badge {
-  display:inline-block;
-  background: linear-gradient(90deg, rgba(255,107,0,0.12), rgba(255,154,60,0.08));
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight:700;
-  box-shadow: 0 6px 18px rgba(255,107,0,0.06);
-  transform-origin: center;
-}
-
-/* pulsing + glow animation for the amount to create the "glooming" effect */
-@keyframes pricePulse {
-  0%   { transform: scale(1); text-shadow: none; }
-  50%  { transform: scale(1.06); text-shadow: 0 8px 24px rgba(255,107,0,0.18); }
-  100% { transform: scale(1); text-shadow: none; }
-}
-
-.price-card .amount {
-  display: inline-block; /* needed for transform */
-  animation: pricePulse 2.2s ease-in-out infinite;
-  will-change: transform, text-shadow;
-  transition: transform 0.2s;
-}
-
-/* Slightly increase pulse on hover (keeps interaction-friendly) */
-.price-card:hover .amount {
-  transform: scale(1.08);
-  text-shadow: 0 10px 28px rgba(255,107,0,0.22);
-}
-
-/* Make title and badge more prominent on small screens but avoid overwhelming */
-@media (max-width: 600px) {
-  .pricing.urgent .pricing-title { font-size: 16px; }
-  .promo-badge { font-size:12px; padding:3px 7px; }
-  .price-card .amount { font-size: 16px; }
-}
-
-/* small improvement: reduce heavy box-shadows on mobile to save paint cost */
-@media (max-width: 480px) {
-  .service-item, .service-item img { box-shadow: none; }
-}
-
-/* Improve Speed Index / SI and reduce main-thread work:
-   - Defer rendering of offscreen heavy sections until needed.
-   - Provide intrinsic sizes to avoid layout shifts. */
-.services-gallery,
-.reviews-section,
-.pricing,
-.gallery {
-  content-visibility: auto;
-  contain-intrinsic-size: 480px; /* reserve space to avoid CLS */
-}
-
-/* Ensure service images have intrinsic ratio (already set) and hardware-accelerated animations */
-.service-item img {
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-/* Reduce animations for users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .price-card .amount,
-  .price-card,
-  .service-item,
-  .hero-logo,
-  .marmita {
-    animation: none !important;
-    transition: none !important;
-  }
-}
-
-/* Avoid non-composited animations: prefer transform/opacity only */
-.price-card .amount,
-.service-item,
-.hero-logo,
-.marmita {
-  will-change: transform, opacity;
-}
-
-/* Drop expensive large text-shadows on small screens to reduce paint cost */
-@media (max-width: 600px) {
-  .hero-title, .price-card .amount {
-    text-shadow: none;
-  }
-}
-
-/* End of performance tweaks */
-@media (min-width: 769px) {
-  /* ensure floating CTA appears at a consistent desktop size */
   .floating-cta {
     right: 40px;
     bottom: 30px;
   }
+
   .floating-cta a {
     min-width: 180px;
     padding: 12px 18px;
     font-size: 1rem;
     line-height: 1;
   }
+
   .floating-cta a .label {
     font-size: 1rem;
     display: inline-block;
   }
+
   .floating-cta i {
     font-size: 1.2rem;
   }
-  /* keep collapsed state only for smaller viewports */
-  .floating-cta.collapsed { /* no-op on desktop */ }
+
+  .floating-cta.collapsed {
+    /* no-op on desktop */
+  }
+
+  .floating-cta a {
+    min-width: 160px;
+    padding: 10px 14px;
+    border-radius: 999px;
+  }
 }
 
-/* Mobile / small tablet fixes to avoid header/icon overlap with the hamburger menu */
-@media (max-width: 768px) {
-  /* ensure the menu toggle stays above icons */
-  .nav-toggle-label { z-index: 1100; right: 1rem; top: 1rem; }
+@media (max-width: 600px) {
+  #amorteceor {
+    padding: 8px;
+  }
 
-  /* push overlay content down so icons/menu don't overlap */
+  #amorteceor .amount {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  .pricing {
+    padding: 12px;
+  }
+
+  .pricing h3 {
+    font-size: 16px;
+  }
+
+  .price-card .amount {
+    font-size: 16px;
+  }
+
+  .pricing.urgent .pricing-title {
+    font-size: 16px;
+  }
+
+  .promo-badge {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+
+  .hero-title,
+  .price-card .amount {
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
   .overlay {
-    padding-top: 4rem; /* reserve space for toggle + icons on small screens */
+    padding: 1rem 0.5rem;
   }
 
-  /* make social icons compact on small screens */
-  .social-top {
-    gap: 16px !important;
+  .main-nav {
+    width: 100vw;
+    max-width: none;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    padding: 0.5rem 0.5rem;
     margin-bottom: 1rem;
-    position: relative;
-    z-index: 1050; /* below the toggle but above background */
   }
+
+  .main-nav ul {
+    gap: 0.5rem;
+  }
+
+  .social-top {
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
   .social-top a {
-    font-size: 1.8rem !important;
-    line-height: 1;
-    padding: 4px;
+    font-size: 2rem;
+  }
+
+  .hero-logo {
+    max-width: clamp(120px, 30vw, 180px);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .service-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-item,
+  .service-item img {
+    box-shadow: none;
   }
 }
 
-/* Extra safety for very small screens */
 @media (max-width: 420px) {
-  .overlay { padding-top: 4.5rem; }
-  .social-top { gap: 12px; }
-  .social-top a { font-size: 1.6rem; }
+  .overlay {
+    padding-top: 4.5rem;
+  }
+
+  .social-top {
+    gap: 12px;
+  }
+
+  .social-top a {
+    font-size: 1.6rem;
+  }
+
+  .floating-cta {
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .floating-cta a {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
 }
 
-/* Floating CTA shared by homepage and promo pages */
-.floating-cta{
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-end;
-}
-.floating-cta a{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #25D366;
-  color: #07202a;
-  padding: 10px 14px;
-  border-radius: 999px;
-  box-shadow: 0 8px 28px rgba(37,211,102,0.14);
-  font-weight: 700;
-  text-decoration: none;
-}
-.floating-cta a.phone { background: #ff6b00; color: #071022; }
-.floating-cta i { font-size: 1.1rem; }
-
-/* adjust placement on very large viewports */
-@media (min-width: 1200px) {
-  .floating-cta { right: 40px; bottom: 30px; }
+@media (prefers-reduced-motion: reduce) {
+  .price-card .amount,
+  .price-card,
+  .service-item,
+  .hero-logo {}
 }
 
-/* ensure CTA does not block small-screen controls (if needed you can tweak) */
-@media (max-width: 420px) {
-  .floating-cta { right: 12px; bottom: 12px; gap: 8px; }
-  .floating-cta a { padding: 8px 10px; font-size: 0.95rem; }
-}
-
-/* Floating CTA: collapsed / expanded behavior (mobile-friendly) */
-.floating-cta {
-  transition: transform 200ms ease, opacity 200ms ease;
-  pointer-events: auto;
-}
-/* wrapper keeps original layout on desktop; on mobile we collapse */
-.floating-cta.collapsed a {
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border-radius: 50%;
-  justify-content: center;
-  overflow: hidden;
-}
-.floating-cta.collapsed a .label {
-  display: none;
-}
-.floating-cta a .label {
-  display: inline-block;
-  white-space: nowrap;
-  will-change: opacity, transform;
-}
-
-/* subtle transition for labels */
-.floating-cta a .label {
-  transition: opacity 180ms ease, transform 180ms ease;
-  opacity: 1;
-}
-.floating-cta.collapsed a .label {
-  opacity: 0;
-  transform: translateX(6px);
-}
-
-/* compact icon-only buttons look */
-.floating-cta.collapsed a i {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-/* expanded state (temporary on mobile) */
-.floating-cta.expanded a {
-  min-width: 160px;
-  padding: 10px 14px;
-  border-radius: 999px;
-}
-.floating-cta.expanded a .label { display: inline-block; opacity: 1; transform: none; }
-
-/* ensure spacing & z-index safe for small screens */
-@media (max-width: 768px) {
-  .floating-cta { right: 12px; bottom: 12px; gap: 8px; }
-  .floating-cta a { font-size: 0.95rem; padding: 8px 10px; }
-  .floating-cta.collapsed a { width: 44px; height: 44px; padding: 0; }
-  .floating-cta.collapsed a i { font-size: 1.1rem; }
-}
-
-/* preserve desktop expanded appearance */
-@media (min-width: 769px) {
-  .floating-cta { right: 40px; bottom: 30px; }
-  .floating-cta.collapsed { /* do not collapse on desktop */ }
-  .floating-cta a { min-width: 160px; padding: 10px 14px; border-radius: 999px; }
+#amortecedor {
+  color: #000;
 }
