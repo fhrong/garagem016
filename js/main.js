@@ -1,3 +1,4 @@
+
 const images = [
     "/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
     "/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
@@ -11,11 +12,11 @@ let currentIndex = 0;
 let intervalId;
 
 function setBg(index) {
-    galleryBg.style.opacity = 0;
-    setTimeout(() => {
-        galleryBg.style.backgroundImage = `url('${images[index]}')`;
-        galleryBg.style.opacity = 1;
-    }, 300);
+    galleryBg.classList.remove("fade-in");
+    void galleryBg.offsetWidth; // reflow for restart animation
+    galleryBg.style.backgroundImage = `url('${images[index]}')`;
+    galleryBg.classList.add("fade-in");
+
     indicators.forEach((btn, i) => {
         btn.classList.toggle('active', i === index);
     });
@@ -27,7 +28,6 @@ indicators.forEach((btn, i) => {
         clearInterval(intervalId);
         setBg(i);
         startAuto();
-        btn.blur(); //Netlify.Update.main
     });
 });
 
