@@ -18,41 +18,116 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutoRepair",
+    "@type": ["AutoRepair", "LocalBusiness"],
     "name": "Garagem 016",
     "url": "https://garagem016.com.br/",
     "logo": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
     "image": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
     "telephone": "+55-16-99239-1499",
-    "priceRange":"R$",
+    "priceRange": "R$",
     "address": {
-      "@type":"PostalAddress",
-      "streetAddress":"Rua dos Aliados, 581",
-      "addressLocality":"Ribeirão Preto",
-      "addressRegion":"SP",
-      "postalCode":"14080-570",
-      "addressCountry":"BR"
+      "@type": "PostalAddress",
+      "streetAddress": "Rua dos Aliados, 581",
+      "addressLocality": "Ribeirão Preto",
+      "addressRegion": "SP",
+      "postalCode": "14080-570",
+      "addressCountry": "BR"
     },
     "geo": {
-      "@type":"GeoCoordinates",
+      "@type": "GeoCoordinates",
       "latitude": -21.1505882,
       "longitude": -47.803875
     },
-    "openingHours": ["Mo-Fr 08:00-18:00","Sa 08:00-12:00"],
-    "contactPoint": [{
-      "@type":"ContactPoint",
-      "telephone":"+55-16-99239-1499",
-      "contactType":"customer service",
-      "areaServed":"BR",
-      "availableLanguage":["Portuguese","English"]
-    }],
-    "sameAs":[
+    "openingHours": [
+      "Mo-Fr 08:00-18:00",
+      "Sa 08:00-12:00"
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+55-16-99239-1499",
+        "contactType": "customer service",
+        "areaServed": "BR",
+        "availableLanguage": ["Portuguese", "English"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+55-16-99239-1499",
+        "contactType": "sales",
+        "areaServed": "BR",
+        "availableLanguage": ["Portuguese"]
+      }
+    ],
+    "sameAs": [
       "https://www.facebook.com/Garagem016Oficina",
       "https://www.instagram.com/garagem016oficinacta",
       "https://www.tiktok.com/@garagem016.oficinacta"
-    ]
+    ],
+    "makesOffer": [
+      {
+        "@type": "Service",
+        "name": "Troca de Óleo",
+        "serviceType": "Serviço automotivo de troca de óleo",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Revisão de Carro",
+        "serviceType": "Revisão completa de veículo",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Alinhamento e Balanceamento",
+        "serviceType": "Serviço automotivo de alinhamento e balanceamento de pneus",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ],
+    "hasFAQ": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quais serviços a Garagem 016 oferece?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realizamos troca de óleo, revisão automotiva, alinhamento, balanceamento, troca de amortecedores, elétrica automotiva e manutenção preventiva em geral."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso agendar um horário?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O agendamento é recomendado para evitar esperas, mas também atendemos por ordem de chegada conforme disponibilidade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais formas de pagamento são aceitas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aceitamos Pix, cartões de crédito, débito e pagamentos em dinheiro."
+          }
+        }
+      ]
+    }
   }
   </script>
+
+
 
 
   <style>
