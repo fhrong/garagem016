@@ -28,112 +28,130 @@
       border: 0;
     }
   </style>
+  <!-- Marca institucional -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Organization",
+    "url": "https://garagem016.com.br",
+    "logo": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png"
+  }
+  </script>
+
+  <!-- Dados do negócio local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://garagem016.com.br/#business",
+    "name": "Garagem 016",
+    "url": "https://garagem016.com.br/",
+    "logo": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+    "image": "https://garagem016.com.br/imagens/suspensao-automotiva-ribeirao-preto.webp",
+    "telephone": "+55-16-99239-1499",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua dos Aliados, 581",
+      "addressLocality": "Ribeirão Preto",
+      "addressRegion": "SP",
+      "postalCode": "14080-570",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -21.1775,
+      "longitude": -47.8103
+    },
+    "openingHours": [
+      "Mo-Fr 08:00-18:00",
+      "Sa 08:00-12:00"
+    ],
+    "areaServed": [
+      "Ribeirão Preto",
+      "Sertãozinho",
+      "Cravinhos",
+      "Jardinópolis"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/Garagem016Oficina",
+      "https://www.instagram.com/garagem016oficinacta"
+    ]
+  }
+  </script>
+
+  <!-- Serviço da página (Promoção de amortecedor) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://garagem016.com.br/#service",
+    "name": "Troca de Amortecedor — Promoção",
+    "serviceType": "Troca de Amortecedor com instalação",
+    "provider": {
+      "@id": "https://garagem016.com.br/#business"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://garagem016.com.br/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "price": "59.90",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2025-12-31"
+    }
+  }
+  </script>
+
+  <!-- FAQ da página -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://garagem016.com.br/#faq",
+    "mainEntity": [
       {
-        "@type": "LocalBusiness",
-        "@id": "https://garagem016.com.br/#business",
-        "name": "Garagem 016",
-        "url": "https://garagem016.com.br/",
-        "logo": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
-        "image": "https://garagem016.com.br/imagens/suspensao-automotiva-ribeirao-preto.webp",
-        "telephone": "+55-16-99239-1499",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua dos Aliados, 581",
-          "addressLocality": "Ribeirão Preto",
-          "addressRegion": "SP",
-          "postalCode": "14080-570",
-          "addressCountry": "BR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -21.1775,
-          "longitude": -47.8103
-        },
-        "openingHours": [
-          "Mo-Fr 08:00-18:00",
-          "Sa 08:00-12:00"
-        ],
-        "areaServed": [
-          "Ribeirão Preto",
-          "Sertãozinho",
-          "Cravinhos",
-          "Jardinópolis"
-        ],
-        "sameAs": [
-          "https://www.facebook.com/Garagem016Oficina",
-          "https://www.instagram.com/garagem016oficinacta"
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://garagem016.com.br/#service",
-        "name": "Troca de Amortecedor — Promoção",
-        "serviceType": "Troca de Amortecedor com instalação",
-        "provider": {
-          "@id": "https://garagem016.com.br/#business"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://garagem016.com.br/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
-          "price": "59.90",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "priceValidUntil": "2025-12-31"
+        "@type": "Question",
+        "name": "Quanto custa a troca de amortecedor na Garagem 016?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Durante a promoção, a troca de amortecedor sai por apenas R$59,90 por par, já com instalação inclusa em Ribeirão Preto."
         }
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://garagem016.com.br/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Quanto custa a troca de amortecedor na Garagem 016?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Durante a promoção, a troca de amortecedor sai por apenas R$59,90 por par, já com instalação inclusa em Ribeirão Preto."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "A promoção de R$59,90 é válida para todos os modelos de carro?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A promoção é válida para a maioria dos veículos de passeio. Entre em contato para confirmar se o seu carro é compatível."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "A troca de amortecedor tem garantia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. A instalação possui garantia e os amortecedores têm até 2 anos de garantia do fabricante."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Preciso agendar a troca de amortecedor?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Recomendamos agendar pelo WhatsApp para garantir atendimento imediato, mas também atendemos por ordem de chegada conforme disponibilidade."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Onde fazer a troca de amortecedor por R$59,90 em Ribeirão Preto?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A promoção é exclusiva da Garagem 016, localizada na Rua dos Aliados, 581 — Ribeirão Preto, SP."
-            }
-          }
-        ]
+        "@type": "Question",
+        "name": "A promoção de R$59,90 é válida para todos os modelos de carro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A promoção é válida para a maioria dos veículos de passeio. Entre em contato para confirmar se o seu carro é compatível."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A troca de amortecedor tem garantia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. A instalação possui garantia e os amortecedores têm até 2 anos de garantia do fabricante."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso agendar a troca de amortecedor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recomendamos agendar pelo WhatsApp para garantir atendimento imediato, mas também atendemos por ordem de chegada conforme disponibilidade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde fazer a troca de amortecedor por R$59,90 em Ribeirão Preto?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A promoção é exclusiva da Garagem 016, localizada na Rua dos Aliados, 581 — Ribeirão Preto, SP."
+        }
       }
     ]
   }
   </script>
+
 
   <meta name="robots" content="index,follow">
   <meta name="author" content="Garagem 016">
