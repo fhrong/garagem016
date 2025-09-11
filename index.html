@@ -15,20 +15,7 @@
   <!-- load main CSS non-blocking (versioned to bust cache after deploy) -->
   <link rel="preload" href="css/style.css?v=20250902" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/style.css?v=20250902"></noscript>
-  <!-- Marca institucional da empresa -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "url": "https://garagem016.com.br",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
-      "width": 180,
-      "height": 60
-    }
-   }
-  </script>
+ 
 
   <!-- Dados do negócio local (oficina) -->
   <script type="application/ld+json">
@@ -86,65 +73,70 @@
     ],
     "makesOffer": [
       {
-        "@type": "Service",
-        "name": "Troca de Óleo",
-        "serviceType": "Serviço automotivo de troca de óleo",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock"
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Troca de Óleo",
+          "serviceType": "Serviço automotivo de troca de óleo"
         }
       },
       {
-        "@type": "Service",
-        "name": "Revisão de Carro",
-        "serviceType": "Revisão completa de veículo",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock"
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Revisão de Carro",
+          "serviceType": "Revisão completa de veículo"
         }
       },
       {
-        "@type": "Service",
-        "name": "Alinhamento e Balanceamento",
-        "serviceType": "Serviço automotivo de alinhamento e balanceamento de pneus",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock"
+        "@type": "Offer",
+        "priceCurrency": "BRL",
+        "availability": "https://schema.org/InStock",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Alinhamento e Balanceamento",
+          "serviceType": "Serviço automotivo de alinhamento e balanceamento de pneus"
         }
       }
-    ],
-    "hasFAQ": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Quais serviços a Garagem 016 oferece?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Realizamos troca de óleo, revisão automotiva, alinhamento, balanceamento, troca de amortecedores, elétrica automotiva e manutenção preventiva em geral."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso agendar um horário?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O agendamento é recomendado para evitar esperas, mas também atendemos por ordem de chegada conforme disponibilidade."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quais formas de pagamento são aceitas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Aceitamos Pix, cartões de crédito, débito e pagamentos em dinheiro."
-          }
+    ]
+  }
+  </script>
+
+  <!-- FAQ separado -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quais serviços a Garagem 016 oferece?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Realizamos troca de óleo, revisão automotiva, alinhamento, balanceamento, troca de amortecedores, elétrica automotiva e manutenção preventiva em geral."
         }
-      ]
-    }
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso agendar um horário?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O agendamento é recomendado para evitar esperas, mas também atendemos por ordem de chegada conforme disponibilidade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais formas de pagamento são aceitas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aceitamos Pix, cartões de crédito, débito e pagamentos em dinheiro."
+        }
+      }
+    ]
   }
   </script>
 
