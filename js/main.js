@@ -3,7 +3,7 @@ const images = [
     "/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
     "/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
     "/imagens/oficina-interior-ribeirao-preto-servicos.webp",
-    "/imagens/mecanica-oficina-ribeirao-preto.jpg"
+    "/imagens/mecanica-oficina-ribeirao-preto.webp"
 ];
 
 const galleryBg = document.querySelector('.gallery-bg');
