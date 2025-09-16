@@ -11,6 +11,11 @@
       "permanent": true
     },
     {
+      "source": "/promocao-amortecedor-59_90-reais-ribeirao-preto.html",
+      "destination": "/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "permanent": true
+    },
+    {
       "source": "/servicos/suspensao-automotiva-ribeirao-preto.html",
       "destination": "/",
       "permanent": true
