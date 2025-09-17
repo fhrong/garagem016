@@ -9,10 +9,8 @@
   <link rel="canonical" href="https://garagem016.com.br/pages/index.html" />
   <link rel="icon" type="image/ico" href="/assets/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Performance: preconnect & preload critical assets (CSS loaded async below) -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp" as="image" fetchpriority="high">
-  <!-- load main CSS non-blocking (versioned to bust cache after deploy) -->
   <link rel="preload" href="/css/style.css?v=20250902" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/css/style.css?v=20250902 "></noscript>
  
@@ -166,7 +164,6 @@
 
 
   <style>
-    /* floating CTA (WhatsApp + call) */
     .floating-cta{
       position:fixed;
       right:18px;
@@ -197,15 +194,12 @@
 <body>
   <header class="hero">
     <div class="overlay">
-      <!-- Mobile Nav Toggle -->
       <input type="checkbox" id="nav-toggle" class="nav-toggle" />
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
         <span></span>
         <span></span>
       </label>
-
-      <!-- Main Navigation -->
       <nav class="main-nav">
         <ul>
           <li><a href="#services">Serviços</a></li>
@@ -213,8 +207,6 @@
           <li><a href="#cta-final">Orçamento</a></li>
         </ul>
       </nav>
-
-      <!-- Social Icons -->
       <div class="social-top">
         <a href="https://www.facebook.com/Garagem016Oficina" target="_blank" aria-label="WhatsApp da Garagem016">
           <i class="fab fa-facebook"></i>
@@ -230,7 +222,7 @@
         </a>
       </div>
 
-      <!-- Logo and Hero Content -->
+
       <img src="/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png?tr=w-200,h-200,f-webp" alt="Logo da Garagem 016, mecânica automotiva em Ribeirão Preto" class="hero-logo" width="180" height="60" loading="eager" decoding="async" fetchpriority="high">
       <div class="hero-content">
         <h1 class="hero-title">Garagem 016 – Oficina Mecânica em Ribeirão Preto</h1>
@@ -253,7 +245,6 @@
     <a href="https://wa.me/5516992391499?text=Olá! 😊 Vim pelo site e gostaria de solicitar um atendimento." class="cta secondary">Faça um orçamento!</a>
   </section>
 
-  <!-- Pricing compact (non-intrusive, conversion-friendly) -->
   <section class="pricing urgent" aria-label="Valores Promocionais">
     <h3 class="pricing-title">Valores Promocionais <span class="promo-badge" aria-hidden="true">🔥 Oferta</span></h3>
     <div class="pricing-grid" role="list">
@@ -385,21 +376,15 @@
       <a href="https://www.tiktok.com/@garagem016.oficinacta" target="_blank" aria-label="TikTok da Garagem 016"><i class="fab fa-tiktok"></i></a>
     </div>
   </footer>
-
-  <!-- defer JS to avoid render-blocking; main.js should be resilient to defer -->
   <script src="/js/main.js?v=20250902" defer></script>
-  <!-- Ensure the promo link opens even if other scripts intercept clicks -->
   <script>
     (function(){
       const a = document.getElementById('amortecedorLink');
       if (!a) return;
-      // use capture so this runs before most other handlers
       a.addEventListener('click', function (ev) {
         try {
-          // open in new tab (matches target="_blank")
           window.open(a.href, '_blank', 'noopener');
         } catch (e) {
-          // fallback to standard navigation
           window.location.href = a.href;
         }
         ev.preventDefault();
@@ -408,7 +393,6 @@
     })();
   </script>
 
-  <!-- Floating CTAs for immediate conversion -->
   <div class="floating-cta" aria-hidden="false">
     <a class="whatsapp" href="https://wa.me/5516992391499?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
       <i class="fab fa-whatsapp" aria-hidden="true"></i>
@@ -419,8 +403,6 @@
       <span class="label">+55 (16) 99239‑1499</span>
     </a>
   </div>
-
-  <!-- Floating CTA behavior: collapse on mobile, expand on tap -->
   <script>
     (function(){
       function isMobile(){ return window.matchMedia('(max-width:768px)').matches; }
@@ -430,14 +412,12 @@
         if (isMobile()) cta.classList.add('collapsed');
         else cta.classList.remove('collapsed');
       }
-      // toggle expand on tap/click inside CTA on mobile
       document.addEventListener('click', function(e){
         if (!cta.contains(e.target)) return;
-        if (!isMobile()) return; // keep desktop unchanged
+        if (!isMobile()) return;
         if (cta.classList.contains('collapsed')) {
           cta.classList.remove('collapsed');
           cta.classList.add('expanded');
-          // auto-collapse after 6s
           clearTimeout(cta._collapseTimer);
           cta._collapseTimer = setTimeout(()=>{ cta.classList.remove('expanded'); cta.classList.add('collapsed'); }, 6000);
         }
