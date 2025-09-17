@@ -12,7 +12,7 @@ let intervalId;
 
 function setBg(index) {
     galleryBg.classList.remove("fade-in");
-    void galleryBg.offsetWidth; // reflow for restart animation
+    void galleryBg.offsetWidth;
     galleryBg.style.backgroundImage = `url('${images[index]}')`;
     galleryBg.classList.add("fade-in");
 
