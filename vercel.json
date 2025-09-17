@@ -1,51 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/imagens/:path*",
-      "destination": "/assets/imagens/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/fonts/:path*",
-      "destination": "/assets/fonts/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/favicon.ico",
-      "destination": "/assets/favicon.ico",
-      "permanent": true
-    },
-
-    {
-      "source": "/servicos/troca-de-oleo-em-ribeirao-preto.html",
-      "destination": "/servicos/troca-de-oleo-em-ribeirao-preto.html",
-      "permanent": true
-    },
-    {
-      "source": "/servicos/:path*",
-      "destination": "/servicos/:path*",
-      "permanent": true
-    },
-
-    {
-      "source": "/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
-      "destination": "/promos/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
-      "permanent": true
-    },
-    {
-      "source": "/promocao-:path*",
-      "destination": "/promos/promocao-:path*",
-      "permanent": true
-    },
-
-    {
       "source": "/",
       "destination": "/pages/index.html",
       "permanent": true
     },
     {
-      "source": "/:page.html",
-      "destination": "/pages/:page.html",
+      "source": "/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "destination": "/promos/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
       "permanent": true
     }
   ]
