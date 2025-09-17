@@ -821,11 +821,26 @@ footer .footer-social a i {
 }
 
 @media (min-width: 769px) {
+  /* --- Desktop "zoom out" tweaks (only for >=769px) --- */
+  .overlay {
+    transform-origin: center top;
+    transform: scale(0.92);
+    transition: transform 180ms ease;
+  }
+  .hero {
+    height: calc(100vh / 0.92);
+    overflow: visible;
+  }
+  .hero-title {
+    line-height: 1.02;
+  }
+
+  /* Desktop nav: always visible and reset mobile hiding styles */
   .main-nav {
     position: static;
     top: auto;
     left: auto;
-    transform: none;
+    transform: none !important;
     margin-bottom: 1.5rem;
     background: rgba(0, 0, 0, 0.6);
     padding: 0.5rem 2.5rem;
@@ -835,22 +850,7 @@ footer .footer-social a i {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
-  }
-
-  .overlay {
-    align-items: center;
-    transform-origin: center top;
-    transform: scale(0.92);
-    transition: transform 180ms ease;
-  }
-
-  .hero {
-    height: calc(100vh / 0.92);
-    overflow: visible;
-  }
-
-  .hero-title {
-    line-height: 1.02;
+    pointer-events: auto !important;
   }
 
   .social-top {
@@ -1030,21 +1030,37 @@ footer .footer-social a i {
   .hero-logo {}
 }
 
-@media (min-width: 1025px) {
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden; /* previne barra horizontal que "força zoom" */
+
+/* --- Fix: garantir nav visível no desktop (override seguro) --- */
+@media (min-width: 769px) {
+  .main-nav {
+    position: fixed !important;        /* fica fora do fluxo e sempre visível */
+    top: 14px !important;              /* distância do topo */
+    left: 50% !important;              /* centraliza horizontalmente */
+    transform: translateX(-50%) !important;
+    width: auto !important;            /* largura conforme conteúdo */
+    max-width: calc(100% - 48px) !important;
+    padding: 0.45rem 1.8rem !important;/* ajuste fino do espaçamento */
+    background: rgba(0, 0, 0, 0.64) !important;
+    border-radius: 1.6rem !important;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.28) !important;
+    z-index: 99999 !important;         /* acima da overlay */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 
-  .hero,
+  /* assegura que links não fiquem apertados e que o layout não quebre */
+  .main-nav ul {
+    gap: 1.8rem;
+  }
+
+  /* evita que o conteúdo da hero fique escondido atrás do nav fixo */
   header.hero {
-    max-width: 100%;
-    overflow-x: hidden;
+    padding-top: 78px; /* ajuste fino: aumente/reduza conforme a altura real do nav */
+    box-sizing: border-box;
   }
-}
-
-
-#gloom {
-  color: #000;
 }
