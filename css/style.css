@@ -85,7 +85,7 @@ body {
 }
 
 .hero {
-  background: url('/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
+  background: url('/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
   contain: paint;
   height: 100vh;
   display: flex;
@@ -1030,7 +1030,6 @@ footer .footer-social a i {
   .hero-logo {}
 }
 
-/* Correção de zoom/overflow apenas para telas grandes */
 @media (min-width: 1025px) {
   html, body {
     width: 100%;
