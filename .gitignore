@@ -1,3 +1,4 @@
 # Ignore SSH keys folder inside $HOME folder in repo
 $HOME/.ssh/
 .ssh/
+/assets/fonts/

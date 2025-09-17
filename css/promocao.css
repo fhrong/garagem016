@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: 'ArtegraSans';
-  src: url('/fonts/artegra-sans-font-artegra.woff2') format('woff2'),
-    url('/fonts/artegra-sans-font-artegra.woff') format('woff');
+  src: url('/assets/fonts/artegra-sans-font-artegra.woff2') format('woff2'),
+    url('/assets/fonts/artegra-sans-font-artegra.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -110,7 +110,7 @@ body {
 header.hero {
   position: relative;
   height: 92vh;
-  background: url('/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
+  background: url('/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;

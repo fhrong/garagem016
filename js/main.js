@@ -1,9 +1,8 @@
-
 const images = [
-    "/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
-    "/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
-    "/imagens/oficina-interior-ribeirao-preto-servicos.webp",
-    "/imagens/mecanica-oficina-ribeirao-preto.webp"
+    "/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
+    "/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
+    "/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp",
+    "/assets/imagens/mecanica-oficina-ribeirao-preto.webp"
 ];
 
 const galleryBg = document.querySelector('.gallery-bg');
@@ -39,4 +38,5 @@ function startAuto() {
 }
 
 setBg(0);
+startAuto();
 startAuto();

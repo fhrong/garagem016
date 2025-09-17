@@ -1,28 +1,51 @@
 {
   "redirects": [
     {
-      "source": "/servicos/mecanica-geral-ribeirao-preto.html",
-      "destination": "/",
+      "source": "/imagens/:path*",
+      "destination": "/assets/imagens/:path*",
       "permanent": true
     },
     {
-      "source": "/servicos/alinhamento-balanceamento-ribeirao-preto.html",
-      "destination": "/",
+      "source": "/fonts/:path*",
+      "destination": "/assets/fonts/:path*",
       "permanent": true
     },
     {
-      "source": "/promocao-amortecedor-59_90-reais-ribeirao-preto.html",
-      "destination": "/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "source": "/favicon.ico",
+      "destination": "/assets/favicon.ico",
+      "permanent": true
+    },
+
+    {
+      "source": "/servicos/troca-de-oleo-em-ribeirao-preto.html",
+      "destination": "/servicos/troca-de-oleo-em-ribeirao-preto.html",
       "permanent": true
     },
     {
-      "source": "/servicos/suspensao-automotiva-ribeirao-preto.html",
-      "destination": "/",
+      "source": "/servicos/:path*",
+      "destination": "/servicos/:path*",
+      "permanent": true
+    },
+
+    {
+      "source": "/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "destination": "/promos/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
       "permanent": true
     },
     {
-      "source": "/favicon.png",
-      "destination": "/",
+      "source": "/promocao-:path*",
+      "destination": "/promos/promocao-:path*",
+      "permanent": true
+    },
+
+    {
+      "source": "/",
+      "destination": "/pages/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/:page.html",
+      "destination": "/pages/:page.html",
       "permanent": true
     }
   ]

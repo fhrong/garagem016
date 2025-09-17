@@ -7,82 +7,82 @@
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://garagem016.com.br/favicon.ico</loc>
+    <loc>https://garagem016.com.br/assets/favicon.ico</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/favicon.ico</image:loc>
+      <image:loc>https://garagem016.com.br/assets/favicon.ico</image:loc>
       <image:caption>Favicon da Garagem 016</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png</loc>
+    <loc>https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/garagem016-logo-mecanica-ribeirao-preto.png</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png</image:loc>
       <image:caption>Logo da Garagem 016, mecânica automotiva em Ribeirão Preto</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/oficina-fachada-exterior-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/oficina-fachada-exterior-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp</image:loc>
       <image:caption>Fachada da oficina Garagem 016</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/oficina-interior-ribeirao-preto-servicos.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/oficina-interior-ribeirao-preto-servicos.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp</image:loc>
       <image:caption>Interior da oficina Garagem 016</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp</image:loc>
       <image:caption>Vista em 45 graus da oficina Garagem 016</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</image:loc>
       <image:caption>Alinhamento e Balanceamento de Pneus</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/mecanica-geral-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/mecanica-geral-ribeirao-preto.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/mecanica-geral-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/mecanica-geral-ribeirao-preto.webp</image:loc>
       <image:caption>Mecânica Geral em ação</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/parte-eletrica-veicular-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/parte-eletrica-veicular-ribeirao-preto.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/parte-eletrica-veicular-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/parte-eletrica-veicular-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de elétrica e diagnóstico veicular</image:caption>
     </image:image>
   </url>
 
   <url>
-    <loc>https://garagem016.com.br/imagens/suspensao-automotiva-ribeirao-preto.webp</loc>
+    <loc>https://garagem016.com.br/assets/imagens/suspensao-automotiva-ribeirao-preto.webp</loc>
     <lastmod>2025-08-04T12:00:00+00:00</lastmod>
     <image:image>
-      <image:loc>https://garagem016.com.br/imagens/suspensao-automotiva-ribeirao-preto.webp</image:loc>
+      <image:loc>https://garagem016.com.br/assets/imagens/suspensao-automotiva-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de suspensão automotiva</image:caption>
     </image:image>
   </url>
