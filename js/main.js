@@ -1,28 +1,33 @@
-const gallerySection = document.querySelector('#gallery');
-const galleryBg = gallerySection.querySelector('.gallery-bg');
+const images = [
+    "/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
+    "/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
+    "/imagens/oficina-interior-ribeirao-preto-servicos.webp",
+    "/imagens/mecanica-oficina-ribeirao-preto.jpg"
+];
+
+const galleryBg = document.querySelector('.gallery-bg');
+const indicators = document.querySelectorAll('.carousel-indicators button');
 let currentIndex = 0;
 let intervalId;
 
 function setBg(index) {
-    galleryBg.classList.remove("fade-in");
-    void galleryBg.offsetWidth;
-    galleryBg.style.backgroundImage = `url('${images[index]}')`;
-    galleryBg.classList.add("fade-in");
-
-    const indicators = gallerySection.querySelectorAll('.carousel-indicators button');
+    galleryBg.style.opacity = 0;
+    setTimeout(() => {
+        galleryBg.style.backgroundImage = `url('${images[index]}')`;
+        galleryBg.style.opacity = 1;
+    }, 300);
     indicators.forEach((btn, i) => {
-        console.log(`btn ${i}: was ${btn.classList.contains('active')}, should be ${i === index}`);
         btn.classList.toggle('active', i === index);
     });
-
     currentIndex = index;
 }
 
-gallerySection.querySelectorAll('.carousel-indicators button').forEach((btn, i) => {
+indicators.forEach((btn, i) => {
     btn.addEventListener('click', () => {
         clearInterval(intervalId);
         setBg(i);
         startAuto();
+        btn.blur();
     });
 });
 
