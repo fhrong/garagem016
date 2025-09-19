@@ -15,6 +15,7 @@ function setBg(index) {
     galleryBg.style.backgroundImage = `url('${images[index]}')`;
     galleryBg.classList.add("fade-in");
     indicators.forEach((btn, i) => {
+        console.log(`btn ${i}: was ${btn.classList.contains('active')}, should be ${i === index}`);
         btn.classList.toggle('active', i === index);
     });
     currentIndex = index;
