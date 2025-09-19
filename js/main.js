@@ -22,7 +22,7 @@ function setBg(index) {
     currentIndex = index;
 }
 
-indicators.forEach((btn, i) => {
+document.querySelectorAll('.carousel-indicators button').forEach((btn, i) => {
     btn.addEventListener('click', () => {
         clearInterval(intervalId);
         setBg(i);
