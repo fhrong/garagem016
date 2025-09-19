@@ -39,4 +39,3 @@ function startAuto() {
 
 setBg(0);
 startAuto();
-startAuto();
