@@ -1,11 +1,5 @@
-const images = [
-    "/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp",
-    "/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp",
-    "/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp",
-    "/assets/imagens/mecanica-oficina-ribeirao-preto.webp"
-];
-
-const galleryBg = document.querySelector('.gallery-bg');
+const gallerySection = document.querySelector('#gallery');
+const galleryBg = gallerySection.querySelector('.gallery-bg');
 let currentIndex = 0;
 let intervalId;
 
@@ -14,15 +8,17 @@ function setBg(index) {
     void galleryBg.offsetWidth;
     galleryBg.style.backgroundImage = `url('${images[index]}')`;
     galleryBg.classList.add("fade-in");
-    const indicators = document.querySelectorAll('.carousel-indicators button');
+
+    const indicators = gallerySection.querySelectorAll('.carousel-indicators button');
     indicators.forEach((btn, i) => {
         console.log(`btn ${i}: was ${btn.classList.contains('active')}, should be ${i === index}`);
         btn.classList.toggle('active', i === index);
     });
+
     currentIndex = index;
 }
 
-document.querySelectorAll('.carousel-indicators button').forEach((btn, i) => {
+gallerySection.querySelectorAll('.carousel-indicators button').forEach((btn, i) => {
     btn.addEventListener('click', () => {
         clearInterval(intervalId);
         setBg(i);
