@@ -4,9 +4,8 @@ const images = [
     "/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp",
     "/assets/imagens/mecanica-oficina-ribeirao-preto.webp"
 ];
-
-const galleryBg = document.querySelector('.gallery-bg');
 const indicators = document.querySelectorAll('.carousel-indicators button');
+const galleryBg = document.querySelector('.gallery-bg');
 let currentIndex = 0;
 let intervalId;
 
@@ -15,7 +14,6 @@ function setBg(index) {
     void galleryBg.offsetWidth;
     galleryBg.style.backgroundImage = `url('${images[index]}')`;
     galleryBg.classList.add("fade-in");
-
     indicators.forEach((btn, i) => {
         btn.classList.toggle('active', i === index);
     });
