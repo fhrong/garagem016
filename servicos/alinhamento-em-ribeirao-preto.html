@@ -27,18 +27,18 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["AutoRepair", "LocalBusiness"],
-        "@id": "https://garagem016.com.br/#business",
+        "@type": [
+          "Organization",
+          "AutoRepair",
+          "LocalBusiness"
+        ],
+        "@id": "https://garagem016.com.br/#organization",
         "name": "Garagem 016",
         "url": "https://garagem016.com.br/",
-        "logo": {
-          "@type": "ImageObject",
-          "@id": "https://garagem016.com.br/#logo",
-          "url": "https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png?tr=w-200,h-200,f-webp",
-          "width": 180,
-          "height": 60
+        "logo": "https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png",
+        "image": {
+          "@id": "https://garagem016.com.br/#logo"
         },
-        "image": { "@id": "https://garagem016.com.br/#logo" },
         "telephone": "+55-16-99239-1499",
         "priceRange": "R$",
         "address": {
@@ -62,17 +62,21 @@
           "bestRating": "5",
           "worstRating": "1"
         },
-        "openingHours": [ "Mo-Fr 08:00-18:00" ],
-        "makesOffer": [{
-          "@type": "Offer",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Alinhamento",
-            "serviceType": "Serviço de alinhamento automotivo"
+        "openingHours": [
+          "Mo-Fr 08:00-18:00"
+        ],
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Alinhamento",
+              "serviceType": "Serviço de alinhamento automotivo"
+            }
           }
-        }],
+        ],
         "sameAs": [
           "https://www.facebook.com/Garagem016Oficina",
           "https://www.instagram.com/garagem016oficinacta",
@@ -87,7 +91,9 @@
         "name": "Garagem 016",
         "description": "Oficina mecânica especializada em alinhamento, balanceamento, revisão e manutenção automotiva em Ribeirão Preto.",
         "inLanguage": "pt-BR",
-        "publisher": { "@id": "https://garagem016.com.br/#business" }
+        "publisher": {
+          "@id": "https://garagem016.com.br/#organization"
+        }
       },
       {
         "@type": "FAQPage",
