@@ -1,10 +1,11 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/pages/index.html",
-      "permanent": true
-    },
+      "destination": "/pages/index.html"
+    }
+  ],
+  "redirects": [
     {
       "source": "/index.html",
       "destination": "/pages/index.html",
