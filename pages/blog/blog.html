@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confira as melhores dicas e informações sobre manutenção automotiva no blog da Garagem 016.">
+  <meta name="keywords" content="manutenção automotiva, dicas automotivas, problemas comuns em carros">
+  <meta property="og:title" content="Blog | Garagem 016">
+  <meta property="og:description" content="Confira as melhores dicas e informações sobre manutenção automotiva no blog da Garagem 016.">
+  <meta property="og:image" content="https://garagem016.com.br/assets/imagens/blog-preview.png">
+  <meta property="og:url" content="https://garagem016.com.br/pages/blog.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Garagem 016">
+  <meta name="twitter:description" content="Confira as melhores dicas e informações sobre manutenção automotiva no blog da Garagem 016.">
+  <meta name="twitter:image" content="https://garagem016.com.br/assets/imagens/blog-preview.png">
+  <title>Blog | Garagem 016</title>
+  <link rel="icon" type="image/x-icon" href="https://garagem016.com.br/assets/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/css/style.css?v=20250902">
+  <style>
+    .hero, .blog-hero {
+      background: url('/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      height: 350px;
+    }
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+    }
+    .blog-list, .blog-categories {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .blog-list h2, .blog-categories h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff6600;
+    }
+    .blog-cards, .category-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .blog-card, .category-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-card:hover, .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .blog-card img, .category-card img {
+      width: 100%;
+      height: auto;
+    }
+    .blog-card h3, .category-card h3 {
+      margin: 16px;
+      font-size: 1.2em;
+      color: #222;
+    }
+    .blog-card p, .category-card p {
+      margin: 0 16px 16px;
+      color: #555;
+    }
+    @media (min-width: 992px) {
+      .hero {
+        height: 460px;
+        background-size: 140% !important;
+        background-position: center calc(50% - 60px) !important;
+      }
+      .hero .overlay {
+        transform: scale(1) !important;
+        padding-top: 2.2rem;
+        padding-bottom: 1.2rem;
+      }
+      .hero-logo {
+        max-width: 220px;
+        margin-top: -18px;
+      }
+      .hero-content {
+        transform: translateY(-6px);
+      }
+      .hero-subtitle{
+        font-size: small;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/#services">Serviços</a></li>
+          <li><a href="/#cta-final">Orçamento</a></li>
+          <li><a href="/pages/blog/blog.html" class="active">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="social-top">
+        <a href="https://www.facebook.com/Garagem016Oficina" target="_blank" aria-label="WhatsApp da Garagem016">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/5516992391499?text=Olá! 😊 Vim pelo site e gostaria de solicitar um atendimento." target="_blank" aria-label="WhatsApp da Garagem016">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/garagem016oficinacta" target="_blank" aria-label="Instagram da Garagem016">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@garagem016.oficinacta" target="_blank" aria-label="TikTok da Garagem016">
+          <i class="fab fa-tiktok"></i>
+        </a>
+      </div>
+      <a href="/"><img src="https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png?tr=w-200,h-200,f-webp" alt="Garagem 016" class="hero-logo" width="180" height="60" /></a>
+      <div class="hero-content">
+        <h1 class="hero-title">Blog da Garagem 016</h1>
+        <p class="hero-subtitle">Dicas, informações e tudo o que você precisa saber sobre manutenção automotiva.</p>
+      </div>
+    </div>
+    </header>
+    <main>
+    <section class="blog-list">
+      <h2>Últimos Artigos</h2>
+      <div class="blog-cards">
+        <article class="blog-card">
+          <a href="/pages/blog/problemas-comuns-honda-civic.html">
+            <img src="/assets/imagens/blog_img/civic/civic-gen-11.webp" alt="Problemas Comuns no Honda Civic" loading="lazy" decoding="async">
+            <h3>Problemas Comuns no Honda Civic</h3>
+            <p>Descubra os problemas mais frequentes no Honda Civic e como evitá-los.</p>
+          </a>
+        </article>
+        <article class="blog-card">
+          <a href="/pages/blog/problemas-comuns-volkswagen-gol.html">
+            <img src="/assets/imagens/blog_img/gol/gol-gen-06.webp" alt="Problemas Comuns no VW Gol" loading="lazy" decoding="async">
+            <h3>Problemas Comuns no VW Gol</h3>
+            <p>Saiba mais sobre os desafios mais comuns enfrentados pelos donos de VW Gol.</p>
+          </a>
+        </article>
+        <article class="blog-card">
+          <a href="/pages/blog/problemas-comuns-chevrolet-onix.html">
+            <img src="/assets/imagens/blog_img/onix/chevrolet-onix-2019.webp" alt="Problemas Comuns no Chevrolet Onix" loading="lazy" decoding="async">
+            <h3>Problemas Comuns no Chevrolet Onix</h3>
+            <p>Veja como identificar e resolver os problemas mais recorrentes no Chevrolet Onix.</p>
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="blog-categories">
+      <h2>Categorias</h2>
+      <div class="category-cards">
+        <div class="category-card">
+          <a href="/pages/categoria-manutencao.html">
+            <img src="/assets/imagens/categorias/manutencao.webp" alt="Manutenção Automotiva" loading="lazy" decoding="async">
+            <h3>Manutenção Automotiva</h3>
+            <p>Dicas e informações para manter seu carro em perfeito estado.</p>
+          </a>
+        </div>
+        <div class="category-card">
+          <a href="/pages/categoria-problemas-comuns.html">
+            <img src="/assets/imagens/categorias/problemas-comuns.webp" alt="Problemas Comuns" loading="lazy" decoding="async">
+            <h3>Problemas Comuns</h3>
+            <p>Identifique e resolva os problemas mais frequentes em veículos.</p>
+          </a>
+        </div>
+        <div class="category-card">
+          <a href="/pages/categoria-dicas-gerais.html">
+            <img src="/assets/imagens/categorias/dicas-gerais.webp" alt="Dicas Gerais" loading="lazy" decoding="async">
+            <h3>Dicas Gerais</h3>
+            <p>Conselhos úteis para o dia a dia com seu carro.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Garagem 016 - Todos os direitos reservados.</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/garagem016oficinacta" target="_blank" aria-label="Instagram da Garagem 016"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@garagem016.oficinacta" target="_blank" aria-label="TikTok da Garagem 016"><i class="fab fa-tiktok"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
