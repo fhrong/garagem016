@@ -6,9 +6,10 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- Branding Images -->
   <url>
     <loc>https://garagem016.com.br/assets/favicon.ico</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/favicon.ico</image:loc>
       <image:caption>Favicon da Garagem 016</image:caption>
@@ -17,16 +18,17 @@
 
   <url>
     <loc>https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png</image:loc>
       <image:caption>Logo da Garagem 016, mecânica automotiva em Ribeirão Preto</image:caption>
     </image:image>
   </url>
 
+  <!-- Office Images -->
   <url>
     <loc>https://garagem016.com.br/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp</image:loc>
       <image:caption>Fachada da oficina Garagem 016</image:caption>
@@ -35,7 +37,7 @@
 
   <url>
     <loc>https://garagem016.com.br/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/oficina-interior-ribeirao-preto-servicos.webp</image:loc>
       <image:caption>Interior da oficina Garagem 016</image:caption>
@@ -44,16 +46,17 @@
 
   <url>
     <loc>https://garagem016.com.br/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp</image:loc>
       <image:caption>Vista em 45 graus da oficina Garagem 016</image:caption>
     </image:image>
   </url>
 
+  <!-- Service Images -->
   <url>
     <loc>https://garagem016.com.br/assets/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/alinhamento-balanceamento-pneus-ribeirao-preto.webp</image:loc>
       <image:caption>Alinhamento e Balanceamento de Pneus</image:caption>
@@ -62,7 +65,7 @@
 
   <url>
     <loc>https://garagem016.com.br/assets/imagens/mecanica-geral-ribeirao-preto.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/mecanica-geral-ribeirao-preto.webp</image:loc>
       <image:caption>Mecânica Geral em ação</image:caption>
@@ -71,7 +74,7 @@
 
   <url>
     <loc>https://garagem016.com.br/assets/imagens/parte-eletrica-veicular-ribeirao-preto.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/parte-eletrica-veicular-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de elétrica e diagnóstico veicular</image:caption>
@@ -80,10 +83,103 @@
 
   <url>
     <loc>https://garagem016.com.br/assets/imagens/suspensao-automotiva-ribeirao-preto.webp</loc>
-    <lastmod>2025-09-18T12:00:00+00:00</lastmod>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
     <image:image>
       <image:loc>https://garagem016.com.br/assets/imagens/suspensao-automotiva-ribeirao-preto.webp</image:loc>
       <image:caption>Serviço de suspensão automotiva</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Images - Honda Civic -->
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/civic/civic-gen-09.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/civic/civic-gen-09.webp</image:loc>
+      <image:caption>Honda Civic 9ª Geração</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/civic/civic-gen-10.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/civic/civic-gen-10.webp</image:loc>
+      <image:caption>Honda Civic 10ª Geração</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/civic/civic-gen-11.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/civic/civic-gen-11.webp</image:loc>
+      <image:caption>Honda Civic 11ª Geração</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Images - Volkswagen Gol -->
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/gol/gol-gen-04.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/gol/gol-gen-04.webp</image:loc>
+      <image:caption>Volkswagen Gol G4</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/gol/gol-gen-05.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/gol/gol-gen-05.webp</image:loc>
+      <image:caption>Volkswagen Gol G5</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/gol/gol-gen-06.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/gol/gol-gen-06.webp</image:loc>
+      <image:caption>Volkswagen Gol G6</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Images - Chevrolet Onix -->
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/onix/chevrolet-onix-2019.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/onix/chevrolet-onix-2019.webp</image:loc>
+      <image:caption>Chevrolet Onix 2019</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/onix/onix-interior.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/onix/onix-interior.webp</image:loc>
+      <image:caption>Interior do Chevrolet Onix</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/onix/onix-stabilitrak.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/onix/onix-stabilitrak.webp</image:loc>
+      <image:caption>Sistema StabiliTrak do Chevrolet Onix</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://garagem016.com.br/assets/imagens/blog_img/onix/onix-transmissao.webp</loc>
+    <lastmod>2025-10-29T12:00:00+00:00</lastmod>
+    <image:image>
+      <image:loc>https://garagem016.com.br/assets/imagens/blog_img/onix/onix-transmissao.webp</image:loc>
+      <image:caption>Transmissão do Chevrolet Onix</image:caption>
     </image:image>
   </url>
 
