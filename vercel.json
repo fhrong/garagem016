@@ -18,12 +18,12 @@
     },
     {
       "source": "/pages/problemas-comuns-volkswagen-gol.html",
-      "destination": "/blog/pages/problemas-comuns-volkswagen-gol.html",
+      "destination": "/pages/blog/problemas-comuns-volkswagen-gol.html",
       "permanent": true
     },
     {
       "source": "/pages/problemas-comuns-honda-civic.html",
-      "destination": "/blog/pages/problemas-comuns-honda-civic.html",
+      "destination": "/pages/blog/problemas-comuns-honda-civic.html",
       "permanent": true
     }
   ]
