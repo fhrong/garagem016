@@ -9,7 +9,7 @@ body{margin:0;font-family:'Segoe UI',sans-serif;background-color:var(--backgroun
 .main-nav a{color:var(--text-color);text-decoration:none;font-weight:600;transition:color .2s;}
 .main-nav a:hover{color:var(--primary-color);}
 .hero{background:url('/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp') no-repeat center center/cover;contain:paint;height:100vh;display:flex;align-items:center;justify-content:center;position:relative;color:var(--text-color);}
-.overlay{position:absolute;inset:0;background-color:rgba(0,0,0,.75);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;}
+.overlay{position:absolute;inset:0;background-color:rgba(0,0,0,.75);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 .hero-logo{max-width:clamp(160px,20vw,280px);height:auto;margin-bottom:1.5rem;filter:drop-shadow(0 0 4px rgba(0,0,0,.5));transition:transform .3s ease;}
 .hero-logo{scale:1.6;}
 .hero-logo:hover{transform:scale(1.3);}
@@ -108,7 +108,7 @@ footer .footer-social a i{font-size:1.05rem;line-height:1;display:inline-block;}
 }
 @media (min-width:769px){
   .main-nav{margin-top:5rem;position:static;top:auto;left:auto;transform:none;margin-bottom:1.5rem;background:rgba(0,0,0,.6);padding:.5rem 2.5rem;border-radius:2rem;box-shadow:0 4px 12px var(--shadow-color);z-index:1;display:flex!important;visibility:visible!important;opacity:1!important;}
-  .overlay{align-items:center;transform-origin:center top;transform:scale(.92);transition:transform 180ms ease;}
+  .overlay{align-items:center;transform-origin:center top;transform:scale(.88);transition:transform 180ms ease;}
   .hero{height:calc(100vh / .92);overflow:visible;}
   .hero-title{line-height:1.02;}f
   .social-top{margin:0 0 1.5rem;}
