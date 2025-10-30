@@ -24,6 +24,63 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="sitemap" type="application/xml" href="https://garagem016.com.br/sitemap.xml">
+  <style>
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    @media(max-width: 450px){
+        .hero-content p {
+            font-size: 0.8rem;    
+        }   
+    }
+
+    @media (max-width: 768px) {
+      .cta-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .cta {
+        width: auto;
+        text-align: center;
+        margin: 0.5rem 1rem;
+      }
+      .services-illustration-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+      }
+      .hero-title {
+        font-size: 1.8rem;
+        padding: 0 1rem;
+      }
+      .services h2 {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+      }
+      .footer-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+      .footer-links p {
+        margin: 0.5rem 0;
+      }
+    }
+    .services p, .services ul {
+      padding: 0 1rem;
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -155,12 +212,14 @@
           <img src="/assets/imagens/garagem016-logo-mecanica-ribeirao-preto.png" alt="Garagem 016 logo" class="hero-logo">
         </a>
       </div>
-      <h1 class="hero-title">Volante Vibrando Depois do Alinhamento? O Que Checar Antes de Reclamar da Oficina</h1>
-      <p>Guia completo sobre vibração no volante após alinhamento — diagnóstico automotivo profissional em Ribeirão Preto. Nossa oficina mecânica especializada apresenta 8 causas reais (baseadas em diagnósticos práticos) para ajudar você a identificar e resolver o problema.</p>
-      <div class="cta-group">
+      <div class="hero-content">
+        <h1 class="hero-title">Volante Vibrando Depois do Alinhamento? O Que Checar Antes de Reclamar da Oficina</h1>
+        <p>Nossa oficina mecânica especializada apresenta 8 causas reais (baseadas em diagnósticos práticos) para ajudar você a identificar e resolver o problema.</p>
+        <div class="cta-group">
         <a href="https://wa.me/5516992391499?text=Olá,%20quero%20fazer%20um%20diagnóstico." class="cta highlight">Agendar Diagnóstico Agora</a>
         <a href="#causas" class="cta secondary">Ver Causas Comuns</a>
       </div>
+    </div>
     </div>
   </header>
 
