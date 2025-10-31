@@ -25,6 +25,41 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="sitemap" type="application/xml" href="https://garagem016.com.br/sitemap.xml">
   <style>
+    .gallery {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    }
+
+    .gallery-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease-in-out;
+    }
+
+    .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    }
+
+    .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    }
+
+    .carousel-indicators button.active {
+    background: #ff6600;
+    }
     p{
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -41,11 +76,12 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-    @media(max-width: 450px){
+    @media(max-width: 550px){
         .hero-content p {
             font-size: 0.8rem;    
         }   
     }
+    
     
     .services{
       padding: 12px;
@@ -66,11 +102,8 @@
             width: 550px;
         }
     }
+    
     @media (max-width: 768px) {
-      [name="card_img"]{
-        height: auto;
-        width: 398px;
-      }
       .cta-group {
         flex-direction: column;
         align-items: stretch;
@@ -367,12 +400,24 @@
   </section>
 
   <section id="cta-final" class="cta-final">
-    <div class="cta-final-content">
+    <div class="cta-final-content" style="justify-items: center; align-items: center;">
       <!-- IMAGEM 8 -->
       <!-- Foto real da oficina, mecânico sorrindo, ou cliente sendo atendido -->
-      <img src="/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp" alt="Atendimento profissional na Garagem 016 em Ribeirão Preto" class="service-image" name="card_img">
-
       <h2>Diagnóstico gratuito na Garagem 016</h2>
+      <script src="/js/main.js?v=20250902" defer></script>
+      <section id="gallery" class="gallery" aria-label="Galeria de fotos da oficina">
+        <div class="gallery-bg"></div>
+        <div class="gallery-overlay">
+        <h2 style="margin-right: 50px;margin-left: 50px;font-family:ArtegraSans,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:clamp(1.8rem,4.5vw,3.5rem);line-height:1.03;margin-bottom:1rem;color:#ff6600;max-width:1100px;word-break:normal;white-space:normal;text-wrap:balance;">SUA OFICINA</h2>
+        <div class="carousel-indicators" role="tablist">
+            <button data-slide="0" aria-label="Foto 1" class="active"></button>
+            <button data-slide="1" aria-label="Foto 2"></button>
+            <button data-slide="2" aria-label="Foto 3"></button>
+            <button data-slide="3" aria-label="Foto 4"></button>
+        </div>
+        </div>
+      </section>
+      <!-- <img src="/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp" alt="Atendimento profissional na Garagem 016 em Ribeirão Preto" class="service-image" name="card_img" style="height: 430px;width: auto;"> -->
       <p>Se o volante vibra mesmo depois do alinhamento, traga o carro para um teste prático. Nossa equipe especializada fará um diagnóstico completo do seu veículo.</p>
       <a href="https://wa.me/5516992391499?text=Olá,%20meu%20volante%20está%20vibrando%20após%20o%20alinhamento.%20Quero%20diagnóstico." class="cta highlight">Agendar Agora</a>
       <p class="cta-secure">Atendimento na Rua dos Aliados, 581, Ribeirão Preto. Segunda a sexta, das 08h às 18h.</p>
