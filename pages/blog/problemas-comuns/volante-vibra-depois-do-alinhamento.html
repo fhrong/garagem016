@@ -25,6 +25,10 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="sitemap" type="application/xml" href="https://garagem016.com.br/sitemap.xml">
   <style>
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
     .cta-group {
       display: flex;
       flex-wrap: wrap;
@@ -42,8 +46,31 @@
             font-size: 0.8rem;    
         }   
     }
+    
+    .services{
+      padding: 12px;
+      margin: 10px;
+      border-radius: 8vw;
+      border-color: rgb(255, 144, 65);
+      border-style: solid;
+      justify-items: center;
+    }
 
+    
+
+    .service-image { width: 310px; height: 206.55px; object-fit: contain; display: block; border-radius: 8px;}
+    @media (max-width: 600px) { .service-image { width: 100%; height: auto; } }
+    @media (min-width: 768px) {
+        [name="card_img"]{
+            height: auto;
+            width: 550px;
+        }
+    }
     @media (max-width: 768px) {
+      [name="card_img"]{
+        height: auto;
+        width: 398px;
+      }
       .cta-group {
         flex-direction: column;
         align-items: stretch;
@@ -52,7 +79,7 @@
         width: auto;
         text-align: center;
         margin: 0.5rem 1rem;
-      }
+    }
       .services-illustration-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -65,7 +92,7 @@
       .services h2 {
         font-size: 1.5rem;
         padding: 0 1rem;
-      }
+    }
       .footer-links {
         flex-direction: column;
         text-align: center;
@@ -80,6 +107,7 @@
       max-width: 800px;
       margin: 1rem auto;
     }
+    
   </style>
 
   <script type="application/ld+json">
@@ -206,6 +234,7 @@
 
 <body>
   <header class="hero article-hero">
+    <!-- Dica: use uma imagem de fundo relacionada à direção, volante ou oficina -->
     <div class="overlay">
       <div class="hero-header">
         <a href="/" class="home-button" aria-label="Voltar para a página inicial da Garagem 016">
@@ -214,33 +243,47 @@
       </div>
       <div class="hero-content">
         <h1 class="hero-title">Volante Vibrando Depois do Alinhamento? O Que Checar Antes de Reclamar da Oficina</h1>
-        <p>Nossa oficina mecânica especializada apresenta 8 causas reais (baseadas em diagnósticos práticos) para ajudar você a identificar e resolver o problema.</p>
+        <p>Nossa oficina mecânica especializada apresenta 3 causas reais (baseadas em diagnósticos práticos) para ajudar você a identificar e resolver o problema.</p>
         <div class="cta-group">
-        <a href="https://wa.me/5516992391499?text=Olá,%20quero%20fazer%20um%20diagnóstico." class="cta highlight">Agendar Diagnóstico Agora</a>
-        <a href="#causas" class="cta secondary">Ver Causas Comuns</a>
+          <a href="https://wa.me/5516992391499?text=Olá,%20quero%20fazer%20um%20diagnóstico." class="cta highlight">Agendar Diagnóstico Agora</a>
+          <a href="#causas" class="cta secondary">Ver Causas Comuns</a>
+        </div>
       </div>
-    </div>
     </div>
   </header>
 
   <section id="intro" class="services">
     <h2>Por que o volante vibra depois do alinhamento?</h2>
+
+    <!-- IMAGEM 1: foto ilustrando o volante vibrando ou motorista segurando o volante -->
+    <!-- Exemplo: motorista segurando o volante, painel desfocado -->
+    <img name="card_img" src="/assets/imagens/blog_img/pb-comuns/volante-vibrando-depois-do-alinhamento.webp" alt="Motorista segurando o volante durante a direção, representando vibração" class="service-image">
     <p>Quando alguém faz apenas o ajuste geométrico (alinhamento) sem balancear corretamente as rodas, ou quando existem problemas mecânicos ocultos (roda empenada, bolha no pneu, buchas com folga), a sensação de vibração no volante pode persistir — ou até aparecer depois do serviço. Abaixo, listamos as causas mais recorrentes e o que fazer em cada caso.</p>
+
   </section>
 
   <section id="causas" class="services-gallery">
-    <h2>8 Causas Mais Comuns</h2>
+    <h2>3 Causas Mais Comuns</h2>
     <div class="services-illustration-grid">
+
       <div class="service-item">
+        <!-- IMAGEM 2 -->
+        <!-- Foto de máquina de balanceamento ou roda em balanceadora -->
+        <img src="/assets/imagens/blog_img/pb-comuns/balanceamento-de-rodas-ribeirao-garagem016.webp" alt="Roda sendo balanceada em equipamento de oficina" class="service-image">
+
         <h3>1. Balanceamento insuficiente ou mal feito</h3>
         <p>O balanceamento equilibra massas da roda/pneu. Se não foi feito ou foi mal executado, a vibração aparece em velocidade média/alta (60–120 km/h).</p>
         <details>
           <summary>Solução prática</summary>
           <p>Retornar à oficina para balanceamento dinâmico; na Garagem 016 usamos balanceadora digital e testamos em até 2 minutos por roda.</p>
         </details>
-
       </div>
+
       <div class="service-item">
+        <!-- IMAGEM 3 -->
+        <!-- Foto de pneu com bolha ou deformidade no flanco -->
+        <img src="/assets/imagens/blog_img/pb-comuns/pneu-com-bolha-na-lateral.webp" alt="Pneu com bolha visível na lateral" class="service-image">
+
         <h3>2. Pneu com bolha ou deformidade</h3>
         <p>Bolhas internas (separação da carcaça) provocam vibração irregular que não some com balanceamento.</p>
         <details>
@@ -250,6 +293,10 @@
       </div>
 
       <div class="service-item">
+        <!-- IMAGEM 4 -->
+        <!-- Foto de roda empenada ou amassada sendo inspecionada -->
+        <img src="/assets/imagens/blog_img/pb-comuns/garagem-016-roda-amassada.webp" alt="Roda amassada sendo verificada em bancada de oficina" class="service-image">
+
         <h3>3. Roda empenada (amassada)</h3>
         <p>Pequeno amassado na roda causa vibração mesmo com pneus em bom estado. Encontramos esse problema em colisões leves e buracos fortes.</p>
         <details>
@@ -262,6 +309,11 @@
 
   <section id="testes" class="services">
     <h2>Testes Rápidos que Você Pode Fazer</h2>
+
+    <!-- IMAGEM 5 -->
+    <!-- Foto de mecânico inspecionando pneu ou apertando porcas de roda -->
+    <img src="/assets/imagens/blog_img/pb-comuns/checando-porcas-e-parafusos.webp" alt="Mecânico verificando pneu e porcas da roda" class="service-image" name="card_img">
+
     <ul>
       <li><strong>Inspeção Visual:</strong> Procure bolhas ou cortes no flanco dos pneus.</li>
       <li><strong>Verificação de Porcas:</strong> Com o carro no chão, confira se as porcas estão bem apertadas.</li>
@@ -274,6 +326,11 @@
 
   <section id="when" class="services">
     <h2>Quando Procurar Ajuda Profissional?</h2>
+
+    <!-- IMAGEM 6 -->
+    <!-- Foto da equipe da oficina Garagem 016 ou fachada da oficina -->
+    <img src="/assets/imagens/oficina-fachada-exterior-ribeirao-preto.webp" alt="Equipe da Garagem 016 ou fachada da oficina em Ribeirão Preto" class="service-image" name="card_img">
+
     <p>Se você notar qualquer um destes sinais:</p>
     <ul>
       <li>Vibração forte ou que aumenta com o tempo</li>
@@ -285,33 +342,42 @@
     <a href="https://wa.me/5516992391499?text=Olá!%20Preciso%20de%20um%20diagnóstico%20para%20vibração%20no%20volante." class="cta secondary">Agendar Visita</a>
   </section>
 
-    <section id="faq" class="services">
-      <h2>Perguntas Frequentes</h2>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <strong>Posso rodar a cidade inteira com o carro vibrando?</strong>
-          <p>Evite rodar longas distâncias. Vibração forte pode causar perda de controle ou danificar componentes (rolamentos, buchas, pneus).</p>
-        </div>
-        <div class="faq-item">
-          <strong>O que a oficina deveria verificar após eu reclamar?</strong>
-          <p>Balanceamento, inspeção de pneus (bolha), verificação de roda empenada, torque das porcas e checagem de buchas/terminais.</p>
-        </div>
-        <div class="faq-item">
-          <strong>Quanto tempo leva o diagnóstico completo?</strong>
-          <p>Normalmente 30–45 minutos (diagnóstico + teste em estrada curta). Se precisar de desmontagem, será informado no orçamento.</p>
-        </div>
-      </div>
-      <a href="https://wa.me/5516992391499?text=Olá!%20Tenho%20dúvidas%20sobre%20vibração%20no%20volante." class="cta secondary">Tirar Dúvidas no WhatsApp</a>
-    </section>
+  <section id="faq" class="services">
+    <h2>Perguntas Frequentes</h2>
 
-    <section id="cta-final" class="cta-final">
-      <div class="cta-final-content">
-        <h2>Diagnóstico gratuito na Garagem 016</h2>
-        <p>Se o volante vibra mesmo depois do alinhamento, traga o carro para um teste prático. Nossa equipe especializada fará um diagnóstico completo do seu veículo.</p>
-        <a href="https://wa.me/5516992391499?text=Olá,%20meu%20volante%20está%20vibrando%20após%20o%20alinhamento.%20Quero%20diagnóstico." class="cta highlight">Agendar Agora</a>
-        <p class="cta-secure">Atendimento na Rua dos Aliados, 581, Ribeirão Preto. Segunda a sexta, das 08h às 18h.</p>
+    <!-- IMAGEM 7 -->
+    <!-- Ícone ou imagem leve ilustrando perguntas ou atendimento -->
+    <img src="/assets/imagens/blog_img/pb-comuns/acordo-mecanico-cliente-garagem-016.webp" alt="Ilustração de atendimento automotivo ou dúvidas frequentes" class="service-image" name="card_img">
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <strong>Posso rodar a cidade inteira com o carro vibrando?</strong>
+        <p>Evite rodar longas distâncias. Vibração forte pode causar perda de controle ou danificar componentes (rolamentos, buchas, pneus).</p>
       </div>
-    </section>
+      <div class="faq-item">
+        <strong>O que a oficina deveria verificar após eu reclamar?</strong>
+        <p>Balanceamento, inspeção de pneus (bolha), verificação de roda empenada, torque das porcas e checagem de buchas/terminais.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Quanto tempo leva o diagnóstico completo?</strong>
+        <p>Normalmente 30–45 minutos (diagnóstico + teste em estrada curta). Se precisar de desmontagem, será informado no orçamento.</p>
+      </div>
+    </div>
+    <a href="https://wa.me/5516992391499?text=Olá!%20Tenho%20dúvidas%20sobre%20vibração%20no%20volante." class="cta secondary">Tirar Dúvidas no WhatsApp</a>
+  </section>
+
+  <section id="cta-final" class="cta-final">
+    <div class="cta-final-content">
+      <!-- IMAGEM 8 -->
+      <!-- Foto real da oficina, mecânico sorrindo, ou cliente sendo atendido -->
+      <img src="/assets/imagens/oficina-automotiva-ribeirao-preto-vista-45graus.webp" alt="Atendimento profissional na Garagem 016 em Ribeirão Preto" class="service-image" name="card_img">
+
+      <h2>Diagnóstico gratuito na Garagem 016</h2>
+      <p>Se o volante vibra mesmo depois do alinhamento, traga o carro para um teste prático. Nossa equipe especializada fará um diagnóstico completo do seu veículo.</p>
+      <a href="https://wa.me/5516992391499?text=Olá,%20meu%20volante%20está%20vibrando%20após%20o%20alinhamento.%20Quero%20diagnóstico." class="cta highlight">Agendar Agora</a>
+      <p class="cta-secure">Atendimento na Rua dos Aliados, 581, Ribeirão Preto. Segunda a sexta, das 08h às 18h.</p>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Garagem 016 - Oficina mecânica especializada em alinhamento e balanceamento em Ribeirão Preto — Rua Aliados Nº581 - Campos Elíseos.</p>
@@ -328,6 +394,7 @@
     </div>
   </footer>
 </body>
+
 </html>
 </body>
 </html>
