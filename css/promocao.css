@@ -679,3 +679,14 @@ section,
     min-height: calc(100vh - 90px);
   }
 }
+
+@media (max-width:320px){
+  .overlay{padding-top:4.5rem;}
+  .social-top{gap:12px;}
+  .social-top a{font-size:1.6rem;}
+  .floating-cta{right:12px;bottom:12px;gap:8px;}
+  .floating-cta a{padding:8px 10px;font-size:.95rem;}
+  .hero-title {font-size: 15px;}
+  .overlay p{font-size: 10px;}
+  .hero-content a.cta{font-size: 10px;}
+}

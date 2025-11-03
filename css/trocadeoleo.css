@@ -286,6 +286,7 @@ body {
     width: 95vw;
     max-width: 98vw;
   }
+  .overlay{margin-bottom: 90px;}
   .troca-cta-hero { font-size: 1.05rem; padding: 0.8rem 1.1rem; }
 }
 
@@ -297,4 +298,17 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+
+@media (max-width:320px){
+  .overlay{zoom: 0.9; margin-bottom: 50px;}
+  .social-top{gap:12px;}
+  .social-top a{font-size:1.6rem;}
+  .floating-cta{right:12px;bottom:12px;gap:8px;}
+  .floating-cta a{padding:8px 10px;font-size:.95rem;}
+  .hero-title {font-size: 15px;}
+  .hero-logo {font-size: 0.5rem;}
+  .overlay p{font-size: 10px;}
+  .hero-content.troca-card {zoom: 0.7; width: 1000vw;}
 }
