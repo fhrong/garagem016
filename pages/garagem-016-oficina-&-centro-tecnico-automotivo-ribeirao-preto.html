@@ -43,7 +43,61 @@
       "@type": "ReserveAction",
       "target": "https://wa.me/5516992391499?text=Olá!%20Quero%20agendar%20um%20atendimento",
       "name": "Agendar Atendimento"
-    }
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": "Cliente 1",
+        "reviewBody": "Ótimos profissionais, confiança e qualidade no serviço prestado. Recomendo!",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      },
+      {
+        "@type": "Review",
+        "author": "Cliente 2",
+        "reviewBody": "Empresa de muita qualidade, atendimento nota mil e o melhor de tudo, profissionais qualificados!",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        }
+      }
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Troca de Óleo e Filtros",
+          "url": "https://garagem016.com.br/servicos/troca-de-oleo-em-ribeirao-preto.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Alinhamento e Balanceamento",
+          "url": "https://garagem016.com.br/servicos/alinhamento-e-balanceamento-em-ribeirao-preto.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Suspensão e Freios"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Elétrica, Injeção e Diagnóstico"
+        }
+      }
+    ]
   }
   </script>
   <meta name="keywords" content="Oficina automotiva Ribeirão Preto, troca de óleo, alinhamento, balanceamento, suspensão, freios, elétrica, revisão completa">
@@ -96,7 +150,67 @@
 
 				<h3>Horário de Funcionamento</h3>
 				<p><strong>Segunda a Sexta:</strong> 08:00 — 18:00<br><strong>Sábado:</strong> atendimento por agendamento (consulte)<br><strong>Domingo:</strong> fechado</p>
-
+                <section id="reviews" style="padding:2rem 1rem; background-color:#f9f9f9;border-style: solid; border-radius: 2vw;">
+                    <h2 style="text-align:center; color:#ff6600; margin-bottom:1.5rem;">O que nossos clientes dizem</h2>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;">
+                        <!-- Review Template -->
+                        <div style="background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                            <div style="width:60px; height:60px; background:#ddd; border-radius:50%;"><img src="https://lh3.googleusercontent.com/a-/ALV-UjU5tiySam1ViJvUj_L-X8Uj8hQ8_FRFqPN7yuCrJ9GxG6JxuQ56=w65-h65-p-rp-mo-br100" alt=""></div>
+                            <div>
+                            <h3 style="margin:0; font-size:1.1rem; color:#333;">Gustavo Oliveira</h3><span style="color: gold; font-size: 24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+                        <p style="font-size:1rem; color:#444;">Ótimos profissionais, confiança e Qualidade no serviço Prestados, Recomendo.</p>
+                        </div>
+                        <!-- Repeat the above block for 6 reviews -->
+                        <div style="background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                            <div style="width:60px; height:60px; background:#ddd; border-radius:50%;"><img src="https://lh3.googleusercontent.com/a/ACg8ocKGahzcrObzEOmweHhza1rP7DulfhLZ_s2VdvtdgVqXzZr9sw=w65-h65-p-rp-mo-br100" alt=""></div>
+                            <div>
+                            <h3 style="margin:0; font-size:1.1rem; color:#333;">Vander Alves</h3><span style="color: gold; font-size: 24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+                        <p style="font-size:1rem; color:#444;">Empresa de muita qualidade, atendimento nota mil e o melhor de tudo, profissionais qualificados !</p>
+                        </div>
+                        <div style="background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                            <div style="width:60px; height:60px; background:#ddd; border-radius:50%;"><img src="https://lh3.googleusercontent.com/a/ACg8ocKnORq_G--MFEP00z22Z56XaW64tkuqEac1i9VjVZYMLqoMgw=w65-h65-p-rp-mo-br100" alt=""></div>
+                            <div>
+                            <h3 style="margin:0; font-size:1.1rem; color:#333;">Roberta Mesquita Silveira</h3><span style="color: gold; font-size: 24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+                        <p style="font-size:1rem; color:#444;">Ótimo atendimento, bons profissionais, super indico !</p>
+                        </div>
+                        <div style="background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                            <div style="width:60px; height:60px; background:#ddd; border-radius:50%;"><img src="https://lh3.googleusercontent.com/a/ACg8ocI7o6IZ3h3hZPF_wFgYStdyOANm4ppStNPYGCmMSMrjp8OnbQ=w72-h72-p-rp-mo-br100" alt=""></div>
+                            <div>
+                            <h3 style="margin:0; font-size:1.1rem; color:#333;">Luis Carlos Dassie</h3><span style="color: gold; font-size: 24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+                        <p style="font-size:1rem; color:#444;">Muito bom, recomendo ! Além de serem ótimos profissionais são super honestos e de confiança !</p>
+                        </div>
+                        <div style="background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                            <div style="width:60px; height:60px; background:#ddd; border-radius:50%;"><img src="https://lh3.googleusercontent.com/a-/ALV-UjVbIdzT8AX1gXLS5beYTQs5mBEaPekyKwTNeQpUVEoJqhCgHp4=w65-h65-p-rp-mo-br100" alt=""></div>
+                            <div>
+                            <h3 style="margin:0; font-size:1.1rem; color:#333;">Bruno Vargas Rezende</h3><span style="color: gold; font-size: 24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+                        <p style="font-size:1rem; color:#444;">Recomendo sempre, ótimo atendimento e um serviço excelente, parabéns.</p>
+                        </div>
+                        <div style="background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+                            <div style="width:60px; height:60px; background:#ddd; border-radius:50%;"><img src="https://lh3.googleusercontent.com/a/ACg8ocK4XPAOLrdzACLBl1bXCNkX-spcOKg6okFvrgJJgmYcCutYJA=w65-h65-p-rp-mo-br100" alt=""></div>
+                            <div>
+                            <h3 style="margin:0; font-size:1.1rem; color:#333;">Maria Helena Benati</h3><span style="color: gold; font-size: 24px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                            </div>
+                        </div>
+                        <p style="font-size:1rem; color:#444;">Tudo muito bom.</p>
+                        </div>
+                    </div>
+                    </section>
 				<section id="localizacao" class="localizacao-section" aria-label="Localização da Garagem 016">
                     <h2 style="text-align:center; color:#ff6600; margin-bottom:0.7em;">
                     <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Onde estamos?
@@ -120,8 +234,13 @@
 
 				<h3>Telefone e WhatsApp</h3>
 				<p>
-					Telefone: <a href="tel:+5516992391499">+55 16 99239-1499</a><br>
-					WhatsApp: <a href="https://wa.me/5516992391499?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20servi%C3%A7os" target="_blank">Chamar no WhatsApp</a>
+					Telefone: <a style="color:white;" href="tel:+5516992391499"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg>+55 16 99239-1499</a><br>
+					WhatsApp: <a style="color:white;" href="https://wa.me/5516992391499?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20servi%C3%A7os" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg> WhatsApp</a>
 				</p>
 
 				<h3>Serviços Principais</h3>
@@ -134,9 +253,7 @@
 					<li>Elétrica, Injeção e Diagnóstico</li>
 					<li>Mecânica Geral e Revisão</li>
 				</ul>
-
-				<p>Estas páginas internas contêm informações técnicas e condições promocionais; ao indexar, o Google terá dados claros sobre os serviços que prestamos.</p>
-			</div>
+            </div>
 
 			<aside class="contact-card" aria-label="Contato e galeria">
 				<h3>Galeria Rápida</h3>
@@ -149,7 +266,10 @@
 
 				<h3>Contato Rápido</h3>
 				<p style="margin-bottom:10px;"><strong>Telefone:</strong><br>
-				<a href="tel:+5516992391499">+55 16 99239-1499</a></p>
+				<a href="tel:+5516992391499"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg>+55 16 99239-1499</a></p>
 
 				<style>
 					:root{
@@ -247,6 +367,7 @@
 				</style>
 			</aside>
 		</section>
+
 		<footer>
 			<p>© 2025 Garagem 016 - Todos os direitos reservados.</p>
 			<p class="email">E-mail: <a href="mailto:garagem016oficina@gmail.com">garagem016oficina@gmail.com</a></p>
