@@ -92,6 +92,16 @@
     height: auto;
   }
 
+  .blog-card img {
+    height: 220px; /* Set a fixed height for blog card images */
+    object-fit: cover; /* Ensure the image covers the area proportionally */
+  }
+
+  .blog-categories img{
+    height: 220px; /* Set a fixed height for blog card images */
+    object-fit: cover;
+  }
+
   .blog-card h3, .category-card h3 {
     margin: 16px;
     font-size: 1.2em;
@@ -251,7 +261,7 @@
       font-size: 1.5rem;
     }
   }
-</style>
+  </style>
 
 </head>
 <body>
@@ -318,9 +328,16 @@
             <p>Veja como identificar e resolver os problemas mais recorrentes no Chevrolet Onix.</p>
           </a>
         </article>
+        <article class="blog-card">
+          <a href="/pages/blog/problemas-comuns/volante-vibra-depois-do-alinhamento.html">
+            <img src="/assets/imagens/blog_img/pb-comuns/volante-vibrando-depois-do-alinhamento.webp" alt="Problemas Comuns no Chevrolet Onix" loading="lazy" decoding="async">
+            <h3>Volante Vibrando Depois do Alinhamento ?</h3>
+            <p>Entenda as causas mais recorrentes e o que fazer em cada caso.</p>
+          </a>
+        </article>
       </div>
     </section>
-    <section class="blog-categories">
+    <!-- <section class="blog-categories">
       <h2>Categorias</h2>
       <div class="category-cards">
         <div class="category-card em-breve">
@@ -329,34 +346,28 @@
           <p>Estamos preparando conteúdos incríveis para você!</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- <section class="blog-categories">
+    <section class="blog-categories">
       <h2>Categorias</h2>
       <div class="category-cards">
         <div class="category-card">
-          <a href="/pages/categoria-manutencao.html">
-            <img src="/assets/imagens/categorias/manutencao.webp" alt="Manutenção Automotiva" loading="lazy" decoding="async">
-            <h3>Manutenção Automotiva</h3>
-            <p>Dicas e informações para manter seu carro em perfeito estado.</p>
-          </a>
-        </div>
-        <div class="category-card">
           <a href="/pages/categoria-problemas-comuns.html">
-            <img src="/assets/imagens/categorias/problemas-comuns.webp" alt="Problemas Comuns" loading="lazy" decoding="async">
+            <img src="/assets/imagens/blog_img/pb-comuns/problemas-comuns.webp" alt="Problemas Comuns" loading="lazy" decoding="async">
             <h3>Problemas Comuns</h3>
             <p>Identifique e resolva os problemas mais frequentes em veículos.</p>
           </a>
         </div>
         <div class="category-card">
-          <a href="/pages/categoria-dicas-gerais.html">
-            <img src="/assets/imagens/categorias/dicas-gerais.webp" alt="Dicas Gerais" loading="lazy" decoding="async">
-            <h3>Dicas Gerais</h3>
-            <p>Conselhos úteis para o dia a dia com seu carro.</p>
+          <a href="/pages/categoria-problemas-comuns.html">
+            <img src="/assets/imagens/blog_img/em-breve.webp" alt="Problemas Comuns" loading="lazy" decoding="async">
+            <h3>Em breve</h3>
+            <!-- <p>Identifique e resolva os problemas mais frequentes em veículos.</p> -->
           </a>
         </div>
+
       </div>
-    </section> -->
+    </section> 
   </main>
   <footer>
     <p>© 2025 Garagem 016 - Todos os direitos reservados.</p>
