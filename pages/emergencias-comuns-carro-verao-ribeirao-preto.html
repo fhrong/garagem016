@@ -511,18 +511,38 @@
       window.addEventListener('resize', adjustHeroMargin);
     }
   });
-
+</script>
+<script>
   document.addEventListener('DOMContentLoaded', () => {
-    const whatsappButton = document.querySelector('.cta-final-leve .modern-button');
-    const callButton = document.querySelector('.floating-cta .phone');
 
-    if (whatsappButton) {
-      whatsappButton.setAttribute('onclick', "gtag('event', 'whatsapp_click_diagnostico', {'send_to': 'AW-17392207837'});");
-    }
+    // Todos os botões de WhatsApp da página
+    const whatsappButtons = document.querySelectorAll(
+      'a[href*="wa.me"], a[href*="api.whatsapp"]'
+    );
 
-    if (callButton) {
-      callButton.setAttribute('onclick', "gtag('event', 'call_click_diagnostico', {'send_to': 'AW-17392207837'});");
-    }
+    // Todos os botões de ligação
+    const callButtons = document.querySelectorAll(
+      'a[href^="tel:"]'
+    );
+
+    // Evento de WhatsApp
+    whatsappButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        gtag('event', 'whatsapp_click_diagnostico', {
+          'send_to': 'AW-17392207837'
+        });
+      });
+    });
+
+    // Evento de ligação
+    callButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        gtag('event', 'call_click_diagnostico', {
+          'send_to': 'AW-17392207837'
+        });
+      });
+    });
+
   });
 </script>
 </body>

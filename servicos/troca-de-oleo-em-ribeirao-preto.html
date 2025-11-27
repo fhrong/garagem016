@@ -149,6 +149,15 @@
     }
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17392207837"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17392207837');
+    </script>
+
 
 </head>
 <body>
@@ -296,18 +305,37 @@
       </a>
     </div>
     <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const whatsappButton = document.querySelector('.floating-cta .whatsapp');
-    const callButton = document.querySelector('.floating-cta .phone');
+      document.addEventListener('DOMContentLoaded', () => {
 
-    if (whatsappButton) {
-      whatsappButton.setAttribute('onclick', "gtag('event', 'whatsapp_click_oleo', {'send_to': 'AW-17392207837'});");
-    }
+        // Todos os botões de WhatsApp da página
+        const whatsappButtons = document.querySelectorAll(
+          'a[href*="wa.me"], a[href*="api.whatsapp"]'
+        );
 
-    if (callButton) {
-      callButton.setAttribute('onclick', "gtag('event', 'call_click_oleo', {'send_to': 'AW-17392207837'});");
-    }
-  });
-</script>
+        // Todos os botões de ligação
+        const callButtons = document.querySelectorAll(
+          'a[href^="tel:"]'
+        );
+
+        // Evento de WhatsApp
+        whatsappButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            gtag('event', 'whatsapp_click_oleo', {
+              'send_to': 'AW-17392207837'
+            });
+          });
+        });
+
+        // Evento de ligação
+        callButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            gtag('event', 'call_click_oleo', {
+              'send_to': 'AW-17392207837'
+            });
+          });
+        });
+
+      });
+    </script>
 </body>
 </html>

@@ -330,8 +330,7 @@
       <span class="label">Ligar agora</span>
     </a>
   </div>
-</body>
-
+  
   <script>
     (function(){
       function isMobile(){ return window.matchMedia('(max-width:768px)').matches; }
@@ -357,18 +356,37 @@
   </script>
 
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const whatsappButton = document.querySelector('.floating-cta .whatsapp');
-    const callButton = document.querySelector('.floating-cta .phone');
+    document.addEventListener('DOMContentLoaded', () => {
 
-    if (whatsappButton) {
-      whatsappButton.setAttribute('onclick', "gtag('event', 'whatsapp_click_amortecedor', {'send_to': 'AW-17392207837'});");
-    }
+      // Todos os botões de WhatsApp da página
+      const whatsappButtons = document.querySelectorAll(
+        'a[href*="wa.me"], a[href*="api.whatsapp"]'
+      );
 
-    if (callButton) {
-      callButton.setAttribute('onclick', "gtag('event', 'call_click_amortecedor', {'send_to': 'AW-17392207837'});");
-    }
-  });
-  </script>
-</body>
+      // Todos os botões de ligação
+      const callButtons = document.querySelectorAll(
+        'a[href^="tel:"]'
+      );
+
+      // Evento de WhatsApp
+      whatsappButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          gtag('event', 'whatsapp_click_amortecedor', {
+            'send_to': 'AW-17392207837'
+          });
+        });
+      });
+
+      // Evento de ligação
+      callButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          gtag('event', 'call_click_amortecedor', {
+            'send_to': 'AW-17392207837'
+          });
+        });
+      });
+
+    });
+    </script>
+  </body>
 </html>
