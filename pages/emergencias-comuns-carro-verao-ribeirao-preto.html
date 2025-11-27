@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17392207837"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17392207837');
+  </script>
+
   <style>
     .modern-button {
       display: inline-block;
@@ -500,6 +509,19 @@
       adjustHeroMargin();
 
       window.addEventListener('resize', adjustHeroMargin);
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const whatsappButton = document.querySelector('.cta-final-leve .modern-button');
+    const callButton = document.querySelector('.floating-cta .phone');
+
+    if (whatsappButton) {
+      whatsappButton.setAttribute('onclick', "gtag('event', 'whatsapp_click_diagnostico', {'send_to': 'AW-17392207837'});");
+    }
+
+    if (callButton) {
+      callButton.setAttribute('onclick', "gtag('event', 'call_click_diagnostico', {'send_to': 'AW-17392207837'});");
     }
   });
 </script>

@@ -295,5 +295,19 @@
         <span class="label">Ligar agora</span>
       </a>
     </div>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const whatsappButton = document.querySelector('.floating-cta .whatsapp');
+    const callButton = document.querySelector('.floating-cta .phone');
+
+    if (whatsappButton) {
+      whatsappButton.setAttribute('onclick', "gtag('event', 'whatsapp_click_oleo', {'send_to': 'AW-17392207837'});");
+    }
+
+    if (callButton) {
+      callButton.setAttribute('onclick', "gtag('event', 'call_click_oleo', {'send_to': 'AW-17392207837'});");
+    }
+  });
+</script>
 </body>
 </html>

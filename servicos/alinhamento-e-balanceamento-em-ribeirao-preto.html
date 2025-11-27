@@ -241,5 +241,19 @@
     <a class="whatsapp" href="https://wa.me/5516992391499?text=Olá! Gostaria de agendar alinhamento." target="_blank"><i class="fab fa-whatsapp"></i> <span class="label">Falar no WhatsApp</span></a>
     <a class="phone" href="tel:+5516992391499"><i class="fas fa-phone"></i> <span class="label">Ligar agora</span></a>
   </div>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const whatsappButton = document.querySelector('.floating-cta .whatsapp');
+    const callButton = document.querySelector('.floating-cta .phone');
+
+    if (whatsappButton) {
+      whatsappButton.setAttribute('onclick', "gtag('event', 'whatsapp_click_alinhabalan', {'send_to': 'AW-17392207837'});");
+    }
+
+    if (callButton) {
+      callButton.setAttribute('onclick', "gtag('event', 'call_click_alinhabalan', {'send_to': 'AW-17392207837'});");
+    }
+  });
+  </script>
 </body>
 </html>
