@@ -1,6 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <style>
+    .modern-button {
+      display: inline-block;
+      padding: 1rem;
+      background: #ff6600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .modern-button:hover {
+      background-color: #ff4500;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+  
+    .modern-button:active {
+      background-color: #e63900;
+      transform: translateY(0);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
+    .topbar-cta {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 102, 0, 0.95);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.4rem 1rem;
+      z-index: 9999;
+      font-size: 0.95rem;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    }
+    .topbar-cta a {
+      color: #fff;
+      font-weight: bold;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      transition: .3s;
+    }
+  
+    .topbar-cta a:hover {
+      background: #fff;
+      color: #ff6600;
+    }
+    .mini-cta {
+      text-align: center;
+      background: rgba(255, 102, 0, 0.1);
+      border: 1px solid #ff6600;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      margin: 1rem auto 2rem;
+      max-width: 600px;
+      font-size: 0.95rem;
+    }
+  
+    .mini-cta a {
+      font-weight: bold;
+      color: #ff6600;
+      text-decoration: underline;
+    }
+    .cta-final-leve {
+      text-align: center;
+      margin: 3rem 10px;
+      padding: 2rem;
+      background: #1a1a1a;
+      border: 1px solid #ff6600;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,.5);
+    }
+    .cta-final-leve h3 {
+      color: #ff6600;
+      margin-bottom: 0.5rem;
+    }
+    .cta-final-leve p {
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+    /* Empurra o header pra baixo quando a topbar existir */
+    body.topbar-active header {
+      margin-top: 100px; /* altura exata da topbar */
+    }
+
+    @media (max-width: 480px) {
+      body.topbar-active header {
+        margin-top: 44px; /* topbar fica um pouco maior no mobile */
+      }
+    }
+    @media (max-width: 768px) {
+      .social-top {
+        position: relative;
+        z-index: 10000; /* Ensure it appears above the topbar */
+        margin-top: 5vh; /* Add spacing to avoid overlap */
+      }
+
+      .topbar-cta {
+        font-size: 0.85rem; /* Slightly smaller font size */
+      }
+    }
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: clamp(1.2rem, 4vw, 2rem); /* Adjust font size for tablets */
+      }
+
+      .hero-subtitle {
+        font-size: clamp(0.9rem, 3.5vw, 1.5rem); /* Adjust subtitle size for tablets */
+      }
+
+      .hero-content {
+        padding: 1rem; /* Ensure proper spacing */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: clamp(0.32rem, 0.1vw, 0.5rem); /* Adjust font size for mobile */
+      }
+
+      .hero-subtitle {
+        font-size: clamp(0.1rem, 0.1vw, .11rem); /* Adjust subtitle size for mobile */
+      }
+
+      .hero-content {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: clamp(0.32rem, 0.1vw, 0.5rem); /* Adjust font size for mobile */
+      }
+
+      .hero-subtitle {
+        font-size: clamp(0.7rem, 5vw, 1rem); /* Adjust subtitle size for mobile */
+      }
+
+      .hero-content {
+        padding: 0.5rem; /* Reduce padding for mobile */
+      }
+    }
+
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -87,8 +239,13 @@
 <!-- ========================================= -->
 <!-- SEÇÃO DE SINTOMAS                         -->
 <!-- ========================================= -->
+<div class="mini-cta">
+  Não sabe qual é o problema? Fale com um mecânico agora →
+  <a href="https://wa.me/5516992391499">Atendimento imediato</a>
+</div>
 <section id="sintomas">
   <h2>Sintomas Comuns no Carro e o Que Podem Significar</h2>
+
   <p>Selecione um dos sintomas abaixo para ver causas prováveis, riscos e a solução recomendada.</p>
 
   <!-- Sintoma 1 -->
@@ -231,7 +388,7 @@
       <li>Transparência total no processo.</li>
       <li>Atendimento rápido via WhatsApp.</li>
       <li>Localização estratégica no Campos Elíseos.</li>
-      <li>Diagnóstico Gratuito</li>
+      <li>Diagnóstico Gratuito.</li>
     </ul>
   </div>
 
@@ -242,8 +399,8 @@
 <!-- LOCALIZAÇÃO                               -->
 <!-- ========================================= -->
 <section style="justify-self: center; text-align:center;" id="localizacao" class="localizacao-section" aria-label="Localização da Garagem 016">
-    <div>
-      <h2 style="color:#ff6600; margin-bottom:0.7em;">
+  <div>
+    <h2 style="color:#ff6600; margin-bottom:0.7em;">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Onde estamos?
       </h2>
       <p style="font-size:1.08em; color:#222; margin-bottom:1.2em;">
@@ -281,33 +438,12 @@
   </ul>
 </section>
 
-<style>
-  .modern-button {
-    display: inline-block;
-    padding: 1rem;
-    background: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
 
-  .modern-button:hover {
-    background-color: #ff4500;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  .modern-button:active {
-    background-color: #e63900;
-    transform: translateY(0);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  }
-</style>
-
+<section class="cta-final-leve">
+  <h3>Precisa de ajuda agora?</h3>
+  <p>Respondemos rápido e fazemos diagnóstico gratuito em Ribeirão Preto.</p>
+  <a href="https://wa.me/5516992391499" class="modern-button">Chamar no WhatsApp</a>
+</section>
 <!-- ========================================= -->
 <!-- FOOTER                                    -->
 <footer style="padding-left: 0px; padding-right: 0px;">
@@ -321,19 +457,16 @@
 
 
 <script>
-  // JavaScript for interactive buttons
   document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.grid-sintomas .item');
     const ctaButton = document.querySelector('.cta');
 
-    let selectedProblems = []; // Array to store selected problems
+    let selectedProblems = [];
 
-    // Add click event to each item
     items.forEach(item => {
       item.addEventListener('click', () => {
         const problem = item.textContent.trim();
 
-        // Toggle 'selected' class and update the selectedProblems array
         if (item.classList.contains('selected')) {
           item.classList.remove('selected');
           selectedProblems = selectedProblems.filter(p => p !== problem);
@@ -344,7 +477,6 @@
       });
     });
 
-    // Update the CTA button link dynamically
     ctaButton.addEventListener('click', (event) => {
       if (selectedProblems.length > 0) {
         const problemsText = selectedProblems.join(', ');
@@ -354,7 +486,26 @@
       }
     });
   });
-</script>
 
+  document.addEventListener('DOMContentLoaded', () => {
+    const topbar = document.querySelector('.topbar-cta');
+    const hero = document.querySelector('.hero');
+
+    if (topbar && hero) {
+      const adjustHeroMargin = () => {
+        const topbarHeight = topbar.offsetHeight;
+        hero.style.marginTop = `${topbarHeight}px`;
+      };
+
+      adjustHeroMargin();
+
+      window.addEventListener('resize', adjustHeroMargin);
+    }
+  });
+</script>
 </body>
+<div class="topbar-cta">
+  <span>Diagnóstico rápido e gratuito →</span>
+  <a href="https://wa.me/5516992391499" target="_blank">Chamar no WhatsApp</a>
+</div>
 </html>
