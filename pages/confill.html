@@ -44,11 +44,21 @@
     }
 
     function maskCurrency(value) {
+      let v = value.replace(/\D/g, ""); 
+      v = (v / 100).toFixed(2) + "";
+      v = v.replace(".", ",");      
+      v = v.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    
+      return "R$" + v;
+    }
+
+
+    function maskDate(value) {
       return value
         .replace(/\D/g, "")
-        .replace(/(\d)(\d{2})$/, "$1,$2")
-        .replace(/(?=(\d{3})+\D)/g, ".")
-        .replace(/^/, "R$");
+        .replace(/(\d{2})(\d)/, "$1/$2")
+        .replace(/(\d{2})(\d)/, "$1/$2")
+        .replace(/(\d{4})\d+?$/, "$1");
     }
 
     function generateFormId() {
@@ -63,16 +73,12 @@
 
     window.addEventListener('DOMContentLoaded', generateFormId);
 
-    // ----------- EVITA REDIRECIONAMENTO E USA FETCH ----------
     async function enviarFormulario(event) {
-      event.preventDefault(); // impede o redirect
-
+      event.preventDefault(); 
       const form = event.target;
       const webhook = "https://autowebhook.garantiabrasilauto.com.br/webhook/1316fb6a-47a1-442d-9b73-3d2278843814";
 
       const formData = new FormData(form);
-
-      // Converte FormData para objeto normal
       const payload = {};
       formData.forEach((value, key) => payload[key] = value);
 
@@ -106,9 +112,6 @@
   <form onsubmit="enviarFormulario(event)"
         class="max-w-2xl w-full mx-auto bg-white p-6 mt-6 rounded-lg shadow-lg px-4 sm:p-8">
 
-    <!-- TODOS OS CAMPOS IGUAIS AO SEU -->
-    <!-- (não removi nenhum) -->
-
     <input type="text" name="Vendedor Responsável" placeholder="Vendedor Responsável" required
            class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
@@ -139,9 +142,10 @@
            class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Data de Nasc" placeholder="Data de Nasc"
+           oninput="this.value = maskDate(this.value)" maxlength="10"
            class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
-    <input type="text" name="Endereço" placeholder="Endereço" required
+    <input type="text" name="Endereço" placeholder="Endereço " required
            class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Cidade" placeholder="Cidade" required
