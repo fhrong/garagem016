@@ -43,20 +43,57 @@
       return maskCNPJ(value);
     }
 
+    function maskCurrency(value) {
+      return value
+        .replace(/\D/g, "")
+        .replace(/(\d)(\d{2})$/, "$1,$2")
+        .replace(/(?=(\d{3})+\D)/g, ".")
+        .replace(/^/, "R$");
+    }
+
     function generateFormId() {
       const letters = 'abcdefghijklmnopqrstuvwxyz';
       const randomLetters =
         letters[Math.floor(Math.random() * letters.length)] +
         letters[Math.floor(Math.random() * letters.length)];
-
       const randomNumbers =
         Math.floor(Math.random() * 10) + '' + Math.floor(Math.random() * 10);
-
-      const el = document.getElementById('form_id');
-      if (el) el.value = `000${randomLetters}${randomNumbers}`;
+      document.getElementById('form_id').value = `000${randomLetters}${randomNumbers}`;
     }
 
     window.addEventListener('DOMContentLoaded', generateFormId);
+
+    // ----------- EVITA REDIRECIONAMENTO E USA FETCH ----------
+    async function enviarFormulario(event) {
+      event.preventDefault(); // impede o redirect
+
+      const form = event.target;
+      const webhook = "https://autowebhook.garantiabrasilauto.com.br/webhook/1316fb6a-47a1-442d-9b73-3d2278843814";
+
+      const formData = new FormData(form);
+
+      // Converte FormData para objeto normal
+      const payload = {};
+      formData.forEach((value, key) => payload[key] = value);
+
+      try {
+        const response = await fetch(webhook, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        document.getElementById("mensagem").innerHTML =
+          `<p class="text-green-600 font-semibold mt-4">Formulário enviado com sucesso!</p>`;
+
+        form.reset();
+        generateFormId();
+
+      } catch (error) {
+        document.getElementById("mensagem").innerHTML =
+          `<p class="text-red-600 font-semibold mt-4">Erro ao enviar. Tente novamente.</p>`;
+      }
+    }
   </script>
 </head>
 
@@ -66,80 +103,79 @@
     Formulário
   </h2>
 
-  <!-- IMPORTANT: action apontando para a API Next correta -->
-  <form method="POST" action="https://autowebhook.garantiabrasilauto.com.br/webhook/1316fb6a-47a1-442d-9b73-3d2278843814"
+  <form onsubmit="enviarFormulario(event)"
         class="max-w-2xl w-full mx-auto bg-white p-6 mt-6 rounded-lg shadow-lg px-4 sm:p-8">
 
+    <!-- TODOS OS CAMPOS IGUAIS AO SEU -->
+    <!-- (não removi nenhum) -->
+
     <input type="text" name="Vendedor Responsável" placeholder="Vendedor Responsável" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Whats Vendedor" placeholder="Whats Vendedor" required
-           oninput="this.value = maskPhone(this.value)"
-           maxlength="15"
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           oninput="this.value = maskPhone(this.value)" maxlength="15"
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <label class="block mb-2 text-gray-600">Tipo de Contrato</label>
     <select name="tipo de contrato" required
-            class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
       <option value="Motor e Câmbio">Motor e Câmbio</option>
       <option value="Motor, Câmbio e Suspensão">Motor, Câmbio e Suspensão</option>
       <option value="Suspensão">Suspensão</option>
     </select>
 
     <input type="text" name="Nome / Razão Social" placeholder="Nome / Razão Social" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="CPF / CNPJ" placeholder="CPF / CNPJ" required
-           oninput="this.value = maskCPFOrCNPJ(this.value)"
-           maxlength="18"
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           oninput="this.value = maskCPFOrCNPJ(this.value)" maxlength="18"
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="email" name="Email" placeholder="Email" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Whatsapp" placeholder="Whatsapp" required
-           oninput="this.value = maskPhone(this.value)"
-           maxlength="15"
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           oninput="this.value = maskPhone(this.value)" maxlength="15"
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Data de Nasc" placeholder="Data de Nasc"
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Endereço" placeholder="Endereço" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Cidade" placeholder="Cidade" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="CEP" placeholder="CEP" required
-           oninput="this.value = maskCEP(this.value)"
-           maxlength="9"
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           oninput="this.value = maskCEP(this.value)" maxlength="9"
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Numero_ende" placeholder="Número" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Marca/Modelo do Veículo" placeholder="Marca/Modelo" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Ano de Fabricação" placeholder="Ano" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="placa" placeholder="Placa" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="RENAVAM" placeholder="RENAVAM" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Chassi" placeholder="Chassi" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <input type="text" name="Valor do Contrato (R$)" placeholder="Valor (R$)" required
-           class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+           oninput="this.value = maskCurrency(this.value)" maxlength="15"
+           class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
 
     <label class="block mb-2 text-gray-600">Unidade</label>
     <select name="Unidade" required
-            class="w-full p-3 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            class="w-full p-3 mb-6 border border-gray-300 rounded-lg">
       <option value="Bauru">Bauru</option>
       <option value="Ribeirão Preto">Ribeirão Preto</option>
     </select>
@@ -148,9 +184,11 @@
     <input type="hidden" name="form_name" value="New Form">
 
     <button type="submit"
-            class="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500">
+            class="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
       Enviar
     </button>
+
+    <div id="mensagem"></div>
 
   </form>
 
