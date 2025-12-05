@@ -1,4 +1,30 @@
 {
-  "version": 2,
-  "framework": "nextjs"
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/pages/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/pages/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "destination": "/promos/promocao-amortecedor-59-90-reais-ribeirao-preto.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/problemas-comuns-volkswagen-gol.html",
+      "destination": "/pages/blog/problemas-comuns-volkswagen-gol.html",
+      "permanent": true
+    },
+    {
+      "source": "/pages/problemas-comuns-honda-civic.html",
+      "destination": "/pages/blog/problemas-comuns-honda-civic.html",
+      "permanent": true
+    }
+  ]
 }
